@@ -5,7 +5,7 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 $client = new GuzzleHttp\Client();
-//get   ?filter[name]=4
+//get 股东  ?filter[name]=4
 $response = $client->request(
                 'GET',
                 'http://127.0.0.1/shareholders',
@@ -29,7 +29,7 @@ $response = $client->request(
                                                          )
                                        )
                           );*/
-
+//add 股东
 /*$response = $client->request(
                 'POST',
                 'http://127.0.0.1/shareholders',
@@ -38,6 +38,7 @@ $response = $client->request(
                 'json' => $data
                 ]
             );*/
+//edit 股东
 /*$response = $client->request(
                 'PUT',
                 'http://127.0.0.1/shareholders/11',
