@@ -5,7 +5,7 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 $client = new GuzzleHttp\Client();
-//get 
+//get 认领企业表单
 /*$response = $client->request(
                 'GET',
                 'http://127.0.0.1/claimCompanyForms',
@@ -29,6 +29,7 @@ $data = array("data"=>array("type"=>"claimCompanyForms",
                                        )
                           );
 
+//add 认领企业表单
 //"companyId"=>"1",
 /*$response = $client->request(
                 'POST',
@@ -38,6 +39,7 @@ $data = array("data"=>array("type"=>"claimCompanyForms",
                 'json' => $data
                 ]
             );*/
+//edit 认领企业表单
 $response = $client->request(
                 'PUT',
                 'http://127.0.0.1/claimCompanyForms/1',
