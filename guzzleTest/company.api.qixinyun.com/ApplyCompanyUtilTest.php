@@ -5,7 +5,7 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 $client = new GuzzleHttp\Client();
-//get 申请企业表单
+//get 
 /*$response = $client->request(
                 'GET',
                 'http://127.0.0.1/applyCompanyForms',
@@ -13,10 +13,10 @@ $client = new GuzzleHttp\Client();
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 ]
             );*/
-//,
-$data = array("data"=>array("type"=>"applyCompanyForms",
-                                    "attributes"=>array( "name"=>"企业名称12",
-                                                         "certificate"=>array('certificate132','certificate2','certificate3'),
+
+/*$data = array("data"=>array("type"=>"applyCompanyForms",
+                                    "attributes"=>array( "name"=>"企业名称555",
+                                                         "certificate"=>array('certificate11','certificate22','certificate33'),
                                                          "province"=>"20",
                                                          "city"=>"30",
                                                          "region"=>"40",
@@ -29,8 +29,7 @@ $data = array("data"=>array("type"=>"applyCompanyForms",
                                        )
                           );
 
-// add 申请企业表单
-/*$response = $client->request(
+$response = $client->request(
                 'POST',
                 'http://127.0.0.1/applyCompanyForms',
                 [
@@ -38,16 +37,39 @@ $data = array("data"=>array("type"=>"applyCompanyForms",
                 'json' => $data
                 ]
             );*/
-//edit 申请企业表单
-$response = $client->request(
+/*$response = $client->request(
                 'PUT',
                 'http://127.0.0.1/applyCompanyForms/2',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
+/*$response = $client->request(
+                'PUT',
+                'http://127.0.0.1/applyCompanyForms/4/confirm',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                ]
+            );*/
+
+
+$data = array("data"=>array("type"=>"replyApplyCompanyForms",
+                                "attributes"=>array( "reasonCategory"=>"1",
+                                                     "comment"=>'nononononn'
+                                                     )
+                                       )
+                          );
+
+$response = $client->request(
+                'PUT',
+                'http://127.0.0.1/applyCompanyForms/6/decline',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
 
 $status = $response->getStatusCode();
 $body = $response->getBody();

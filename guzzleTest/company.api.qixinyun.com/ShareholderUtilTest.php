@@ -5,18 +5,18 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 $client = new GuzzleHttp\Client();
-//get 股东  ?filter[name]=4
+//get 
 $response = $client->request(
                 'GET',
-                'http://127.0.0.1/shareholders',
+                'http://127.0.0.1/shareholders?filter[company]=2',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 ]
             );
 
 /*$data = array("data"=>array("type"=>"shareholders",
-                                    "attributes"=>array( "companyId"=>"1",
-                                    					 "name"=>"股东名称12233",
+                                    "attributes"=>array( "companyId"=>"2",
+                                    					 "name"=>"股东名称",
                                                          "category"=>"1",
                                                          "certificateType"=>"1",
                                                          "certificateNumber"=>"1234567896321465",
@@ -29,7 +29,7 @@ $response = $client->request(
                                                          )
                                        )
                           );*/
-//add 股东
+
 /*$response = $client->request(
                 'POST',
                 'http://127.0.0.1/shareholders',
@@ -38,7 +38,6 @@ $response = $client->request(
                 'json' => $data
                 ]
             );*/
-//edit 股东
 /*$response = $client->request(
                 'PUT',
                 'http://127.0.0.1/shareholders/11',
