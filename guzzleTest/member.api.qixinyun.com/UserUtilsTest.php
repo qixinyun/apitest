@@ -13,31 +13,25 @@ $client = new GuzzleHttp\Client();
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 ]
             );*/
-//,
-$data = array("data"=>array("type"=>"shareholders",
-                                    "attributes"=>array( "companyId"=>"1",
-                                    					 "name"=>"股东名称",
-                                                         "category"=>"1",
-                                                         "certificateType"=>"1",
-                                                         "certificateNumber"=>"1234567896321456",
-                                                         "subscribedContributionMethod"=>"1",
-                                                         "subscribedContribution"=>"1000",
-                                                         "subscribedContributionTime"=>"20161125",
-                                                         "actualContributionMethod"=>"1",
-                                                         "actualContribution"=>"1000",
-                                                         "actualContributionTime"=>"20161125"
-                                                         )
-                                       )
-                          );
 
-$response = $client->request(
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("cellPhone"=>"12345678933",
+                                                "password"=>"123456"
+                                               )
+		                   )
+		      );*/
+
+//signUp
+/*$response = $client->request(
                 'POST',
-                'http://127.0.0.1/shareholders',
+                'http://127.0.0.1/users',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
+
+//restPassword
 /*$response = $client->request(
                 'PUT',
                 'http://127.0.0.1/restPassword',
@@ -47,6 +41,7 @@ $response = $client->request(
                 ]
             );*/
 
+//signIn
 /*$response = $client->request(
                 'POST',
                 'http://127.0.0.1/users/signIn',
@@ -56,15 +51,21 @@ $response = $client->request(
                 ]
             );*/
 
-//"oldPassword"=>"111111"
-/*$response = $client->request(
+//updatePassword
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("oldPassword"=>"111111",
+                                                "password"=>"123456"
+                                               )
+                           )
+              );
+$response = $client->request(
                 'PUT',
                 'http://127.0.0.1/users/2/updatePassword',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 
 
 $status = $response->getStatusCode();
