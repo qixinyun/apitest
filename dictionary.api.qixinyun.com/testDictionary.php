@@ -2,17 +2,17 @@
 
 require '../vendor/autoload.php';
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
-$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8003/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
 // $response = $client->request('GET', 'dictionaries/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'dictionaries/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-$response = $client->request('GET', 'dictionaries?filter[categoryId]=1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'dictionaries?filter[categoryId]=11&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 //add -- 开始
 // $data = array("data"=>array("type"=>"dictionaries",
-//                             "attributes"=>array("name"=>"name",
-//                                                 "value"=>"value",
+//                             "attributes"=>array("name"=>"name2",
+//                                                 "value"=>12,
 //                                                 "categoryId"=>1
 //                                                )
 //                            )
