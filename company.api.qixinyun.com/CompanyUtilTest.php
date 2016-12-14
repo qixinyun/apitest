@@ -20,27 +20,27 @@ $client = new GuzzleHttp\Client();
  *
  */
 $data = array("data"=>array("type"=>"companies",
-                                    "attributes"=>array( "name"=>"企业名称34",
-                                                         "certificate"=>array('address1'),
-                                                         "province"=>"20",
-                                                         "city"=>"30",                                                        
-                                                         "region"=>"40",
-                                                         "uid"=>"1",
+                                    "attributes"=>array( "name"=>"企业名称44",
+                                                         "certificate"=>array('address1','222','333'),
+                                                         "province"=>20,
+                                                         "city"=>30,                                                        
+                                                         "region"=>40,
+                                                         "uid"=>1,
                                                          "principalRealName"=>"法人名字",
                                                          "principalIdentifyCardNumber"=>"xxxxxxxxxx",
                                                          "principalCertificate"=>"xxxxxxxxxx",
                                                          "contractPhone"=>"1234568911",
-                                                         "category"=>"1",
+                                                         "category"=>1,
                                                          "registrationNumber"=>"xxxxxxxxxx",
                                                          "unifiedSocialCreditCode"=>"xxxxxxxxxx",
                                                          "organizationCode"=>"xxxxxxxxxx",
                                                          "registrationAuthority"=>"登记机关",
                                                          "approveDate"=>"123456789",
                                                          "englishName"=>"xxxxxxxxxx",
-                                                         "registrationCapital"=>"200",
-                                                         "scale"=>"1",
+                                                         "registrationCapital"=>20000,
+                                                         "scale"=>1,
                                                          "establishedDate"=>"123456789",
-                                                         "industry"=>"1",
+                                                         "industry"=>1,
                                                          "issuedDate"=>"123456789",
                                                          "creditUrl"=>"xxxxxxxxxx",
                                                          "email"=>"xxxxxxxxxx",
@@ -48,13 +48,13 @@ $data = array("data"=>array("type"=>"companies",
                                                          "businessTermFrom"=>"123456789",
                                                          "businessTermTo"=>"123456789",
                                                          "businessScope"=>"xxxxxxxxxx",
-                                                         "businessStatus"=>"1",
-                                                         "principalCategory"=>"1"
+                                                         "businessStatus"=>2,
+                                                         "principalCategory"=>1
                                                          )
                                        )
                           );
 
-//add company
+//add --start
 /*$response = $client->request(
                 'POST',
                 'http://127.0.0.1/companies',
@@ -64,15 +64,18 @@ $data = array("data"=>array("type"=>"companies",
                 ]
             );
 */
-//edit company
-$response = $client->request(
+//add --end
+
+//edit --start
+/*$response = $client->request(
                 'PUT',
                 'http://127.0.0.1/companies/4',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
+//edit --end
 
 
 $status = $response->getStatusCode();
