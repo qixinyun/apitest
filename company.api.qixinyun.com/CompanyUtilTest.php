@@ -5,7 +5,16 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 $client = new GuzzleHttp\Client();
-//get filter[name]  filter[principalRealName]
+//get 
+// filter[principalRealName]
+// filter[name]
+// filter[uid]
+// filter[registrationCapital]
+// filter[industry]
+// filter[businessStatus]
+// filter[areaId]
+// filter[establishedPeriod]
+
 /*$response = $client->request(
                 'GET',
                 'http://127.0.0.1/companies?filter[principalRealName]=法人名字',
@@ -23,8 +32,8 @@ $data = array("data"=>array("type"=>"companies",
                                     "attributes"=>array( "name"=>"企业名称44",
                                                          "certificate"=>array('address1','222','333'),
                                                          "province"=>20,
-                                                         "city"=>30,                                                        
-                                                         "region"=>40,
+                                                         "city"=>274,                                                        
+                                                         "region"=>2288,
                                                          "uid"=>1,
                                                          "principalRealName"=>"法人名字",
                                                          "principalIdentifyCardNumber"=>"xxxxxxxxxx",
@@ -49,7 +58,8 @@ $data = array("data"=>array("type"=>"companies",
                                                          "businessTermTo"=>"123456789",
                                                          "businessScope"=>"xxxxxxxxxx",
                                                          "businessStatus"=>2,
-                                                         "principalCategory"=>1
+                                                         "principalCategory"=>1,
+                                                         "detailedAddress"=>"详细地址"
                                                          )
                                        )
                           );
