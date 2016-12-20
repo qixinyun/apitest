@@ -93,6 +93,20 @@ $response = $client->request(
 //                 ]
 //             );
 
+//restPassword
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("password"=>"111111")
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'users/1/restPassword',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
+
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
