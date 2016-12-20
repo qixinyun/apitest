@@ -10,7 +10,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 //get 
 // $response = $client->request('GET', 'roles/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'roles/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'roles?filter[userGroupId]=1&filter[roleStatus]=0',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'roles?filter[userGroupId]=1&filter[roleStatus]=0&filter[scope]=2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"roles",
@@ -58,14 +58,24 @@ $response = $client->request(
 //enabled --结束
 
 //disabled --开始
-$response = $client->request(
+/*$response = $client->request(
                 'PUT',
                 'roles/1/disabled',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
-            );
+            );*/
 //disabled --结束
+
+//open --开始
+/*$response = $client->request(
+                'PUT',
+                'roles/1/open',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            );*/
+//open --结束
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
