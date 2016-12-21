@@ -32,13 +32,13 @@ $response = $client->request(
             );*/
 //add -- 结束
 
-$data = array("data"=>array("type"=>"departments",
+//edit --开始
+/*$data = array("data"=>array("type"=>"departments",
                             "attributes"=>array("name"=>"department11",
                                                 "departmentType"=>"1"
                                                )
                            )
               );
-//edit
 $response = $client->request(
                 'PUT',
                 'http://127.0.0.1/departments/1',
@@ -47,6 +47,28 @@ $response = $client->request(
                 'json' => $data
                 ]
             );
+*/
+//edit -- 结束
+
+//enabled --开始
+/*$response = $client->request(
+                'PUT',
+                'http://127.0.0.1/departments/1/enabled',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            );*/
+//enabled --结束
+
+//disabled --开始
+/*$response = $client->request(
+                'PUT',
+                'http://127.0.0.1/departments/1/disabled',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            );*/
+//disabled --结束
 
 
 
