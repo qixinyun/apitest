@@ -8,35 +8,35 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8003/']);
 //get 
 // $response = $client->request('GET', 'dictionaries/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'dictionaries/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-$response = $client->request('GET', 'dictionaries?filter[categoryId]=11&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'dictionaries?filter[categoryId]=11&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 //add -- 开始
-// $data = array("data"=>array("type"=>"dictionaries",
-//                             "attributes"=>array("name"=>"name2",
-//                                                 "value"=>12,
-//                                                 "categoryId"=>1
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'POST',
-//                 'dictionaries',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+$data = array("data"=>array("type"=>"dictionaries",
+                            "attributes"=>array("name"=>"name4555",
+                                                "value"=>0,
+                                                "categoryId"=>1
+                                               )
+                           )
+              );
+$response = $client->request(
+                'POST',
+                'dictionaries',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
 //add -- 结束
 
 //edit -- 开始
 // $data = array("data"=>array("type"=>"dictionaries",
 //                             "attributes"=>array("name"=>"name1",
-//                                                 "value"=>"value1"
+//                                                 "value"=>0
 //                                                )
 //                            )
 //               );
 // $response = $client->request(
 //                 'PUT',
-//                 'dictionaries/1',
+//                 'dictionaries/3',
 //                 [
 //                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
 //                 'json' => $data
@@ -56,5 +56,6 @@ $body = $response->getBody();
 $contents = $body->getContents();
 
 echo "<pre>";
+var_dump($status);
 print_r($contents);
 
