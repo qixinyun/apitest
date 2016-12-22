@@ -13,7 +13,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
 
 //signUp -- 开始
 $data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"15202939431",
+                            "attributes"=>array("cellPhone"=>"11202939411",
                                                 "password"=>"123456"
                                                )
                            )
@@ -78,19 +78,19 @@ $response = $client->request(
 //             );
 
 //编辑用户信息
-$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("nickName"=>"nickName111"
-                                               )
-                           )
-              );
-$response = $client->request(
-                'PUT',
-                'users/6',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
+// $data = array("data"=>array("type"=>"users",
+//                             "attributes"=>array("nickName"=>"nickName111"
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'PUT',
+//                 'users/6',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
