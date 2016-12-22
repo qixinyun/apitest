@@ -49,6 +49,55 @@ $response = $client->request(
 //             );
 //edit -- 结束
 
+//enabled --开始
+/*$response = $client->request(
+                'PUT',
+                'http://127.0.0.1/usergroups/1/enabled',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            );*/
+//enabled --结束
+
+//disabled --开始
+/*$response = $client->request(
+                'PUT',
+                'http://127.0.0.1/usergroups/1/disabled',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            );*/
+//disabled --结束
+
+//bindDepartments  --开始
+/*$data = array("data"=>array("type"=>"usergroups",
+                            "relationships"=>array("departments"=>array("data"=>array(array("type"=>"departments", "id"=>1),
+                                                                                      array("type"=>"departments", "id"=>5)
+                                                                                      )
+                                                                        )
+                                               )
+                           )
+              );
+$response = $client->request(
+                'POST',
+                'http://127.0.0.1/usergroups/1/relationships/departments',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
+//bindDepartments  --结束
+
+//unBindDepartments  --开始
+$response = $client->request(
+                'DELETE',
+                'http://127.0.0.1/usergroups/1/relationships/departments/1,5',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            );
+//unBindDepartments  --结束
+
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
