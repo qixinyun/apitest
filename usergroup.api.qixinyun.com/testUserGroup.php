@@ -4,7 +4,7 @@ require '../vendor/autoload.php';
 $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
-//get 
+//get filter[name]=t  filter[status]=0 filter[parentId]
  $response = $client->request('GET', 'usergroups/11',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'usergroups/1,2,3',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'usergroups?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
