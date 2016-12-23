@@ -5,14 +5,13 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
-// $response = $client->request('GET', 'usergroups/11',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'usergroups/11',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'usergroups/1,2,3',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'usergroups?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 // $data = array("data"=>array("type"=>"usergroups",
 //                             "attributes"=>array("name"=>"usergroup44",
-//                                                 "category"=>1,
 //                                                 'parentId'=>0,
 //                                                 'userGroupType'=>1,
 //                                                 'jirisdictionAreaIds'=>array(),
@@ -89,13 +88,13 @@ $response = $client->request(
 //bindDepartments  --结束
 
 //unBindDepartments  --开始
-$response = $client->request(
+/*$response = $client->request(
                 'DELETE',
                 'http://127.0.0.1/usergroups/1/relationships/departments/1,5',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
-            );
+            );*/
 //unBindDepartments  --结束
 
 $status = $response->getStatusCode();

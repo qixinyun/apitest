@@ -7,7 +7,8 @@ use GuzzleHttp;
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
 $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
-//get 
+//get  filter[userName]=t  filter[cellPhone]  filter[departmentId]=1  filter[status]  filter[userGroupId]
+
 // $response = $client->request('GET', 'users/8',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -23,7 +24,9 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 //                                                 'birthday'=>'1983-10-30',
 //                                                 'identifyCardNumber'=>'610103198310301218',
 //                                                 'identifyCardCopy'=>'xxx',
-//                                                 'roleIds'=>array(1,2,3)
+//                                                 'roleIds'=>array(1,2,3),
+//                                                 'number'=>'123456xx',
+//                                                 'departmentId'=>1
 //                                                )
 //                            )
 //               );
@@ -80,7 +83,9 @@ $response = $client->request(
 //                                                 'birthday'=>'1983-10-30',
 //                                                 'identifyCardNumber'=>'610103198310301218',
 //                                                 'identifyCardCopy'=>'xxx',
-//                                                 'roleIds'=>array(2,3)
+//                                                 'roleIds'=>array(2,3),
+//                                                 'number'=>'123456xx',
+//                                                 'departmentId'=>1
 //                                                )
 //                            )
 //               );
