@@ -4,12 +4,12 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
-$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
+//$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get  filter[userName]=t  filter[cellPhone]  filter[departmentId]=1  filter[status]  filter[userGroupId]
 
-// $response = $client->request('GET', 'users/8',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp -- 开始
@@ -41,7 +41,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 //signUp -- 结束
 
 //signIn
-$data = array("data"=>array("type"=>"users",
+/*$data = array("data"=>array("type"=>"users",
                             "attributes"=>array("passport"=>"15202939431",
                                                 "password"=>"123456"
                                                )
@@ -55,7 +55,7 @@ $response = $client->request(
                 'json' => $data
                 ]
             );
-
+*/
 
 //updatePassword
 // $data = array("data"=>array("type"=>"users",
