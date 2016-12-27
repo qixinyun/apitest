@@ -8,11 +8,11 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
-// $response = $client->request('GET', 'users/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp -- 开始
-$data = array("data"=>array("type"=>"users",
+/*$data = array("data"=>array("type"=>"users",
                             "attributes"=>array("cellPhone"=>"11202939411",
                                                 "password"=>"123456"
                                                )
@@ -25,7 +25,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //signUp -- 结束
 
 //signIn
@@ -78,11 +78,14 @@ $response = $client->request(
 //             );
 
 //编辑用户信息
-// $data = array("data"=>array("type"=>"users",
-//                             "attributes"=>array("nickName"=>"nickName111"
-//                                                )
-//                            )
-//               );
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("identifyCardNumber"=>"xxxxxxxxxxxx123",
+                                                "realName"=>"realname",
+                                                "nickName"=>"nickname",
+                                                "avatar"=>"xxxx123456"
+                                               )
+                           )
+              );*/
 // $response = $client->request(
 //                 'PUT',
 //                 'users/6',

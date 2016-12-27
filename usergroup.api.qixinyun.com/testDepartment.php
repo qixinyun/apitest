@@ -4,12 +4,13 @@ namespace UserGroup;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-$client = new GuzzleHttp\Client();
+//$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get filter[name]=t  filter[status]=0  sort=-id
 /*$response = $client->request(
                 'GET',
-                'http://127.0.0.1/departments?filter[status]=0',
+                'departments?filter[status]=0',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 ]
@@ -24,7 +25,7 @@ $client = new GuzzleHttp\Client();
               );
 $response = $client->request(
                 'POST',
-                'http://127.0.0.1/departments',
+                'departments',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -41,7 +42,7 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'http://127.0.0.1/departments/1',
+                'departments/1',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -53,7 +54,7 @@ $response = $client->request(
 //enabled --开始
 /*$response = $client->request(
                 'PUT',
-                'http://127.0.0.1/departments/1/enabled',
+                'departments/1/enabled',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
@@ -63,7 +64,7 @@ $response = $client->request(
 //disabled --开始
 /*$response = $client->request(
                 'PUT',
-                'http://127.0.0.1/departments/1/disabled',
+                'departments/1/disabled',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
