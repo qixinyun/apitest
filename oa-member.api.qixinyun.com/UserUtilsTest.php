@@ -4,7 +4,7 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
 $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
