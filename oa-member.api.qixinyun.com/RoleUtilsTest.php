@@ -4,20 +4,20 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
- $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
+//$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
-$response = $client->request('GET', 'roles/49',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'roles/13',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'roles/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'roles?filter[userGroupId]=1&filter[roleStatus]=0&filter[scope]=2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"roles",
-                            "attributes"=>array("name"=>"roleName2dd",
+                            "attributes"=>array("name"=>"ro222225dssd",
                                                 "userGroupId"=>16,
                                                 "purviewResultList"=>array(
-                                                            '101001'=>['add'],'101002'=>['add','edit'],'101003'=>['edit']
+                                                            '101001'=>[],'101002'=>[],'101003'=>['edit']
                                                         ),
                                                 "scope"=>2
                                                )
@@ -90,3 +90,58 @@ $contents = $body->getContents();
 echo "<pre>";
 print_r($status);
 print_r($contents);
+
+/*
+{
+    "meta": [],
+    "data": {
+        "type": "roles",
+        "id": "13",
+        "attributes": {
+            "name": "rolddde55dssd",
+            "status": 0,
+            "scope": 2,
+            "createTime": 1482920021,
+            "updateTime": 1482920021,
+            "statusTime": 1482920021
+        },
+        "relationships": {
+            "userGroup": {
+                "data": {
+                    "type": "userGroups",
+                    "id": "16"
+                }
+            },
+            "purviewResultList": {
+                "data": [
+                    {
+                        "type": "purviews",
+                        "id": "7"
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "139.224.65.136:8002\/roles\/13"
+        }
+    },
+    "included": [
+        {
+            "type": "purviews",
+            "id": "7",
+            "attributes": {
+                "purviewResultList": {
+                    "101001": [],
+                    "101002": [
+                        "add",
+                        "edit"
+                    ],
+                    "101003": [
+                        "edit"
+                    ]
+                }
+            }
+        }
+    ]
+}
+*/
