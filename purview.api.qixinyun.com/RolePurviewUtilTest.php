@@ -3,7 +3,7 @@ require '../vendor/autoload.php';
 
 $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8005/']);
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
-$response = $client->request('GET', 'rolePurviews?filter[platformId]=1&filter[roleId]=41',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'rolePurviews?filter[platformId]=1&filter[roleId]=53',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'rolePurviews',['haders'=>['Content-' => 'application/vnd.api+json']]);
 //add
 // $data = array("data"=>array("type"=>"rolePurviews",
