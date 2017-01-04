@@ -113,6 +113,26 @@ $response = $client->request(
                 'json' => $data
                 ]
             );*/
+
+//enabled --开始
+/*$response = $client->request(
+                'PUT',
+                'users/6/enabled',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            );*/
+//enabled --结束
+
+//disabled --开始
+/*$response = $client->request(
+                'PUT',
+                'users/6/disabled',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            );*/
+//disabled --结束
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
