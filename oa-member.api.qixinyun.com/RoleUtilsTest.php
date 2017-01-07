@@ -52,25 +52,25 @@ $response = $client->request(
                 ]
             );*/
 
-//enabled --开始
+//enable --开始
 /*$response = $client->request(
                 'PUT',
-                'roles/1/enabled',
+                'roles/1/enable',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
             );*/
-//enabled --结束
+//enable --结束
 
-//disabled --开始
+//disable --开始
 /*$response = $client->request(
                 'PUT',
-                'roles/1/disabled',
+                'roles/1/disable',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
             );*/
-//disabled --结束
+//disable --结束
 
 //open --开始
 /*$response = $client->request(
