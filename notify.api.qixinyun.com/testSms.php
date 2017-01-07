@@ -10,7 +10,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8004/']);
 
 $data = array('data'=>array('type'=>'sms',
 							'attributes'=>array(
-								'code'=>34567
+								'code'=>22331
 								),
 							)
 			);
