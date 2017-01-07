@@ -4,7 +4,7 @@ namespace Company;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-$client = new GuzzleHttp\Client();
+$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 //get 
 // filter[principalRealName]
 // filter[name]
@@ -32,30 +32,30 @@ $data = array("data"=>array("type"=>"companies",
                                     "attributes"=>array( "name"=>"企业名称44",
                                                          "certificate"=>array('address1','222','333'),
                                                          "province"=>20,
-                                                         "city"=>274,                                                        
+                                                         "city"=>274,                                                  
                                                          "region"=>2288,
                                                          "uid"=>1,
                                                          "principalRealName"=>"法人名字",
                                                          "principalIdentifyCardNumber"=>"xxxxxxxxxx",
                                                          "principalCertificate"=>"xxxxxxxxxx",
-                                                         "contractPhone"=>"1234568911",
+                                                         "contactPhone"=>"1234568911",
                                                          "category"=>1,
                                                          "registrationNumber"=>"xxxxxxxxxx",
                                                          "unifiedSocialCreditCode"=>"xxxxxxxxxx",
                                                          "organizationCode"=>"xxxxxxxxxx",
                                                          "registrationAuthority"=>"登记机关",
-                                                         "approveDate"=>"123456789",
+                                                         "approveDate"=>"2014-01-01",
                                                          "englishName"=>"xxxxxxxxxx",
                                                          "registrationCapital"=>20000,
                                                          "scale"=>1,
-                                                         "establishedDate"=>"123456789",
+                                                         "establishedDate"=>"2014-02-01",
                                                          "industry"=>1,
-                                                         "issuedDate"=>"123456789",
+                                                         "issuedDate"=>"2015-01-01",
                                                          "creditUrl"=>"xxxxxxxxxx",
                                                          "email"=>"xxxxxxxxxx",
                                                          "postalCode"=>"710000",
-                                                         "businessTermFrom"=>"123456789",
-                                                         "businessTermTo"=>"123456789",
+                                                         "businessTermFrom"=>"2013-01-01",
+                                                         "businessTermTo"=>"2012-01-01",
                                                          "businessScope"=>"xxxxxxxxxx",
                                                          "businessStatus"=>2,
                                                          "principalCategory"=>1,
@@ -65,15 +65,15 @@ $data = array("data"=>array("type"=>"companies",
                           );
 
 //add --start
-/*$response = $client->request(
+$response = $client->request(
                 'POST',
-                'http://127.0.0.1/companies',
+                'companies',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );
-*/
+
 //add --end
 
 //edit --start
