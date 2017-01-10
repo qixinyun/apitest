@@ -4,12 +4,20 @@ namespace Company;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-$client = new GuzzleHttp\Client();
-
 //$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
 $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
-//get  filter[name]  filter[principalRealName] filter[industry]  filter[unifiedSocialCreditCode] filter[registrationNumber]  filter[registrationCapital]
+
+// filter[principalRealName]
+// filter[name]
+// filter[uid]
+// filter[registrationCapital]
+// filter[industry]
+// filter[businessStatus]
+// filter[areaId]
+// filter[establishedPeriod]
+// filter[unifiedSocialCreditCode] 
+// filter[registrationNumber]
 //sort=-id  sort=-name  sort=-principalRealName
 $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=91350100095309691A',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'companies/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
@@ -83,13 +91,44 @@ $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=9
             );*/
 //edit --end
 
+//update readCount
+// $data = array("data"=>array("type"=>"companies",
+//                         "attributes"=>array(
+//                                             "count"=>15,
+//                                             )
+//                            )
+//               );
+// $response = $client->request(
+//                 'PUT',
+//                 'companies/1/readCount',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
+
+//update searchCount
+$data = array("data"=>array("type"=>"companies",
+                            "attributes"=>array(
+                                            "count"=>15,
+                                            )
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'companies/1/searchCount',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
 
 echo "<pre>";
-var_dump($contents);
+print_r($contents);
 
 
 /*

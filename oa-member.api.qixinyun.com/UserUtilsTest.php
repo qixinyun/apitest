@@ -45,9 +45,9 @@ $response = $client->request(
 //signUp -- 结束
 
 //signIn
-/*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("passport"=>"15202939431",
-                                                "password"=>"123456"
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("passport"=>"18974111315",
+                                                "password"=>"18974111315"
                                                )
                            )
               );
@@ -59,12 +59,12 @@ $response = $client->request(
                 'json' => $data
                 ]
             );
-*/
+
 
 //updatePassword
 // $data = array("data"=>array("type"=>"users",
-//                             "attributes"=>array("oldPassword"=>"1111",
-//                                                 "password"=>"123456"
+//                             "attributes"=>array("oldPassword"=>"18974111315",
+//                                                 "password"=>"18974111315"
 //                                                )
 //                            )
 //               );

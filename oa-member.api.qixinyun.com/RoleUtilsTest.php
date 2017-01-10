@@ -4,13 +4,13 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
- $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
-//$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ // $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
-$response = $client->request('GET', 'roles/13',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'roles/13',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'roles/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'roles?filter[userGroupId]=1&filter[roleStatus]=0&filter[scope]=2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'roles?filter[userGroupId]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"roles",
