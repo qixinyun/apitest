@@ -4,8 +4,8 @@ require '../vendor/autoload.php';
 
 use GuzzleHttp\Exception\RequestException;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8004/']);
-$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8004/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //验证邮箱
 $data = array('data'=>array('type'=>'email',
