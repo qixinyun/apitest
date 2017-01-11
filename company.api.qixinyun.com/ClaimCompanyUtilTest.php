@@ -16,7 +16,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //add --start
 /*$data = array("data"=>array("type"=>"claimCompanyForms",
-                                    "attributes"=>array( "name"=>"企业名称555",
+                                    "attributes"=>array( "name"=>"企业hello555",
                                                          "registrationNumber"=>"xxxxxxxxxx",
                                                          "unifiedSocialCreditCode"=>"xxxxxxxxxx",
                                                          "certificate"=>array('certificate11','certificate22','certificate33'),
@@ -29,12 +29,13 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
                                                          "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
                                                          "principalIdentifyCardBackPhoto"=>"22xxxxxxxxxx",
                                                          "principalIdentifyCardHandHeldPhoto"=>"33xxxxxxxxxx",
+                                                         "principalIdentifyCardValidity"=>"2019-11-11",
                                                          "principalBirthday"=>"2010-10-10",
                                                          "principalBirthdayCategory"=>2,
                                                          "contactName"=>"nijinghello",
                                                          "contactDuties"=>"程序员",
                                                          "contactPhone"=>"18840287763",
-                                                         "companyId"=>101
+                                                         "companyId"=>201
                                                          )
                                        )
                           );
@@ -49,7 +50,7 @@ $response = $client->request(
 //add -end
 
 //edit --start
-/*$data = array("data"=>array("type"=>"claimCompanyForms",
+$data = array("data"=>array("type"=>"claimCompanyForms",
                                     "attributes"=>array( "name"=>"helloworld",
                                                          "registrationNumber"=>"xxxxxxxxxx",
                                                          "unifiedSocialCreditCode"=>"xxxxxxxxxx",
@@ -63,6 +64,7 @@ $response = $client->request(
                                                          "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
                                                          "principalIdentifyCardBackPhoto"=>"22xxxxxxxxxx",
                                                          "principalIdentifyCardHandHeldPhoto"=>"33xxxxxxxxxx",
+                                                         "principalIdentifyCardValidity"=>"2019-11-11",
                                                          "principalBirthday"=>"2010-10-10",
                                                          "principalBirthdayCategory"=>2,
                                                          "contactName"=>"nijinghello",
@@ -73,22 +75,22 @@ $response = $client->request(
                           );
 $response = $client->request(
                 'PUT',
-                'claimCompanyForms/1',
+                'claimCompanyForms/2',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //edit --end
 
 //confirm --start
-$response = $client->request(
+/*$response = $client->request(
                 'PUT',
                 'claimCompanyForms/2/confirm',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 ]
-            );
+            );*/
 //confirm --end
 
 //decline --start
@@ -131,17 +133,18 @@ var_dump($contents);
     "meta": [],
     "data": {
         "type": "claimCompanyForms",
-        "id": "1",
+        "id": "2",
         "attributes": {
-            "name": "\u4f01\u4e1a\u540d\u79f0555",
+            "name": "\u4f01\u4e1ahello555",
             "registrationNumber": "xxxxxxxxxx",
             "unifiedSocialCreditCode": "xxxxxxxxxx",
             "certificate": "certificate11,certificate22,certificate33",
-            "principalRealName": "\u6cd5\u4eba\u540d\u5b57",
+            "principalRealName": "hhhh",
             "principalIdentifyCardNumber": "123456798962",
             "principalIdentifyCardFrontPhoto": "11xxxxxxxxxx",
             "principalIdentifyCardBackPhoto": "22xxxxxxxxxx",
             "principalIdentifyCardHandHeldPhoto": "33xxxxxxxxxx",
+            "principalIdentifyCardValidity": "2019-11-11",
             "principalBirthday": "2010-10-10",
             "principalBirthdayCategory": 2,
             "contactPhone": "18840287763",
@@ -152,7 +155,7 @@ var_dump($contents);
             "region": 40,
             "status": 0,
             "updateTime": 0,
-            "createTime": 1484034219,
+            "createTime": 1484130811,
             "statusTime": 0
         },
         "relationships": {
@@ -165,12 +168,12 @@ var_dump($contents);
             "companies": {
                 "data": {
                     "type": "companies",
-                    "id": "101"
+                    "id": "201"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/claimCompanyForms\/1"
+            "self": "127.0.0.1\/claimCompanyForms\/2"
         }
     }
 }

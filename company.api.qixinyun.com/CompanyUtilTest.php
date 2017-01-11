@@ -4,22 +4,14 @@ namespace Company;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
+$client = new GuzzleHttp\Client();
+
 //$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
 $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
-
-// filter[principalRealName]
-// filter[name]
-// filter[uid]
-// filter[registrationCapital]
-// filter[industry]
-// filter[businessStatus]
-// filter[areaId]
-// filter[establishedPeriod]
-// filter[unifiedSocialCreditCode] 
-// filter[registrationNumber]
+//get  filter[name]  filter[principalRealName] filter[industry]  filter[unifiedSocialCreditCode] filter[registrationNumber]  filter[registrationCapital]
 //sort=-id  sort=-name  sort=-principalRealName
-$response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=91350100095309691A',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=91350100095309691A',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'companies/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'companies?filter[registrationCapital]=20000',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -29,7 +21,7 @@ $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=9
  *
  */
 /*$data = array("data"=>array("type"=>"companies",
-                                    "attributes"=>array( "name"=>"企业2255",
+                                    "attributes"=>array( "name"=>"qiyemingcheng11288",
                                                          "certificate"=>array('address11','address22','address33'),
                                                          "province"=>2,
                                                          "city"=>52,                                                        
@@ -40,6 +32,7 @@ $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=9
                                                          "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
                                                          "principalIdentifyCardBackPhoto"=>"22xxxxxxxxxx",
                                                          "principalIdentifyCardHandHeldPhoto"=>"33xxxxxxxxxx",
+                                                         "principalIdentifyCardValidity"=>"2019-11-11",
                                                          "contactPhone"=>"1234568911",
                                                          "category"=>1,
                                                          "registrationNumber"=>"xxxxxxxxxx",
@@ -83,7 +76,7 @@ $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=9
 //edit --start
 /*$response = $client->request(
                 'PUT',
-                'http://127.0.0.1/companies/101',
+                'http://127.0.0.1/companies/201',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -91,44 +84,13 @@ $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=9
             );*/
 //edit --end
 
-//update readCount
-// $data = array("data"=>array("type"=>"companies",
-//                         "attributes"=>array(
-//                                             "count"=>15,
-//                                             )
-//                            )
-//               );
-// $response = $client->request(
-//                 'PUT',
-//                 'companies/1/readCount',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
-
-//update searchCount
-$data = array("data"=>array("type"=>"companies",
-                            "attributes"=>array(
-                                            "count"=>15,
-                                            )
-                           )
-              );
-$response = $client->request(
-                'PUT',
-                'companies/1/searchCount',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
 
 echo "<pre>";
-print_r($contents);
+var_dump($contents);
 
 
 /*
@@ -136,26 +98,27 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "companies",
-        "id": "101",
+        "id": "201",
         "attributes": {
-            "name": "\u4f01\u4e1a55552",
+            "name": "qiyemingcheng112",
             "category": 1,
             "certificate": [
-                "address1",
-                "address2",
-                "address3"
+                "address11",
+                "address22",
+                "address33"
             ],
             "registrationNumber": "xxxxxxxxxx",
             "unifiedSocialCreditCode": "xxxxxxxxxx",
             "organizationCode": "xxxxxxxxxx",
             "principalRealName": "\u6cd5\u4eba\u540d\u5b57",
             "principalIdentifyCardNumber": "xxxxxxxxxx",
-            "principalIdentifyCardFrontPhoto": "1xxxxxxxxxx",
-            "principalIdentifyCardBackPhoto": "2xxxxxxxxxx",
-            "principalIdentifyCardHandHeldPhoto": "3xxxxxxxxxx",
+            "principalIdentifyCardFrontPhoto": "11xxxxxxxxxx",
+            "principalIdentifyCardBackPhoto": "22xxxxxxxxxx",
+            "principalIdentifyCardHandHeldPhoto": "33xxxxxxxxxx",
+            "principalIdentifyCardValidity": "2016-12-31",
             "principalCategory": 1,
-            "principalBirthday": "2011-10-10",
-            "principalBirthdayCategory": 1,
+            "principalBirthday": "2010-10-10",
+            "principalBirthdayCategory": 2,
             "province": 2,
             "city": 52,
             "region": 500,
@@ -175,7 +138,7 @@ print_r($contents);
             "contactPhone": "1234568911",
             "email": "xxxxxxxxxx",
             "postalCode": "710000",
-            "contactName": "nijing",
+            "contactName": "nijinghello",
             "contactDuties": "\u7a0b\u5e8f\u5458",
             "detailedAddress": "\u8be6\u7ec6\u5730\u5740",
             "readCount": 0,
@@ -183,7 +146,7 @@ print_r($contents);
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1484015798
+            "createTime": 1484126823
         },
         "relationships": {
             "users": {
@@ -194,7 +157,7 @@ print_r($contents);
             }
         },
         "links": {
-            "self": "127.0.0.1\/companies\/101"
+            "self": "127.0.0.1\/companies\/201"
         }
     }
 }
