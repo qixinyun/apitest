@@ -5,7 +5,7 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 //$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get filter[name]=t  filter[status]=0  sort=-id
 /*$response = $client->request(
@@ -17,9 +17,10 @@ use GuzzleHttp;
             );*/
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"departments",
+$data = array("data"=>array("type"=>"departments",
                             "attributes"=>array("name"=>"department1",
-                                                'departmentType'=>1
+                                                'departmentType'=>1,
+                                                'platformId'=>1
                                                )
                            )
               );
@@ -30,7 +31,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit --开始
@@ -77,6 +78,6 @@ $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
 
-echo "<pre>";
-var_dump($contents);
+echo "<pre>", PHP_EOL;
+print_r($contents);
 

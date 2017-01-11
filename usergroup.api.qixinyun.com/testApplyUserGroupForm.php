@@ -4,8 +4,8 @@ namespace UserGroup;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
- $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
+ // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get
 // $response = $client->request('GET', 'applyUserGroupForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
@@ -14,13 +14,14 @@ use GuzzleHttp;
 
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyUserGroupForms",
+$data = array("data"=>array("type"=>"applyUserGroupForms",
                             "attributes"=>array('name'=>"usergroupdddd3332",
-                                                'parentId'=>0,
+                                                'parentId'=>5,
                                                 'userGroupType'=>1,
                                                 'jirisdictionAreaIds'=>array(2, 52, 500),
                                                 'businessAreaIds'=>array(2, 52, 500),
-                                                'uid'=>1
+                                                'uid'=>1,
+                                                'platformId'=>2
                                                )
                            )
               );
@@ -31,49 +32,50 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit  --开始
-/*$data = array("data"=>array("type"=>"applyUserGroupForms",
-                            "attributes"=>array('name'=>"puorgresu1122223",
-                                                'parentId'=>0,
-                                                'userGroupType'=>1,
-                                                'jirisdictionAreaIds'=>array(23, 66, 775),
-                                                'businessAreaIds'=>array(122, 552, 2000),
-                                                'uid'=>1
-                                               )
-                           )
-              );
-$response = $client->request(
-                'PUT',
-                'applyUserGroupForms/1',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );*/
+// $data = array("data"=>array("type"=>"applyUserGroupForms",
+//                             "attributes"=>array('name'=>"puorgresu1122223",
+//                                                 'parentId'=>0,
+//                                                 'userGroupType'=>1,
+//                                                 'jirisdictionAreaIds'=>array(23, 66, 775),
+//                                                 'businessAreaIds'=>array(122, 552, 2000),
+//                                                 'uid'=>1,
+//                                                 'platformId'=>4
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'PUT',
+//                 'applyUserGroupForms/3',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //edit  --结束
 
 
 //approve --开始
-/*$response = $client->request(
-                'PUT',
-                'applyUserGroupForms/1/approve',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json']
-                ]
-            );*/
+// $response = $client->request(
+//                 'PUT',
+//                 'applyUserGroupForms/5/approve',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json']
+//                 ]
+//             );
 //approve --结束
 
 //decline --开始
-/*$response = $client->request(
-                'PUT',
-                'applyUserGroupForms/1/decline',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json']
-                ]
-            );*/
+// $response = $client->request(
+//                 'PUT',
+//                 'applyUserGroupForms/3/decline',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json']
+//                 ]
+//             );
 //decline --结束
 
 
@@ -81,10 +83,9 @@ $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
 
-echo "<pre>";
 var_dump($status);
-echo "<br>";
-var_dump($contents);
+echo "<br>", PHP_EOL;
+print_r($contents);
 
 /*
 {

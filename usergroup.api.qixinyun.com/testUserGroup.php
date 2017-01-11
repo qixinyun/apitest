@@ -7,26 +7,27 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
 //get filter[name]=t  filter[status]=0 filter[parentId]
  // $response = $client->request('GET', 'usergroups?page[number]=3&page[size]=10',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'usergroups/1,2,3',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'usergroups?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'usergroups?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-$data = array("data"=>array("type"=>"usergroups",
-                            "attributes"=>array("name"=>"usergroup44",
-                                                'parentId'=>0,
-                                                'userGroupType'=>1,
-                                                'jirisdictionAreaIds'=>array(),
-                                                'businessAreaIds'=>array()
-                                               )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'usergroups',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
+// $data = array("data"=>array("type"=>"usergroups",
+//                             "attributes"=>array("name"=>"usergroup44",
+//                                                 'parentId'=>1,
+//                                                 'userGroupType'=>1,
+//                                                 'jirisdictionAreaIds'=>array(),
+//                                                 'businessAreaIds'=>array(),
+//                                                 // 'platformId'=>1
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'usergroups',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //add -- 结束
 
 //edit -- 开始
