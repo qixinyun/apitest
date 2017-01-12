@@ -179,7 +179,7 @@ $response = $client->request(
 //               );
 // $response = $client->request(
 //                 'POST',
-//                 'users/1/relationships/positions',
+//                 'users/1/positions',
 //                 [
 //                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
 //                 'json' => $data
@@ -189,7 +189,7 @@ $response = $client->request(
 //解绑职位
 // $response = $client->request(
 //                 'DELETE',
-//                 'users/1/relationships/positions/1',
+//                 'users/1/positions/1',
 //                 [
 //                 'haders'=>['Content-Type' => 'application/vnd.api+json']
 //                 ]
@@ -205,7 +205,7 @@ $response = $client->request(
 //               );
 // $response = $client->request(
 //                 'PUT',
-//                 'users/1/relationships/positions/1',
+//                 'users/1/positions/1',
 //                 [
 //                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
 //                 'json' => $data
