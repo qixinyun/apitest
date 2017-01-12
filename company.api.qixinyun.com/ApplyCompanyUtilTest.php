@@ -9,7 +9,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get  filter[name]  filter[principalRealName] 
 //sort=-id  sort=-name  sort=-principalRealName
- $response = $client->request('GET', 'applyCompanyForms?sort=-principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyCompanyForms?sort=-principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyForms?filter[name]=555&filter[principalRealName]=ni',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -18,7 +18,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 /*$data = array("data"=>array("type"=>"applyCompanyForms",
                                     "attributes"=>array( "name"=>"xian555",
                                                          "registrationNumber"=>"xxxxxxxxxx",
-                                                         "unifiedSocialCreditCode"=>"xxxxxxxxxx",
+                                                         "unifiedSocialCreditCode"=>"",
                                                          "certificate"=>array('certificate11','certificate22','certificate33'),
                                                          "province"=>20,
                                                          "city"=>30,
@@ -29,6 +29,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
                                                          "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
                                                          "principalIdentifyCardBackPhoto"=>"22xxxxxxxxxx",
                                                          "principalIdentifyCardHandHeldPhoto"=>"33xxxxxxxxxx",
+                                                         "principalIdentifyCardValidity"=>"2019-11-11",
                                                          "principalBirthday"=>"2010-10-10",
                                                          "principalBirthdayCategory"=>2,
                                                          "contactName"=>"nijinghello",
@@ -48,8 +49,8 @@ $response = $client->request(
 //add --end
 
 //edit --start
-/*$data = array("data"=>array("type"=>"applyCompanyForms",
-                                    "attributes"=>array( "name"=>"企业名称555",
+$data = array("data"=>array("type"=>"applyCompanyForms",
+                                    "attributes"=>array( "name"=>"hello555",
                                                          "registrationNumber"=>"xxxxxxxxxx",
                                                          "unifiedSocialCreditCode"=>"xxxxxxxxxx",
                                                          "certificate"=>array('certificate1','certificate2','certificate3'),
@@ -62,6 +63,7 @@ $response = $client->request(
                                                          "principalIdentifyCardFrontPhoto"=>"1xxxxxxxxxx",
                                                          "principalIdentifyCardBackPhoto"=>"2xxxxxxxxxx",
                                                          "principalIdentifyCardHandHeldPhoto"=>"3xxxxxxxxxx",
+                                                         "principalIdentifyCardValidity"=>"2020-11-11",
                                                          "principalBirthday"=>"2010-10-10",
                                                          "principalBirthdayCategory"=>2,
                                                          "contactName"=>"nijinghello",
@@ -77,7 +79,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //edit --end
 
 //confirm --start
@@ -132,7 +134,7 @@ var_dump($contents);
         "type": "applyCompanyForms",
         "id": "1",
         "attributes": {
-            "name": "\u4f01\u4e1a\u540d\u79f0555",
+            "name": "hello555",
             "registrationNumber": "xxxxxxxxxx",
             "unifiedSocialCreditCode": "xxxxxxxxxx",
             "certificate": "certificate1,certificate2,certificate3",
@@ -147,12 +149,13 @@ var_dump($contents);
             "principalIdentifyCardFrontPhoto": "1xxxxxxxxxx",
             "principalIdentifyCardBackPhoto": "2xxxxxxxxxx",
             "principalIdentifyCardHandHeldPhoto": "3xxxxxxxxxx",
+            "principalIdentifyCardValidity": "2020-11-11",
             "principalBirthday": "2010-10-10",
             "principalBirthdayCategory": 2,
             "status": 0,
-            "updateTime": 1484033686,
-            "createTime": 1484033191,
-            "statusTime": 1484033686
+            "updateTime": 1484130655,
+            "createTime": 1484130113,
+            "statusTime": 1484130655
         },
         "relationships": {
             "users": {
