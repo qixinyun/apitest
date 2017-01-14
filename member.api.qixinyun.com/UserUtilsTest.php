@@ -4,12 +4,13 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
- //$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
-//$response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'getUsers?filter[source]=1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp  --start
 /* $data = array("data"=>array("type"=>"users",
@@ -26,6 +27,28 @@ $response = $client->request(
                 'json' => $data
                 ]
             );*/
+//signUp  --end
+
+//signUp  --start
+ $data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("cellPhone"=>"12345678911",
+                                                "password"=>"1234678911",
+                                                "openId"=>"12345678911",
+                                                "tokenId"=>"",
+                                                "source"=>2,
+                                                "avatar"=>"avatar",
+                                                "nickName"=>"nickname"
+                                               )
+                           )
+              );
+$response = $client->request(
+                'POST',
+                'users',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
 //signUp  --end
 
 //restPassword --start
@@ -47,8 +70,8 @@ $response = $client->request(
 
 //signIn --start
 /*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"18840287763",
-                                                "password"=>"18840287763"
+                            "attributes"=>array("cellPhone"=>"18729352536",
+                                                "password"=>"123123"
                                                )
                            )
               );
@@ -61,6 +84,23 @@ $response = $client->request(
                 ]
             );*/
 //signIn --end
+
+//openSignIn --start
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("openId"=>"123456789",
+                                                "source"=>"2"
+                                               )
+                           )
+              );
+$response = $client->request(
+                'POST',
+                'users/openSignIn',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
+//openSignIn --end
 
 //updatePassword --start
 /*$data = array("data"=>array("type"=>"users",
