@@ -103,14 +103,14 @@ $response = $client->request(
 //edit --end
 
 //verifyEmail --start 
-$response = $client->request(
-                'PUT',
-                'users/1/verifyEmail',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
+// $response = $client->request(
+//                 'PUT',
+//                 'users/1/verifyEmail',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //verifyEmail --end
 
 
