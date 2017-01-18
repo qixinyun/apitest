@@ -4,8 +4,8 @@ namespace UserGroup;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
- // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get
 // $response = $client->request('GET', 'applyUserGroupForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
@@ -15,13 +15,13 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
 
 //add -- 开始
 $data = array("data"=>array("type"=>"applyUserGroupForms",
-                            "attributes"=>array('name'=>"usergroupdddd3332",
+                            "attributes"=>array('name'=>"test3333",
                                                 'parentId'=>5,
                                                 'userGroupType'=>1,
                                                 'jirisdictionAreaIds'=>array(2, 52, 500),
                                                 'businessAreaIds'=>array(2, 52, 500),
-                                                'uid'=>1,
-                                                'platformId'=>2
+                                                'uid'=>87,
+                                                'platformId'=>1
                                                )
                            )
               );
@@ -37,19 +37,17 @@ $response = $client->request(
 
 //edit  --开始
 // $data = array("data"=>array("type"=>"applyUserGroupForms",
-//                             "attributes"=>array('name'=>"puorgresu1122223",
-//                                                 'parentId'=>0,
+//                             "attributes"=>array('name'=>"avvss1111",
+//                                                 'parentId'=>2,
 //                                                 'userGroupType'=>1,
 //                                                 'jirisdictionAreaIds'=>array(23, 66, 775),
-//                                                 'businessAreaIds'=>array(122, 552, 2000),
-//                                                 'uid'=>1,
-//                                                 'platformId'=>4
+//                                                 'businessAreaIds'=>array(122, 552, 2000)
 //                                                )
 //                            )
 //               );
 // $response = $client->request(
 //                 'PUT',
-//                 'applyUserGroupForms/3',
+//                 'applyUserGroupForms/30',
 //                 [
 //                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
 //                 'json' => $data

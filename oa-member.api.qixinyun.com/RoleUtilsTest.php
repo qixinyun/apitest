@@ -4,34 +4,34 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
- $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ // $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
 // $response = $client->request('GET', 'roles/4',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'roles/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'roles/3',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'roles?filter[userGroupId]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 
 //add -- 开始
-$data = array("data"=>array("type"=>"roles",
-                            "attributes"=>array("name"=>"ro222225dssd22",
-                                                "userGroupId"=>10,
-                                                "purviewResultList"=>array(
-                                                            '101001'=>[],'101002'=>[],'101003'=>['edit']
-                                                        ),
-                                                "scope"=>2
-                                               )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'roles',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
+// $data = array("data"=>array("type"=>"roles",
+//                             "attributes"=>array("name"=>"ro222225dssd22",
+//                                                 "userGroupId"=>10,
+//                                                 "purviewResultList"=>array(
+//                                                             '101001'=>[],'101002'=>[],'101003'=>['edit']
+//                                                         ),
+//                                                 "scope"=>2
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'roles',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //add -- 结束
 
 //edit -- 开始

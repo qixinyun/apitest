@@ -6,8 +6,8 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8004/']);
 
 //get filter[name]=t  filter[status]=0 filter[parentId]
  // $response = $client->request('GET', 'usergroups?page[number]=3&page[size]=10',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'usergroups/1,2,3',['haders'=>['Content-' => 'application/vnd.api+json']]);
-$response = $client->request('GET', 'usergroups?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'usergroups/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'usergroups?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 // $data = array("data"=>array("type"=>"usergroups",

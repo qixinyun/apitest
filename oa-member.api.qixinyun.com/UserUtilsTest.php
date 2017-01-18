@@ -9,7 +9,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
 
 //get 
 // $response = $client->request('GET', 'users?filter[userGroupId]=12',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'users/2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'users/2',['h aders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp -- 开始
 // $data = array("data"=>array("type"=>"users",
@@ -170,21 +170,21 @@ $response = $client->request(
 //verifyEmail --结束
 
 //绑定职位
-$data = array("data"=>array("type"=>"positions",
-                            "attributes"=>array(
-                                "userGroupId"=>2,
-                                "departmentId"=>10
-                            )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'users/69/positions',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );    
+// $data = array("data"=>array("type"=>"positions",
+//                             "attributes"=>array(
+//                                 "userGroupId"=>2,
+//                                 "departmentId"=>10
+//                             )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'users/69/positions',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );    
 
 //解绑职位
 // $response = $client->request(
