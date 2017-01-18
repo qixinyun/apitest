@@ -3,7 +3,7 @@ require '../vendor/autoload.php';
 
 $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8005/']);
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
-$response = $client->request('GET', 'rolePurviews?filter[platformId]=1&filter[roleId]=53',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'rolePurviews?filter[platformId]=1&filter[roleId]=53',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'rolePurviews',['haders'=>['Content-' => 'application/vnd.api+json']]);
 //add  
 // $data = array("data"=>array("type"=>"rolePurviews",
@@ -16,23 +16,23 @@ $response = $client->request('GET', 'rolePurviews?filter[platformId]=1&filter[ro
 //                                        )
 //                           );
 
-// $data = array("data"=>array("type"=>"rolePurviews",
-//                                     "attributes"=>array("platformId"=>1,
-//                                                         "roleId"=>1,
-//                                                         "purviewResultList"=>array(
-//                                                             '101001'=>array('add'),'101002'=>['edit'],'101003'=>['add','edit']
-//                                                         )
-//                                                     )
-//                                        )
-//                           );
-// $response = $client->request(
-//                 'POST',
-//                 'rolePurviews',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+$data = array("data"=>array("type"=>"rolePurviews",
+                                    "attributes"=>array("platformId"=>1,
+                                                        "roleId"=>1,
+                                                        "purviewResultList"=>array(
+                                                            '101001'=>array('add'),'101002'=>['edit'],'101003'=>['add','edit']
+                                                        )
+                                                    )
+                                       )
+                          );
+$response = $client->request(
+                'POST',
+                'rolePurviews',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
 
 //edit
 // $data = array("data"=>array("type"=>"rolePurviews",

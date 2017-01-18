@@ -94,21 +94,44 @@ print_r($contents);
         "type": "applyUserGroupForms",
         "id": "1",
         "attributes": {
-            "userId": 1,
-            "userGroupId": 1,
             "name": "puorgresu1122223",
             "parentId": 0,
             "userGroupType": 1,
             "jirisdictionAreas": [
-                23,
-                66,
-                775
+                {
+                    "province": 23,
+                    "city": 0,
+                    "region": 0
+                },
+                {
+                    "province": 5,
+                    "city": 66,
+                    "region": 0
+                },
+                {
+                    "province": 6,
+                    "city": 85,
+                    "region": 775
+                }
             ],
             "businessAreas": [
-                122,
-                552,
-                2000
+                {
+                    "province": 9,
+                    "city": 122,
+                    "region": 0
+                },
+                {
+                    "province": 4,
+                    "city": 56,
+                    "region": 552
+                },
+                {
+                    "province": 17,
+                    "city": 236,
+                    "region": 2000
+                }
             ],
+            "platform": 0,
             "status": 2,
             "updateTime": 1482916511,
             "createTime": 1482909633,
@@ -124,7 +147,7 @@ print_r($contents);
             "userGroup": {
                 "data": {
                     "type": "usergroups",
-                    "id": "0"
+                    "id": "1"
                 }
             }
         },

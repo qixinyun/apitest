@@ -57,7 +57,6 @@ $data = array("data"=>array("type"=>"applyCompanyForms",
                                                          "province"=>20,
                                                          "city"=>30,
                                                          "region"=>40,
-                                                         "uid"=>1,
                                                          "principalRealName"=>"法人名字",
                                                          "principalIdentifyCardNumber"=>"123456798962",
                                                          "principalIdentifyCardFrontPhoto"=>"1xxxxxxxxxx",
@@ -82,43 +81,6 @@ $response = $client->request(
             );
 //edit --end
 
-//confirm --start
-/*$response = $client->request(
-                'PUT',
-                'applyCompanyForms/4/confirm',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                ]
-            );*/
-//confirm -end
-
-//decline  --start
-/*$data = array("data"=>array("type"=>"replyApplyCompanyForms",
-                                "attributes"=>array( "reasonCategory"=>1,
-                                                     "comment"=>'nononononn'
-                                                     )
-                                       )
-                          );
-
-$response = $client->request(
-                'PUT',
-                'applyCompanyForms/6/decline',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );*/
-//decline --end
-
-//get replyApplyCompanyForm --start
-/*$response = $client->request(
-                'GET',
-                'replyApplyCompanyForms?filter[applyCompanyFormId]=4',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                ]
-            );*/
-//get replyApplyCompanyForm --end
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
