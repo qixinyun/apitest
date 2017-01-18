@@ -20,6 +20,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
  * certificate | array 第三方图片地址 三证/一证  address1，address2，address3
  *
  */
+//add --start
 /*$data = array("data"=>array("type"=>"companies",
                                     "attributes"=>array( "name"=>"qiyemingcheng11288",
                                                          "certificate"=>array('address11','address22','address33'),
@@ -61,8 +62,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
                                                          "detailedAddress"=>"详细地址"
                                                          )
                                        )
-                          );*/
-//add --start
+                          );
 /*$response = $client->request(
                 'POST',
                 'companies',
@@ -74,7 +74,48 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 //add --end
 
 //edit --start
-/*$response = $client->request(
+/*$data = array("data"=>array("type"=>"companies",
+                                    "attributes"=>array( "name"=>"qiyemingcheng11288",
+                                                         "certificate"=>array('address11','address22','address33'),
+                                                         "province"=>2,
+                                                         "city"=>52,                                                        
+                                                         "region"=>500,
+                                                         "principalRealName"=>"法人名字",
+                                                         "principalIdentifyCardNumber"=>"xxxxxxxxxx",
+                                                         "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
+                                                         "principalIdentifyCardBackPhoto"=>"22xxxxxxxxxx",
+                                                         "principalIdentifyCardHandHeldPhoto"=>"33xxxxxxxxxx",
+                                                         "principalIdentifyCardValidity"=>"2019-11-11",
+                                                         "contactPhone"=>"1234568911",
+                                                         "category"=>1,
+                                                         "registrationNumber"=>"xxxxxxxxxx",
+                                                         "unifiedSocialCreditCode"=>"xxxxxxxxxx",
+                                                         "organizationCode"=>"xxxxxxxxxx",
+                                                         "registrationAuthority"=>"登记机关",
+                                                         "approveDate"=>"2016-12-31",
+                                                         "englishName"=>"xxxxxxxxxx",
+                                                         "registrationCapital"=>20000,
+                                                         "scale"=>1,
+                                                         "establishedDate"=>"2016-12-31",
+                                                         "industry"=>1,
+                                                         "issuedDate"=>"2016-12-31",
+                                                         "creditUrl"=>"xxxxxxxxxx",
+                                                         "email"=>"xxxxxxxxxx",
+                                                         "postalCode"=>"710000",
+                                                         "businessTermFrom"=>"2016-12-31",
+                                                         "businessTermTo"=>"2016-12-31",
+                                                         "businessScope"=>"xxxxxxxxxx",
+                                                         "businessStatus"=>2,
+                                                         "principalCategory"=>1,
+                                                         "principalBirthday"=>"2010-10-10",
+                                                         "principalBirthdayCategory"=>2,
+                                                         "contactName"=>"nijinghello",
+                                                         "contactDuties"=>"程序员",
+                                                         "detailedAddress"=>"详细地址"
+                                                         )
+                                       )
+                          );
+$response = $client->request(
                 'PUT',
                 'http://127.0.0.1/companies/201',
                 [
