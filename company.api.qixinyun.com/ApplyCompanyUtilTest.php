@@ -15,9 +15,9 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 
 //add --start
-/*$data = array("data"=>array("type"=>"applyCompanyForms",
-                                    "attributes"=>array( "name"=>"xian555",
-                                                         "registrationNumber"=>"xxxxxxxxxx",
+$data = array("data"=>array("type"=>"applyCompanyForms",
+                                    "attributes"=>array( "name"=>"xian555".rand(0,100),
+                                                         "registrationNumber"=>"xxxxxxxxxx".rand(0,100),
                                                          "unifiedSocialCreditCode"=>"",
                                                          "certificate"=>array('certificate11','certificate22','certificate33'),
                                                          "province"=>20,
@@ -45,40 +45,40 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add --end
 
 //edit --start
-$data = array("data"=>array("type"=>"applyCompanyForms",
-                                    "attributes"=>array( "name"=>"hello555",
-                                                         "registrationNumber"=>"xxxxxxxxxx",
-                                                         "unifiedSocialCreditCode"=>"xxxxxxxxxx",
-                                                         "certificate"=>array('certificate1','certificate2','certificate3'),
-                                                         "province"=>20,
-                                                         "city"=>30,
-                                                         "region"=>40,
-                                                         "principalRealName"=>"法人名字",
-                                                         "principalIdentifyCardNumber"=>"123456798962",
-                                                         "principalIdentifyCardFrontPhoto"=>"1xxxxxxxxxx",
-                                                         "principalIdentifyCardBackPhoto"=>"2xxxxxxxxxx",
-                                                         "principalIdentifyCardHandHeldPhoto"=>"3xxxxxxxxxx",
-                                                         "principalIdentifyCardValidity"=>"2020-11-11",
-                                                         "principalBirthday"=>"2010-10-10",
-                                                         "principalBirthdayCategory"=>2,
-                                                         "contactName"=>"nijinghello",
-                                                         "contactDuties"=>"程序员",
-                                                         "contactPhone"=>"18840287763"
-                                                         )
-                                       )
-                          );
-$response = $client->request(
-                'PUT',
-                'applyCompanyForms/1',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
+// $data = array("data"=>array("type"=>"applyCompanyForms",
+//                                     "attributes"=>array( "name"=>"hello555".rand(0,100),
+//                                                          "registrationNumber"=>"xxxxxxxxxx",
+//                                                          "unifiedSocialCreditCode"=>"xxxxxxxxxx",
+//                                                          "certificate"=>array('certificate1','certificate2','certificate3'),
+//                                                          "province"=>20,
+//                                                          "city"=>30,
+//                                                          "region"=>40,
+//                                                          "principalRealName"=>"法人名字",
+//                                                          "principalIdentifyCardNumber"=>"123456798962",
+//                                                          "principalIdentifyCardFrontPhoto"=>"1xxxxxxxxxx",
+//                                                          "principalIdentifyCardBackPhoto"=>"2xxxxxxxxxx",
+//                                                          "principalIdentifyCardHandHeldPhoto"=>"3xxxxxxxxxx",
+//                                                          "principalIdentifyCardValidity"=>"2020-11-11",
+//                                                          "principalBirthday"=>"2010-10-10",
+//                                                          "principalBirthdayCategory"=>2,
+//                                                          "contactName"=>"nijinghello",
+//                                                          "contactDuties"=>"程序员",
+//                                                          "contactPhone"=>"18840287763"
+//                                                          )
+//                                        )
+//                           );
+// $response = $client->request(
+//                 'PUT',
+//                 'applyCompanyForms/8',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //edit --end
 
 
@@ -87,7 +87,7 @@ $body = $response->getBody();
 $contents = $body->getContents();
 
 echo "<pre>";
-var_dump($contents);
+print_r($contents);
 
 /*
 {
