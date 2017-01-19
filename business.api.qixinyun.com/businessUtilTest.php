@@ -4,8 +4,8 @@ namespace Product;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8006/']);
- $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8008/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get distributions
   /**
@@ -16,7 +16,7 @@ use GuzzleHttp;
      *   3.5 filter[departmentId]
      *   3.6 filter[companyId]
      */
- $response = $client->request('GET', 'distributions/8',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'distributions/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'distributions/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'distributions?filter[companyId]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
