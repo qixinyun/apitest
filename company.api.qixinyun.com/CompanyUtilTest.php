@@ -14,6 +14,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 // $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=91350100095309691A',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'companies/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'companies?filter[registrationCapital]=20000',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'companies?sort=-status,id,principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 /**
  * 
