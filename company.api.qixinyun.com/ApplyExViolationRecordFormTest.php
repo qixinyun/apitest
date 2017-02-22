@@ -9,18 +9,17 @@ use GuzzleHttp;
 
 //get 
  //filter[status]
- //filter[date]
  //filter[company]
  //filter[userIdentification]
 // filter[uid]
- $response = $client->request('GET', 'applyInViolationRecordsForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'applyInViolationRecordsForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'applyInViolationRecordsForms?filter[reason]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyExViolationRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyExViolationRecordForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyExViolationRecordForms?filter[reason]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyInViolationRecordsForms",
-                            "attributes"=>array("reason"=>1,
-                                                "date"=>'2059-05-05',
+/*$data = array("data"=>array("type"=>"applyExViolationRecordForms",
+                            "attributes"=>array("reason"=>"reasonreason",
+                                                "decisionAuthority"=>'decisionAuthoritydecisionAuthoritydecisionAuthority',
                                                 "companyId"=>1,
                                                 "uid"=>1,
                                                 "userIdentification"=>1
@@ -29,7 +28,7 @@ use GuzzleHttp;
               );
 $response = $client->request(
                 'POST',
-                'applyInViolationRecordsForms',
+                'applyExViolationRecordForms',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -38,21 +37,23 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyInViolationRecordsForms",
-                            "attributes"=>array("reason"=>2,
-                                                "date"=>'2052-05-05'
+/*$data = array("data"=>array("type"=>"applyExViolationRecordForms",
+                            "attributes"=>array("reason"=>"r1111easonreason",
+                                                "decisionAuthority"=>'deq11111cisionAuthoritydecisionAuthoritydecisionAuthority'
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyInViolationRecordsForms/4',
+                'applyExViolationRecordForms/1',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
-*/
+            );*/
+
+
+
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
@@ -65,17 +66,17 @@ print_r($contents);
 /*{
     "meta": [],
     "data": {
-        "type": "applyInViolationRecordsForms",
-        "id": "1",
+        "type": "applyExViolationRecordForms",
+        "id": "2",
         "attributes": {
             "userIdentification": 1,
-            "reason": 1,
-            "date": "2049-05-05",
+            "reason": "reasonreason",
+            "decisionAuthority": "decisionAuthoritydecisionAuthoritydecisionAuthority",
             "company": 1,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1487641712
+            "createTime": 1487661466
         },
         "relationships": {
             "user": {
@@ -86,7 +87,7 @@ print_r($contents);
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyInViolationRecordsForms\/1"
+            "self": "127.0.0.1\/applyExViolationRecordForms\/2"
         }
     }
 }*/

@@ -11,12 +11,12 @@ use GuzzleHttp;
  //filter[status]
  //filter[result]
  //filter[company]
- $response = $client->request('GET', 'InViolationRecordses',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'InViolationRecordses/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'InViolationRecordses?filter[reason]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'inViolationRecords',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'inViolationRecords/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'inViolationRecords?filter[reason]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"InViolationRecordses",
+/*$data = array("data"=>array("type"=>"inViolationRecords",
                             "attributes"=>array("reason"=>1,
                                                 "date"=>'2049-05-05',
                                                 "companyId"=>1
@@ -25,7 +25,7 @@ use GuzzleHttp;
               );
 $response = $client->request(
                 'POST',
-                'InViolationRecordses',
+                'inViolationRecords',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -34,7 +34,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"InViolationRecordses",
+/*$data = array("data"=>array("type"=>"inViolationRecords",
                             "attributes"=>array("reason"=>2,
                                                 "date"=>'2052-05-05'
                                                )
@@ -42,7 +42,7 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'InViolationRecordses/4',
+                'inViolationRecords/4',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -61,7 +61,7 @@ print_r($contents);
 /*{
     "meta": [],
     "data": {
-        "type": "inViolationRecordses",
+        "type": "inViolationRecords",
         "id": "4",
         "attributes": {
             "reason": 2,
@@ -80,7 +80,7 @@ print_r($contents);
             }
         },
         "links": {
-            "self": "127.0.0.1\/inViolationRecordses\/4"
+            "self": "127.0.0.1\/inViolationRecords\/4"
         }
     }
 }*/
