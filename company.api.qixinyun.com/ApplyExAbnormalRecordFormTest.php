@@ -12,15 +12,17 @@ use GuzzleHttp;
  //filter[company]
  //filter[userIdentification]
 // filter[uid]
+ //filter[inAbnormalRecord]
 // $response = $client->request('GET', 'applyExAbnormalRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyExAbnormalRecordForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
- $response = $client->request('GET', 'applyExAbnormalRecordForms?filter[company]=1&sort=id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyExAbnormalRecordForms?filter[inAbnormalRecord]=1&sort=id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyExAbnormalRecordForms",
                             "attributes"=>array("reason"=>'reasonreasonreason121',
                                                 "date"=>'2059-05-05',
                                                 "decisionAuthority"=>'decisionAuthoritydecisionAuthoritydecisionAuthority',
+                                                "inAbnormalRecordId"=>1,
                                                 "companyId"=>1,
                                                 "uid"=>1,
                                                 "userIdentification"=>1
@@ -75,6 +77,7 @@ print_r($contents);
             "reason": 1,
             "date": "2059-05-05",
             "decisionAuthority": "decisionAuthoritydecisionAuthoritydecisionAuthority",
+            "inAbnormalRecord": 1,
             "company": 1,
             "status": 0,
             "statusTime": 0,

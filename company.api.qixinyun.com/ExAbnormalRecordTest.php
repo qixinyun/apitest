@@ -10,15 +10,17 @@ use GuzzleHttp;
 //get 
  //filter[status]
  //filter[company]
+ //filter[inAbnormalRecord]
 // $response = $client->request('GET', 'exAbnormalRecords',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'exAbnormalRecords/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'exAbnormalRecords?filter[company]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'exAbnormalRecords?filter[inAbnormalRecord]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"exAbnormalRecords",
                             "attributes"=>array("reason"=>'reasonreasonreason',
                                                 "date"=>'2049-05-05',
                                                 "decisionAuthority"=>'decisionAuthoritydecisionAuthoritydecisionAuthority',
+                                                "inAbnormalRecordId"=>1,
                                                 "companyId"=>1
                                                )
                            )
@@ -34,7 +36,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"exAbnormalRecords",
+/*$data = array("data"=>array("type"=>"exAbnormalRecords",
                             "attributes"=>array("reason"=>'reasonreasonreason121',
                                                 "date"=>'2052-05-05',
                                                 "decisionAuthority"=>'decisionAuthoritydecisionAuthoritydecisionAuthority121',
@@ -49,7 +51,7 @@ $response = $client->request(
                 'json' => $data
                 ]
             );
-
+*/
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
@@ -63,7 +65,7 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "exAbnormalRecords",
-        "id": "1",
+        "id": "2",
         "attributes": {
             "reason": "reasonreasonreason",
             "date": "2049-05-05",
@@ -71,7 +73,7 @@ print_r($contents);
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1487752865
+            "createTime": 1489831498
         },
         "relationships": {
             "companies": {
@@ -79,10 +81,16 @@ print_r($contents);
                     "type": "companies",
                     "id": "1"
                 }
+            },
+            "inAbnormalRecords": {
+                "data": {
+                    "type": "inAbnormalRecords",
+                    "id": "1"
+                }
             }
         },
         "links": {
-            "self": "127.0.0.1\/exAbnormalRecords\/1"
+            "self": "127.0.0.1\/exAbnormalRecords\/2"
         }
     }
 }*/
