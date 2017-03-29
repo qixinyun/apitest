@@ -123,14 +123,18 @@ $response = $client->request(
 
 //edit --start
 $data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("identifyCardNumber"=>"editxxxxxxxxxx123",
-                                                "realName"=>"11realname",
-                                                "nickName"=>"11nickname",
-                                                "avatar"=>"11xxxx123456",
-                                                "qq"=>"1113456",
-                                                "email"=>"122211@qq.com",
+                            "attributes"=>array("identifyCardNumber"=>"3editxxxxxxxxxx133",
+                                                "realName"=>"311realname",
+                                                "nickName"=>"311nickname",
+                                                "avatar"=>"311xxxx133456",
+                                                "qq"=>"31113456",
+                                                "email"=>"313333311@qq.com",
                                                 "gender"=>1,
-                                                "address"=>"addressaddress"
+                                                "address"=>"3addressaddress",
+                                                "birthday"=>"2011-01-10",
+                                                "province"=>23,
+                                                "city"=>135,
+                                                "region"=>1200
                                                )
                            )
               );
@@ -169,26 +173,30 @@ var_dump($contents);
     "meta": [],
     "data": {
         "type": "users",
-        "id": "1",
+        "id": "7",
         "attributes": {
-            "cellPhone": "18840287763",
-            "realName": "11realname",
-            "userName": "tqSm1483769557",
-            "nickName": "11nickname",
+            "cellPhone": "12345678911",
+            "realName": "211realname",
+            "userName": "hOAz1484365438",
+            "nickName": "211nickname",
             "status": 0,
-            "createTime": 1483769557,
-            "updateTime": 1490688559,
+            "createTime": 1484365438,
+            "updateTime": 1490785035,
             "statusTime": 0,
-            "identifyCardNumber": "editxxxxxxxxxx123",
-            "avatar": "11xxxx123456",
-            "qq": "1113456",
-            "email": "122211@qq.com",
-            "isEmailVerified": 1,
-            "gender": 1,
-            "address": "addressaddress"
+            "identifyCardNumber": "2editxxxxxxxxxx123",
+            "avatar": "211xxxx123456",
+            "qq": "21113456",
+            "email": "212222211@qq.com",
+            "isEmailVerified": 0,
+            "gender": 2,
+            "address": "2addressaddress",
+            "birthday": "2010-01-10",
+            "province": 22,
+            "city": 125,
+            "region": 1000
         },
         "links": {
-            "self": "127.0.0.1\/users\/1"
+            "self": "127.0.0.1\/users\/7"
         }
     }
 }
