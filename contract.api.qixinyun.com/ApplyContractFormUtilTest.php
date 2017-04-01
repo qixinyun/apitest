@@ -16,7 +16,7 @@ use GuzzleHttp;
      *   3.5 filter[departmentId]
      *   3.6 filter[businessId]
      */
- $response = $client->request('GET', 'applyContractForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ // $response = $client->request('GET', 'applyContractForms/10',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyContractForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyContractForms?filter[businessId]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -34,48 +34,48 @@ use GuzzleHttp;
 // $response = $client->request('GET', 'contracts?filter[businessId]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyContractForms",
-                            "attributes"=>array("name"=>"contractName",
-                                                "validityStart"=>'2017-01-18',
-                                                "validityEnd"=>'2027-01-18',
-                                                "category"=>1,
-                                                "price"=>10.2,
-                                                "companyId"=>1,
-                                                "productId"=>1,
-                                                "businessId"=>1,
-                                                "uid"=>86
-                                               )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'applyContractForms',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );*/
+// $data = array("data"=>array("type"=>"applyContractForms",
+//                             "attributes"=>array("name"=>"contractName",
+//                                                 "validityStart"=>'2017-01-18',
+//                                                 "validityEnd"=>'2027-01-18',
+//                                                 "category"=>1,
+//                                                 "price"=>10.2,
+//                                                 "companyId"=>1,
+//                                                 "productId"=>1,
+//                                                 "businessId"=>1,
+//                                                 "uid"=>86
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'applyContractForms',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyContractForms",
-                            "attributes"=>array("name"=>"contractNameqqq",
-                                                "validityStart"=>'2017-01-28',
-                                                "validityEnd"=>'2027-01-28',
-                                                "category"=>2,
-                                                "price"=>10.25,
-                                                "productId"=>1
-                                               )
-                           )
-              );
-$response = $client->request(
-                'PUT',
-                'applyContractForms/1',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );*/
+// $data = array("data"=>array("type"=>"applyContractForms",
+//                             "attributes"=>array("name"=>"contractNameqqq",
+//                                                 "validityStart"=>'2017-01-28',
+//                                                 "validityEnd"=>'2027-01-28',
+//                                                 "category"=>2,
+//                                                 "price"=>10.25,
+//                                                 "productId"=>1
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'PUT',
+//                 'applyContractForms/10',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 
 /*$response = $client->request(
                 'PUT',

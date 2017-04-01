@@ -9,22 +9,34 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8003/']);
 // $response = $client->request('GET', 'dictionaries/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'dictionaries/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'dictionaries?filter[categoryId]=11&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+
+$response = $client->request('GET', 'dictionaries/30',
+    [
+    'headers'        => [
+                        'Accept-Encoding' => 'gzip',
+                        'Content-' => 'application/vnd.api+json',
+                        'If-None-Match' => 'bab22a9df03b4ea6ea8e25d6cfe55524' 
+                        ],
+    'decode_content' => true
+    ]
+);
+
 //add -- 开始
-$data = array("data"=>array("type"=>"dictionaries",
-                            "attributes"=>array("name"=>"name4555",
-                                                "value"=>0,
-                                                "categoryId"=>1
-                                               )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'dictionaries',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
+// $data = array("data"=>array("type"=>"dictionaries",
+//                             "attributes"=>array("name"=>"name4555",
+//                                                 "value"=>0,
+//                                                 "categoryId"=>1
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'dictionaries',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //add -- 结束
 
 //edit -- 开始
@@ -55,6 +67,7 @@ $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
 
+var_dump($response->getHeaders());
 echo "<pre>";
 var_dump($status);
 print_r($contents);
