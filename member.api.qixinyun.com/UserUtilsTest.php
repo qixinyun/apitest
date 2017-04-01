@@ -4,13 +4,13 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
- $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
 // $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'getUsers?filter[source]=1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'getUsers?filter[openId]=12345678911',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp  --start
 /* $data = array("data"=>array("type"=>"users",
@@ -30,7 +30,7 @@ $response = $client->request(
 //signUp  --end
 
 //signUp  --start
- $data = array("data"=>array("type"=>"users",
+/* $data = array("data"=>array("type"=>"users",
                             "attributes"=>array("cellPhone"=>"12345678911",
                                                 "password"=>"1234678911",
                                                 "openId"=>"12345678911",
@@ -48,7 +48,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //signUp  --end
 
 //restPassword --start
@@ -87,7 +87,7 @@ $response = $client->request(
 
 //openSignIn --start
 /*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("openId"=>"123456789",
+                            "attributes"=>array("openId"=>"12345678911",
                                                 "source"=>"2"
                                                )
                            )
@@ -122,35 +122,41 @@ $response = $client->request(
 //updatePassword --end
 
 //edit --start
-/*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("identifyCardNumber"=>"xxxxxxxxxxxx123",
-                                                "realName"=>"realname",
-                                                "nickName"=>"nickname",
-                                                "avatar"=>"xxxx123456",
-                                                "qq"=>"13456",
-                                                "email"=>"111@qq.com"
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("identifyCardNumber"=>"3editxxxxxxxxxx133",
+                                                "realName"=>"311realname",
+                                                "nickName"=>"311nickname",
+                                                "avatar"=>"311xxxx133456",
+                                                "qq"=>"31113456",
+                                                "email"=>"313333311@qq.com",
+                                                "gender"=>1,
+                                                "address"=>"3addressaddress",
+                                                "birthday"=>"2011-01-10",
+                                                "province"=>23,
+                                                "city"=>135,
+                                                "region"=>1200
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'users/1',
+                'users/108',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
+//edit --end
+
+//verifyEmail --start 
+/*$response = $client->request(
+                'PUT',
+                'users/1/verifyEmail',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );*/
-//edit --end
-
-//verifyEmail --start 
-// $response = $client->request(
-//                 'PUT',
-//                 'users/1/verifyEmail',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
 //verifyEmail --end
 
 
@@ -167,24 +173,30 @@ var_dump($contents);
     "meta": [],
     "data": {
         "type": "users",
-        "id": "1",
+        "id": "7",
         "attributes": {
-            "cellPhone": "18840287763",
-            "realName": "realname",
-            "userName": "tqSm1483769557",
-            "nickName": "nickname",
+            "cellPhone": "12345678911",
+            "realName": "211realname",
+            "userName": "hOAz1484365438",
+            "nickName": "211nickname",
             "status": 0,
-            "createTime": 1483769557,
-            "updateTime": 1483770156,
+            "createTime": 1484365438,
+            "updateTime": 1490785035,
             "statusTime": 0,
-            "identifyCardNumber": "xxxxxxxxxxxx123",
-            "avatar": "xxxx123456",
-            "qq": "13456",
-            "email": "111@qq.com",
-            "isEmailVerified": 0
+            "identifyCardNumber": "2editxxxxxxxxxx123",
+            "avatar": "211xxxx123456",
+            "qq": "21113456",
+            "email": "212222211@qq.com",
+            "isEmailVerified": 0,
+            "gender": 2,
+            "address": "2addressaddress",
+            "birthday": "2010-01-10",
+            "province": 22,
+            "city": 125,
+            "region": 1000
         },
         "links": {
-            "self": "127.0.0.1\/users\/1"
+            "self": "127.0.0.1\/users\/7"
         }
     }
 }

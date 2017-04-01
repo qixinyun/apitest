@@ -1,0 +1,114 @@
+<?php
+namespace Company;
+
+require '../vendor/autoload.php';
+use GuzzleHttp;
+
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+
+//get 
+ //filter[status]
+ //filter[name]
+ //filter[company]
+ //filter[userIdentification]
+// filter[uid]
+ //filter[category]
+ //filter[knowledgePropertyStatus]
+ $response = $client->request('GET', 'applyKnowledgePropertyForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyKnowledgePropertyForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyKnowledgePropertyForms?filter[reason]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
+
+//add -- 开始
+/*$data = array("data"=>array("type"=>"applyKnowledgePropertyForms",
+                            "attributes"=>array("number"=>"1245789631224444",
+                                                "name"=>'namename4444',
+                                                "category"=>2,
+                                                "pledgorName"=>'出质人名称4444',
+                                                "pledgeeName"=>'质权人名称4444',
+                                                "pledgeRegistrationDeadline"=>'2020-09-06',
+                                                "variation"=>'变化情况2029-05-054444',
+                                                "knowledgePropertyStatus"=>0,
+                                                "companyId"=>1,
+                                                "uid"=>1,
+                                                "userIdentification"=>1
+                                               )
+                           )
+              );
+$response = $client->request(
+                'POST',
+                'applyKnowledgePropertyForms',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
+//add -- 结束
+
+//edit -- 开始
+$data = array("data"=>array("type"=>"applyKnowledgePropertyForms",
+                            "attributes"=>array("number"=>"124578963122",
+                                                "name"=>'namename',
+                                                "category"=>1,
+                                                "pledgorName"=>'出质人名称',
+                                                "pledgeeName"=>'质权人名称',
+                                                "pledgeRegistrationDeadline"=>'2020-09-06',
+                                                "variation"=>'变化情况2029-05-05',
+                                                "knowledgePropertyStatus"=>0
+                                               )
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'applyKnowledgePropertyForms/2',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
+
+
+
+$status = $response->getStatusCode();
+$body = $response->getBody();
+$contents = $body->getContents();
+//edit -- 结束
+
+echo "<pre>";
+print_r($status);
+print_r($contents);
+
+/*{
+    "meta": [],
+    "data": {
+        "type": "applyKnowledgePropertyForms",
+        "id": "1",
+        "attributes": {
+            "userIdentification": 1,
+            "number": "1245789631224444",
+            "name": "namename4444",
+            "category": 2,
+            "pledgorName": "\u51fa\u8d28\u4eba\u540d\u79f04444",
+            "pledgeeName": "\u8d28\u6743\u4eba\u540d\u79f04444",
+            "pledgeRegistrationDeadline": "2020-09-06",
+            "variation": "\u53d8\u5316\u60c5\u51b52029-05-054444",
+            "knowledgePropertyStatus": 0,
+            "company": 1,
+            "status": 0,
+            "statusTime": 0,
+            "updateTime": 0,
+            "createTime": 1487732924
+        },
+        "relationships": {
+            "user": {
+                "data": {
+                    "type": "users",
+                    "id": "1"
+                }
+            }
+        },
+        "links": {
+            "self": "127.0.0.1\/applyKnowledgePropertyForms\/1"
+        }
+    }
+}*/
