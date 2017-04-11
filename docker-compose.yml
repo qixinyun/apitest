@@ -1,0 +1,7 @@
+phpfpm:
+  image: "registry.cn-hangzhou.aliyuncs.com/marmot/phpfpm-7.0-front"
+  volumes:
+   - ./:/var/www/html/
+  container_name: front-apitest-phpfpm
+
+

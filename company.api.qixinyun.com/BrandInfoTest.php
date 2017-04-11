@@ -12,7 +12,7 @@ use GuzzleHttp;
  //filter[name]
  //filter[category]
  //filter[company]
-// $response = $client->request('GET', 'brandInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'brandInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'brandInfos/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'brandInfos?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
