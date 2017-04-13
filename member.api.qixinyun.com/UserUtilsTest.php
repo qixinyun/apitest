@@ -4,11 +4,11 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
- $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
-// $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'getUsers?filter[openId]=12345678911',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -194,6 +194,21 @@ $response = $client->request(
             );*/
 //updateCellPhone --end
 
+//addLawyerCertificates --start 
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("lawyerCertificates"=>array("1xxxxxxx", "2xxxxxxxxxx", "3xxxxxxx"))
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'users/105/addLawyerCertificates',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
+//addLawyerCertificates --end
+
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
@@ -209,30 +224,35 @@ var_dump($contents);
     "meta": [],
     "data": {
         "type": "users",
-        "id": "2",
+        "id": "5",
         "attributes": {
-            "cellPhone": "18840287766",
+            "cellPhone": "",
             "realName": "",
-            "userName": "kLGt1483770589",
-            "nickName": "kLGt1483770589",
+            "userName": "XGJM1484362260",
+            "nickName": "nickname",
             "status": 0,
-            "createTime": 1483770589,
-            "updateTime": 1491386581,
+            "createTime": 1484362260,
+            "updateTime": 1492073257,
             "statusTime": 0,
             "identifyCardNumber": "",
-            "avatar": "",
+            "avatar": "avatar",
             "qq": "",
-            "email": "222nijing@139.com",
-            "isEmailVerified": 1,
+            "email": "",
+            "isEmailVerified": 0,
             "gender": 0,
             "address": "",
             "birthday": "0000-00-00",
             "province": 0,
             "city": 0,
-            "region": 0
+            "region": 0,
+            "lawyerCertificates": [
+                "1xxxxxxx",
+                "2xxxxxxxxxx",
+                "3xxxxxxx"
+            ]
         },
         "links": {
-            "self": "127.0.0.1\/users\/2"
+            "self": "127.0.0.1\/users\/5"
         }
     }
 }
