@@ -9,19 +9,15 @@ use GuzzleHttp;
 
 //get 
  //filter[status]
- //filter[name]
- //filter[category]
- //filter[brandInfoStatus]
- //filter[company]
  //filter[uid]
  //filter[userIdentification]
-// $response = $client->request('GET', 'applyBrandInfoForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ //$response = $client->request('GET', 'applyBrandInfoForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyBrandInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
- $response = $client->request('GET', 'applyBrandInfoForms?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyBrandInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyBrandInfoForms",
-                            "attributes"=>array("name"=>"namenamenamenamenamenamenamenamenamenamenamename",
+                            "attributes"=>array("name"=>"111namemmmmmmmm",
                                                 "category"=>2,
                                                 "fillingTime"=>'2059-05-05',
                                                 "logo"=>'logologologo',
@@ -44,7 +40,7 @@ $response = $client->request(
 
 //edit -- 开始
 /*$data = array("data"=>array("type"=>"applyBrandInfoForms",
-                            "attributes"=>array("name"=>"123456namename",
+                            "attributes"=>array("name"=>"111222namemmmmmmmm",
                                                 "category"=>1,
                                                 "fillingTime"=>'2209-10-12',
                                                 "logo"=>'123456logologo',
@@ -54,13 +50,12 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'applyBrandInfoForms/1',
+                'applyBrandInfoForms/12',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );*/
-
 
 
 $status = $response->getStatusCode();

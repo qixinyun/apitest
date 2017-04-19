@@ -8,8 +8,8 @@ use GuzzleHttp;
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
- $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'getUsers?filter[openId]=12345678911',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp  --start
@@ -30,12 +30,12 @@ $response = $client->request(
 //signUp  --end
 
 //signUp  --start
-/* $data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"12345678911",
-                                                "password"=>"1234678911",
-                                                "openId"=>"12345678911",
-                                                "tokenId"=>"",
-                                                "source"=>2,
+ /*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("cellPhone"=>"21196793881",
+                                                "password"=>"21196793881",
+                                                "openId"=>"21196793881xx",
+                                                "tokenId"=>"21196793881xxx",
+                                                "source"=>1,
                                                 "avatar"=>"avatar",
                                                 "nickName"=>"nickname"
                                                )
@@ -69,8 +69,8 @@ $response = $client->request(
 //restPassword --end
 
 //signIn --start
-/*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"18729352536",
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("cellPhone"=>"18729358536",
                                                 "password"=>"123123"
                                                )
                            )
@@ -82,7 +82,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //signIn --end
 
 //openSignIn --start
@@ -163,15 +163,15 @@ $response = $client->request(
 
 //bindQQ --start 
 /*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("qq"=>"1119679322",
-                                                "openId"=>"openIdopenIdope",
-                                                "tokenId"=>"tokenIdtokenId"
+                            "attributes"=>array("qq"=>"141414111111111",
+                                                "openId"=>"141414openIdopenIdope",
+                                                "tokenId"=>"141414tokenIdtokenId"
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'users/2/bind/qq',
+                'users/14/bind/qq',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data

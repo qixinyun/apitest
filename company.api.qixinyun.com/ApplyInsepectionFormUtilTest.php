@@ -9,12 +9,9 @@ use GuzzleHttp;
 
 //get 
  //filter[status]
- //filter[result]
- //filter[category]
- //filter[company]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyInsepectionForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyInsepectionForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInsepectionForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInsepectionForms?filter[uid]=1&filter[userIdentification]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -42,22 +39,22 @@ $response = $client->request(
 
 //edit -- 开始
 /*$data = array("data"=>array("type"=>"applyInsepectionForms",
-                            "attributes"=>array("council"=>"insepectionCouncil123456",
-                                                "category"=>1,
-                                                "date"=>'2009-05-05',
-                                                "result"=>0
+                            "attributes"=>array("council"=>"1insepectionCouncil123456",
+                                                "category"=>11,
+                                                "date"=>'2109-05-05',
+                                                "result"=>5
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyInsepectionForms/1',
+                'applyInsepectionForms/20',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
-*/
+            );*/
+
 
 
 $status = $response->getStatusCode();

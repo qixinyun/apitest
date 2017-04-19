@@ -9,19 +9,17 @@ use GuzzleHttp;
 
 //get 
  //filter[status]
- //filter[reason]
- //filter[company]
  //filter[userIdentification]
 // filter[uid]
 // $response = $client->request('GET', 'applyInAbnormalRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'applyInAbnormalRecordForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
- $response = $client->request('GET', 'applyInAbnormalRecordForms?filter[company]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyInAbnormalRecordForms/14,15',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyInAbnormalRecordForms?filter[company]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyInAbnormalRecordForms",
-                            "attributes"=>array("reason"=>1,
-                                                "date"=>'2059-05-05',
-                                                "decisionAuthority"=>'decisionAuthoritydecisionAuthoritydecisionAuthority',
+                            "attributes"=>array("reason"=>12,
+                                                "date"=>'2259-05-05',
+                                                "decisionAuthority"=>'2decisionAuthoritydecisionAuthoritydecisionAuthority',
                                                 "companyId"=>1,
                                                 "uid"=>1,
                                                 "userIdentification"=>1
@@ -48,7 +46,7 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'applyInAbnormalRecordForms/1',
+                'applyInAbnormalRecordForms/17',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
