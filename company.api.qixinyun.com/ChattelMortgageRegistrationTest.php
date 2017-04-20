@@ -21,7 +21,7 @@ use GuzzleHttp;
                                                 "registrationAuthority"=>'registrationAuthority',
                                                 "securedBond"=>123,
                                                 "content"=>'contentcontentcontent',
-                                                "attachments"=>array('attachments155','attachments255','attachments355'),
+                                                "attachments"=>array('1attachments155','1attachments255','1attachments355'),
                                                 "status"=>1,
                                                 "companyId"=>1
                                                )
@@ -38,7 +38,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"chattelMortgageRegistrations",
+/*$data = array("data"=>array("type"=>"chattelMortgageRegistrations",
                             "attributes"=>array("registrationNumber"=>'111112222233333',
                                                 "registrationDate"=>'2019-05-05',
                                                 "registrationAuthority"=>'registrationAuthority',
@@ -51,12 +51,12 @@ $data = array("data"=>array("type"=>"chattelMortgageRegistrations",
               );
 $response = $client->request(
                 'PUT',
-                'chattelMortgageRegistrations/1',
+                'chattelMortgageRegistrations/2',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 $status = $response->getStatusCode();
 $body = $response->getBody();

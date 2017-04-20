@@ -10,7 +10,7 @@ use GuzzleHttp;
 //get 
  //filter[status]
  //filter[company]
- //$response = $client->request('GET', 'equityPledgeRegistrations',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'equityPledgeRegistrations',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'equityPledgeRegistrations/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'equityPledgeRegistrations?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -43,7 +43,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"equityPledgeRegistrations",
+/*$data = array("data"=>array("type"=>"equityPledgeRegistrations",
                             "attributes"=>array("registrationNumber"=>'211registrationNumber',
                                                 "pledgorName"=>'211pledgorName',
                                                 "pledgorCertificateType"=>2,
@@ -61,12 +61,12 @@ $data = array("data"=>array("type"=>"equityPledgeRegistrations",
               );
 $response = $client->request(
                 'PUT',
-                'equityPledgeRegistrations/1',
+                'equityPledgeRegistrations/4',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 $status = $response->getStatusCode();
 $body = $response->getBody();

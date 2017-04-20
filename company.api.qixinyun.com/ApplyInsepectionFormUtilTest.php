@@ -54,13 +54,13 @@ $response = $client->request(
                 'json' => $data
                 ]
             );*/
-
+//edit -- 结束
 
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
-//edit -- 结束
+
 
 echo "<pre>";
 print_r($status);

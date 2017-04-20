@@ -10,19 +10,19 @@ use GuzzleHttp;
 //get 
  //filter[status]
  //filter[company]
-// $response = $client->request('GET', 'administrativePunishments',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'administrativePunishments',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'administrativePunishments/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'administrativePunishments?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"administrativePunishments",
-                            "attributes"=>array("number"=>'555555555555',
+                            "attributes"=>array("number"=>'1555555555555',
                                                 "category"=>1,
-                                                "title"=>'titletitle',
-                                                "council"=>'councilcouncil',
+                                                "title"=>'1titletitle',
+                                                "council"=>'1councilcouncil',
                                                 "date"=>'2019-01-02',
-                                                "content"=>'contentcontent',
-                                                "attachments"=>array('attachments155','attachments255','attachments355'),
+                                                "content"=>'1contentcontent',
+                                                "attachments"=>array('1attachments155','a1ttachments255','atta1chments355'),
                                                 "companyId"=>1
                                                )
                            )
@@ -38,7 +38,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"administrativePunishments",
+/*$data = array("data"=>array("type"=>"administrativePunishments",
                             "attributes"=>array("number"=>'111112222233333',
                                                 "category"=>1,
                                                 "title"=>'111titletitle',
@@ -51,12 +51,12 @@ $data = array("data"=>array("type"=>"administrativePunishments",
               );
 $response = $client->request(
                 'PUT',
-                'administrativePunishments/1',
+                'administrativePunishments/5',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 $status = $response->getStatusCode();
 $body = $response->getBody();

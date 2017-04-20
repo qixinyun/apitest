@@ -52,28 +52,12 @@ $response = $client->request(
                 'json' => $data
                 ]
             );*/
-
-$response = $client->request(
-                'PUT',
-                'applyClearInfoForms/28/decline',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json']
-                ]
-            );
-
-/*$response = $client->request(
-                'PUT',
-                'applyClearInfoForms/27/approve',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json']
-                ]
-            );*/
-
+//edit -- 结束
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
-//edit -- 结束
+
 
 echo "<pre>";
 print_r($status);

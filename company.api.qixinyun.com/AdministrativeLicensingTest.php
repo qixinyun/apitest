@@ -10,21 +10,21 @@ use GuzzleHttp;
 //get 
  //filter[status]
  //filter[company]
- $response = $client->request('GET', 'administrativeLicensings',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'administrativeLicensings',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'administrativeLicensings/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'administrativeLicensings?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"administrativeLicensings",
-                            "attributes"=>array("number"=>'555555555555',
-                                                "title"=>'titletitletitle',
-                                                "validityFrom"=>'2009-05-05',
-                                                "validityTo"=>'2029-05-05',
-                                                "content"=>'contentcontentcontent',
-                                                "council"=>'councilcouncilcouncilcouncil',
-                                                "detail"=>'detaildetaildetaildetail',
+                            "attributes"=>array("number"=>'1555555555555',
+                                                "title"=>'1titletitletitle',
+                                                "validityFrom"=>'2019-05-05',
+                                                "validityTo"=>'2039-05-05',
+                                                "content"=>'11contentcontentcontent',
+                                                "council"=>'11councilcouncilcouncilcouncil',
+                                                "detail"=>'11detaildetaildetaildetail',
                                                 "category"=>1,
-                                                "attachments"=>array('attachments155','attachments255','attachments355'),
+                                                "attachments"=>array('a11ttachments155','at11tachments255','at11tachments355'),
                                                 "status"=>1,
                                                 "companyId"=>1
                                                )
@@ -41,28 +41,28 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"administrativeLicensings",
-                            "attributes"=>array("number"=>'111112222233333',
-                                                "title"=>'titletitletitle1',
+$data = array("data"=>array("type"=>"administrativeLicensings",
+                            "attributes"=>array("number"=>'331112222233333',
+                                                "title"=>'33titletitletitle1',
                                                 "validityFrom"=>'2019-05-05',
                                                 "validityTo"=>'2039-05-05',
-                                                "content"=>'11contentcontentcontent',
-                                                "council"=>'11councilcouncilcouncilcouncil',
-                                                "detail"=>'11detaildetaildetaildetail',
+                                                "content"=>'3311contentcontentcontent',
+                                                "council"=>'3311councilcouncilcouncilcouncil',
+                                                "detail"=>'1331detaildetaildetaildetail',
                                                 "category"=>2,
-                                                "attachments"=>array('attachments125','attachments235','attachments345'),
+                                                "attachments"=>array('atta33chments125','attach33ments235','a33ttachments345'),
                                                 "status"=>2
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'administrativeLicensings/1',
+                'administrativeLicensings/3',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
