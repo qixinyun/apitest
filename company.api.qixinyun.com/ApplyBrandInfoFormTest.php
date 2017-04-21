@@ -16,7 +16,7 @@ use GuzzleHttp;
 // $response = $client->request('GET', 'applyBrandInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyBrandInfoForms",
+$data = array("data"=>array("type"=>"applyBrandInfoForms",
                             "attributes"=>array("name"=>"111namemmmmmmmm",
                                                 "category"=>2,
                                                 "fillingTime"=>'2059-05-05',
@@ -35,7 +35,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
@@ -50,7 +50,7 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'applyBrandInfoForms/12',
+                'applyBrandInfoForms/1',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
