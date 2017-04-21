@@ -65,22 +65,6 @@ $response = $client->request(
             );
 //edit -- 结束
 
-/*$response = $client->request(
-                'PUT',
-                'applyRevocationInfoForms/31/decline',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json']
-                ]
-            );*/
-
-/*$response = $client->request(
-                'PUT',
-                'applyRevocationInfoForms/32/approve',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json']
-                ]
-            );*/
-
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
