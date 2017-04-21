@@ -16,7 +16,7 @@ use GuzzleHttp;
 // $response = $client->request('GET', 'applyModifiedInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyModifiedInfoForms",
+$data = array("data"=>array("type"=>"applyModifiedInfoForms",
                             "attributes"=>array("category"=>1,
                                                 "beforeModifiedInfo"=>"beforeModifiedInfo",
                                                 "afterModifiedInfo"=>"afterModifiedInfo",
@@ -33,7 +33,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
