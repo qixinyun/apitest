@@ -45,33 +45,34 @@ $response = $client->request(
 
 //edit -- 开始
 /*$data = array("data"=>array("type"=>"applyAdministrativeLicensingForms",
-                            "attributes"=>array("number"=>'331112222233333',
-                                                "title"=>'33titletitletitle1',
-                                                "validityFrom"=>'2019-05-05',
-                                                "validityTo"=>'2039-05-05',
-                                                "content"=>'3311contentcontentcontent',
-                                                "council"=>'3311councilcouncilcouncilcouncil',
-                                                "detail"=>'1331detaildetaildetaildetail',
+                            "attributes"=>array("number"=>'1331112222233333',
+                                                "title"=>'313titletitletitle1',
+                                                "validityFrom"=>'2029-05-05',
+                                                "validityTo"=>'2049-05-05',
+                                                "content"=>'13311contentcontentcontent',
+                                                "council"=>'31311councilcouncilcouncilcouncil',
+                                                "detail"=>'11331detaildetaildetaildetail',
                                                 "category"=>2,
-                                                "attachments"=>array('atta33chments125','attach33ments235','a33ttachments345'),
+                                                "attachments"=>array('a1tta33chments125','a1ttach33ments235','a33tt1achments345'),
                                                 "administrativeLicensingStatus"=>2,
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyAdministrativeLicensingForms/12',
+                'applyAdministrativeLicensingForms/4',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );*/
+//edit -- 结束
 
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
-//edit -- 结束
+
 
 echo "<pre>";
 print_r($status);
@@ -81,19 +82,28 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyAdministrativeLicensingForms",
-        "id": "1",
+        "id": "8",
         "attributes": {
             "userIdentification": 1,
-            "name": "namenamenamenamenamenamenamenamenamenamenamename",
+            "number": "331112222233333",
+            "title": "33titletitletitle1",
+            "validityFrom": "2019-05-05",
+            "validityTo": "2039-05-05",
+            "content": "3311contentcontentcontent",
+            "council": "3311councilcouncilcouncilcouncil",
+            "detail": "1331detaildetaildetaildetail",
             "category": 2,
-            "fillingTime": "2059-05-05",
-            "logo": "logologologo",
-            "brandInfoStatus": -2,
+            "administrativeLicensingStatus": -2,
+            "attachments": [
+                "atta33chments125",
+                "attach33ments235",
+                "a33ttachments345"
+            ],
             "company": 1,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1487837051
+            "createTime": 1492760024
         },
         "relationships": {
             "user": {
@@ -104,7 +114,7 @@ print_r($contents);
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyAdministrativeLicensingForms\/1"
+            "self": "127.0.0.1\/applyAdministrativeLicensingForms\/8"
         }
     }
 }*/
