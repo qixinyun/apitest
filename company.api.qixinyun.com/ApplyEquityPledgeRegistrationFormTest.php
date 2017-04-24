@@ -12,7 +12,7 @@ use GuzzleHttp;
  //filter[uid]
  //filter[userIdentification]
  //$response = $client->request('GET', 'applyEquityPledgeRegistrationForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'applyEquityPledgeRegistrationForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyEquityPledgeRegistrationForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyEquityPledgeRegistrationForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
@@ -71,22 +71,6 @@ $response = $client->request(
                 ]
             );*/
 //edit -- 结束
-
-$response = $client->request(
-                'PUT',
-                'applyEquityPledgeRegistrationForms/12/decline',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json']
-                ]
-            );
-
-/*$response = $client->request(
-                'PUT',
-                'applyEquityPledgeRegistrationForms/11/approve',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json']
-                ]
-            );*/
 
 
 $status = $response->getStatusCode();
