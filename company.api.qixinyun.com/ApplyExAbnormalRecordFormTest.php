@@ -9,12 +9,10 @@ use GuzzleHttp;
 
 //get 
  //filter[status]
- //filter[company]
  //filter[userIdentification]
 // filter[uid]
- //filter[inAbnormalRecord]
 // $response = $client->request('GET', 'applyExAbnormalRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'applyExAbnormalRecordForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyExAbnormalRecordForms/18,19',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyExAbnormalRecordForms?filter[inAbnormalRecord]=1&sort=id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
@@ -41,27 +39,26 @@ $response = $client->request(
 
 //edit -- 开始
 /*$data = array("data"=>array("type"=>"applyExAbnormalRecordForms",
-                            "attributes"=>array("reason"=>'reasonreasonreason33333',
-                                                "date"=>'2080-04-12',
-                                                "decisionAuthority"=>'11111decisionAuthoritydecisionAuthoritydecisionAuthority'
+                            "attributes"=>array("reason"=>'1reasonreasonreason33333',
+                                                "date"=>'2180-04-12',
+                                                "decisionAuthority"=>'2211111decisionAuthoritydecisionAuthoritydecisionAuthority'
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyExAbnormalRecordForms/1',
+                'applyExAbnormalRecordForms/19',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );*/
-
-
+//edit -- 结束
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
-//edit -- 结束
+
 
 echo "<pre>";
 print_r($status);

@@ -7,8 +7,14 @@ use GuzzleHttp;
 //$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
 $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
-//get  filter[name]  filter[principalRealName] 
-//sort=-id  sort=-name  sort=-principalRealName
+//get  
+// filter[name]  企业名称
+// filter[principalRealName] 法人姓名
+// filter[uid]  用户id
+// filter[status] 审核状态
+    // 2 审核通过
+    // 0  待审核
+    // -2   审核不通过
 // $response = $client->request('GET', 'applyCompanyForms?sort=-principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyForms?filter[name]=555&filter[principalRealName]=ni',['haders'=>['Content-' => 'application/vnd.api+json']]);

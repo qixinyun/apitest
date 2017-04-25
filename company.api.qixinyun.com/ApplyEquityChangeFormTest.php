@@ -4,18 +4,19 @@ namespace Company;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
- //$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
  $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
  //filter[status]
- //filter[company]
-// $response = $client->request('GET', 'equityChanges',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'equityChanges/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'equityChanges?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ //filter[uid]
+ //filter[userIdentification]
+ //$response = $client->request('GET', 'applyEquityChangeForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyEquityChangeForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyEquityChangeForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"equityChanges",
+/*$data = array("data"=>array("type"=>"applyEquityChangeForms",
                             "attributes"=>array("beforeChangeEquityRatio"=>"beforeChangeEquityRatio",
                                                 "afterhangeEquityRatio"=>"afterhangeEquityRatio",
                                                 "date"=>"2010-01-01",
@@ -25,13 +26,15 @@ use GuzzleHttp;
                                                 "court"=>"court",
                                                 "content"=>"contentcontent",
                                                 "shareholderId"=>1,
-                                                "companyId"=>1
-                                               )
+                                                "companyId"=>1,
+                                                "uid"=>1,
+                                                "userIdentification"=>1
+                                               ) 
                            )
               );
 $response = $client->request(
                 'POST',
-                'equityChanges',
+                'applyEquityChangeForms',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -40,31 +43,33 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"equityChanges",
-                            "attributes"=>array("beforeChangeEquityRatio"=>"1beforeChangeEquityRatio",
-                                                "afterhangeEquityRatio"=>"1afterhangeEquityRatio",
-                                                "date"=>"2011-01-01",
-                                                "executor"=>"1executor",
-                                                "equityAmount"=>"1equityAmount",
-                                                "assignee"=>"1assignee",
-                                                "court"=>"1court",
-                                                "content"=>"1contentcontent"
+$data = array("data"=>array("type"=>"applyEquityChangeForms",
+                            "attributes"=>array("beforeChangeEquityRatio"=>"33beforeChangeEquityRatio",
+                                                "afterhangeEquityRatio"=>"33afterhangeEquityRatio",
+                                                "date"=>"2013-01-01",
+                                                "executor"=>"33executor",
+                                                "equityAmount"=>"e33quityAmount",
+                                                "assignee"=>"33assignee",
+                                                "court"=>"33court",
+                                                "content"=>"33contentcontent"
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'equityChanges/2',
+                'applyEquityChangeForms/33',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );
+//edit -- 结束
+
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
-//edit -- 结束
+
 
 echo "<pre>";
 print_r($status);
@@ -73,9 +78,10 @@ print_r($contents);
 /*{
     "meta": [],
     "data": {
-        "type": "equityChanges",
-        "id": "2",
+        "type": "applyEquityChangeForms",
+        "id": "33",
         "attributes": {
+            "userIdentification": 1,
             "beforeChangeequityRatio": "beforeChangeEquityRatio",
             "afterhangeequityRatio": "afterhangeEquityRatio",
             "date": "2010-01-01",
@@ -84,27 +90,23 @@ print_r($contents);
             "assignee": "assignee",
             "court": "court",
             "content": "contentcontent",
+            "shareholder": 1,
+            "company": 1,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1491965072
+            "createTime": 1492669025
         },
         "relationships": {
-            "companies": {
+            "user": {
                 "data": {
-                    "type": "companies",
-                    "id": "1"
-                }
-            },
-            "shareholders": {
-                "data": {
-                    "type": "shareholders",
+                    "type": "users",
                     "id": "1"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/equityChanges\/2"
+            "self": "127.0.0.1\/applyEquityChangeForms\/33"
         }
     }
 }*/

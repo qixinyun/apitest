@@ -9,7 +9,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
 // $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'getUsers?filter[openId]=12345678911',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp  --start
@@ -30,25 +30,25 @@ $response = $client->request(
 //signUp  --end
 
 //signUp  --start
-//  $data = array("data"=>array("type"=>"users",
-//                             "attributes"=>array("cellPhone"=>"12345678911",
-//                                                 "password"=>"1234678911",
-//                                                 "openId"=>"12345678911",
-//                                                 "tokenId"=>"",
-//                                                 "source"=>2,
-//                                                 "avatar"=>"avatar",
-//                                                 "nickName"=>"nickname"
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'POST',
-//                 'users',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+ /*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("cellPhone"=>"21196793881",
+                                                "password"=>"21196793881",
+                                                "openId"=>"21196793881xx",
+                                                "tokenId"=>"21196793881xxx",
+                                                "source"=>1,
+                                                "avatar"=>"avatar",
+                                                "nickName"=>"nickname"
+                                               )
+                           )
+              );
+$response = $client->request(
+                'POST',
+                'users',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
 //signUp  --end
 
 //restPassword --start
@@ -69,8 +69,8 @@ $response = $client->request(
 //restPassword --end
 
 //signIn --start
-/*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"18729352536",
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("cellPhone"=>"18729358536",
                                                 "password"=>"123123"
                                                )
                            )
@@ -82,19 +82,19 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //signIn --end
 
 //openSignIn --start
 /*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("openId"=>"12345678911",
-                                                "source"=>"2"
+                            "attributes"=>array("openId"=>"openIdopenIdope",
+                                                "source"=>"1"
                                                )
                            )
               );
 $response = $client->request(
                 'POST',
-                'users/openSignIn',
+                'users/signIn/open',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -104,10 +104,8 @@ $response = $client->request(
 
 //updatePassword --start
 /*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("identifyCardNumber"=>"xxxxxxxxxxxx123",
-                                                "realName"=>"realname",
-                                                "nickName"=>"nickname",
-                                                "avatar"=>"xxxx123456"
+                            "attributes"=>array("oldPassword"=>"旧密码",
+                                                "password"=>"新密码"
                                                )
                            )
               );*/
@@ -122,43 +120,95 @@ $response = $client->request(
 //updatePassword --end
 
 //edit --start
-$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array(
-                                                // "identifyCardNumber"=>"3editxxxxxxxxxx133",
-                                                // "realName"=>"311realname",
-                                                // "nickName"=>"311nickname",
-                                                "avatar"=>"dadadada",
-                                                // "qq"=>"31113456",
-                                                // "email"=>"313333311@qq.com",
-                                                // "gender"=>1,
-                                                // "address"=>"3addressaddress",
-                                                // "birthday"=>"2011-01-10",
-                                                // "province"=>23,
-                                                // "city"=>135,
-                                                // "region"=>1200
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("identifyCardNumber"=>"108txxxxxxxxxx133",
+                                                "realName"=>"108realname",
+                                                "nickName"=>"108nickname",
+                                                "avatar"=>"",
+                                                "qq"=>"10813456",
+                                                "email"=>"313333108@qq.com",
+                                                "gender"=>1,
+                                                "address"=>"108addressaddress",
+                                                "birthday"=>"1998-01-10",
+                                                "province"=>12,
+                                                "city"=>125,
+                                                "region"=>1250
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
                 'users/1',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
-//edit --end
-
-//verifyEmail --start 
-/*$response = $client->request(
-                'PUT',
-                'users/1/verifyEmail',
+                'users/107',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );*/
-//verifyEmail --end
+//edit --end
+
+//bindEmail --start 
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("email"=>"222nijing@139.com")
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'users/2/bind/email',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
+//bindEmail --end
+
+//bindQQ --start 
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("qq"=>"141414111111111",
+                                                "openId"=>"141414openIdopenIdope",
+                                                "tokenId"=>"141414tokenIdtokenId"
+                                               )
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'users/14/bind/qq',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
+//bindQQ --end
+
+//updateCellPhone --start 
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("cellPhone"=>"12345678912")
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'users/2/updateCellPhone',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
+//updateCellPhone --end
+
+//addLawyerCertificates --start 
+/*$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("lawyerCertificates"=>array("1xxxxxxx", "2xxxxxxxxxx", "3xxxxxxx"))
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'users/105/addLawyerCertificates',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
+//addLawyerCertificates --end
 
 
 $status = $response->getStatusCode();
@@ -166,7 +216,9 @@ $body = $response->getBody();
 $contents = $body->getContents();
 
 echo "<pre>";
-print_r($contents);
+
+var_dump($status);
+var_dump($contents);
 
 
 /*
@@ -174,30 +226,35 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "users",
-        "id": "7",
+        "id": "5",
         "attributes": {
-            "cellPhone": "12345678911",
-            "realName": "211realname",
-            "userName": "hOAz1484365438",
-            "nickName": "211nickname",
+            "cellPhone": "",
+            "realName": "",
+            "userName": "XGJM1484362260",
+            "nickName": "nickname",
             "status": 0,
-            "createTime": 1484365438,
-            "updateTime": 1490785035,
+            "createTime": 1484362260,
+            "updateTime": 1492073257,
             "statusTime": 0,
-            "identifyCardNumber": "2editxxxxxxxxxx123",
-            "avatar": "211xxxx123456",
-            "qq": "21113456",
-            "email": "212222211@qq.com",
+            "identifyCardNumber": "",
+            "avatar": "avatar",
+            "qq": "",
+            "email": "",
             "isEmailVerified": 0,
-            "gender": 2,
-            "address": "2addressaddress",
-            "birthday": "2010-01-10",
-            "province": 22,
-            "city": 125,
-            "region": 1000
+            "gender": 0,
+            "address": "",
+            "birthday": "0000-00-00",
+            "province": 0,
+            "city": 0,
+            "region": 0,
+            "lawyerCertificates": [
+                "1xxxxxxx",
+                "2xxxxxxxxxx",
+                "3xxxxxxx"
+            ]
         },
         "links": {
-            "self": "127.0.0.1\/users\/7"
+            "self": "127.0.0.1\/users\/5"
         }
     }
 }

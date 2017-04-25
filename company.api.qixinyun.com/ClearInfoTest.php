@@ -4,21 +4,21 @@ namespace Company;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
- $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
- //$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
  //filter[status]
  //filter[company]
- $response = $client->request('GET', 'clearInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'clearInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'clearInfos/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'clearInfos?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"clearInfos",
-                            "attributes"=>array("name"=>"namenamename",
-                                                "members"=>"membersmembers",
-                                                "maxClearCount"=>12,
+                            "attributes"=>array("name"=>"111namenamename",
+                                                "members"=>"111membersmembers",
+                                                "maxClearCount"=>112,
                                                 "companyId"=>1
                                                )
                            )
@@ -34,10 +34,10 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"clearInfos",
-                            "attributes"=>array("name"=>"namenamename",
-                                                "members"=>"membersmembers",
-                                                "maxClearCount"=>12,
+$data = array("data"=>array("type"=>"clearInfos",
+                            "attributes"=>array("name"=>"11122namenamename",
+                                                "members"=>"11122membersmembers",
+                                                "maxClearCount"=>122,
                                                )
                            )
               );
@@ -48,7 +48,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
@@ -60,39 +60,29 @@ print_r($status);
 print_r($contents);
 
 /*{
-            "meta": {
-                "count": 1
-            },
-            "links": {
-                "first": null,
-                "last": null,
-                "prev": null,
-                "next": null
-            },
-            "data": [
-                {
-                    "type": "clearInfos",
-                    "id": "1",
-                    "attributes": {
-                        "name": "namename",
-                        "members": "membersmembers",
-                        "maxClearCount": 12,
-                        "status": 0,
-                        "statusTime": 0,
-                        "updateTime": 0,
-                        "createTime": 1487833387
-                    },
-                    "relationships": {
-                        "companies": {
-                            "data": {
-                                "type": "companies",
-                                "id": "1"
-                            }
-                        }
-                    },
-                    "links": {
-                        "self": "127.0.0.1\/clearInfos\/1"
-                    }
+    "meta": [],
+    "data": {
+        "type": "clearInfos",
+        "id": "2",
+        "attributes": {
+            "name": "111namenamename",
+            "members": "111membersmembers",
+            "maxClearCount": 112,
+            "status": 0,
+            "statusTime": 0,
+            "updateTime": 0,
+            "createTime": 1491961753
+        },
+        "relationships": {
+            "companies": {
+                "data": {
+                    "type": "companies",
+                    "id": "1"
                 }
-            ]
-        }*/
+            }
+        },
+        "links": {
+            "self": "127.0.0.1\/clearInfos\/2"
+        }
+    }
+}*/

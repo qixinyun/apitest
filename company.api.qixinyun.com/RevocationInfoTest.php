@@ -9,27 +9,23 @@ use GuzzleHttp;
 
 //get 
  //filter[status]
- //filter[name]
- //filter[category]
  //filter[company]
- $response = $client->request('GET', 'brandInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'brandInfos/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'brandInfos?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ //$response = $client->request('GET', 'revocationInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'revocationInfos/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'revocationInfos?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"brandInfos",
-                            "attributes"=>array("name"=>"namenamename",
-                                                "category"=>1,
-                                                "fillingTime"=>'2029-05-05',
-                                                "logo"=>'logologologo',
-                                                "status"=>0,
+/*$data = array("data"=>array("type"=>"revocationInfos",
+                            "attributes"=>array("category"=>1,
+                                                "beforeRevocationInfo"=>"beforeRevocationInfo",
+                                                "afterRevocationInfo"=>"afterRevocationInfo",
                                                 "companyId"=>1
                                                )
                            )
               );
 $response = $client->request(
                 'POST',
-                'brandInfos',
+                'revocationInfos',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -38,23 +34,21 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"brandInfos",
-                            "attributes"=>array("name"=>"namenamename111",
-                                                "category"=>2,
-                                                "fillingTime"=>'2029-05-05',
-                                                "logo"=>'logologologo111',
-                                                "status"=>-2
+$data = array("data"=>array("type"=>"revocationInfos",
+                            "attributes"=>array("category"=>2,
+                                                "beforeRevocationInfo"=>"222beforeRevocationInfo",
+                                                "afterRevocationInfo"=>"2222afterRevocationInfo",
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'brandInfos/1',
+                'revocationInfos/1',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
@@ -68,17 +62,16 @@ print_r($contents);
 /*{
     "meta": [],
     "data": {
-        "type": "brandInfos",
-        "id": "2",
+        "type": "revocationInfos",
+        "id": "1",
         "attributes": {
-            "name": "namenamename",
             "category": 1,
-            "fillingTime": "2029-05-05",
-            "logo": "logologologo",
+            "beforeRevocationInfo": "beforeRevocationInfo",
+            "afterRevocationInfo": "afterRevocationInfo",
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1487833387
+            "createTime": 1492660078
         },
         "relationships": {
             "companies": {
@@ -89,7 +82,7 @@ print_r($contents);
             }
         },
         "links": {
-            "self": "127.0.0.1\/brandInfos\/2"
+            "self": "127.0.0.1\/revocationInfos\/1"
         }
     }
 }*/
