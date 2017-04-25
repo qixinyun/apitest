@@ -7,9 +7,10 @@ use GuzzleHttp;
 $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
  // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
+
 //get 
-// $response = $client->request('GET', 'users?filter[userGroupId]=12',['haders'=>['Content-' => 'application/vnd.api+json']]);
-$response = $client->request('GET', 'users/2',['h aders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'users/73',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'users?filter[cellPhone]=15592660858&sort=-id&page[number]=1&page[size]=20',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp -- 开始
 // $data = array("data"=>array("type"=>"users",

@@ -5,33 +5,33 @@ require '../vendor/autoload.php';
 
 //get 
  $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8006/']);
-// $response = $client->request('GET', 'workflows/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'workflows/11',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'workflows?filter[userGroupId]=3&filter[category]=2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'workflows?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-$data = array("data"=>array("type"=>"workflows",
-                            "attributes"=>array("userGroupId"=>2,
-                                                "category"=>2,
-                                                'nodeList'=>array(
-                                                		array(
-                                                			'userGroupId'=>1,
-                                                			'departmentId'=>8,
-                                                			'category'=>0,
-                                                			'roleId'=>4,
-                                                		)                                          		
-                                                	)
-                                               )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'workflows',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
+// $data = array("data"=>array("type"=>"workflows",
+//                             "attributes"=>array("userGroupId"=>2,
+//                                                 "category"=>2,
+//                                                 'nodeList'=>array(
+//                                                 		array(
+//                                                 			'userGroupId'=>1,
+//                                                 			'departmentId'=>8,
+//                                                 			'category'=>0,
+//                                                 			'roleId'=>4,
+//                                                 		)                                          		
+//                                                 	)
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'workflows',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //add -- 结束
 
 //edit -- 开始
