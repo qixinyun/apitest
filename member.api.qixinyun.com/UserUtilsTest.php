@@ -4,8 +4,8 @@ namespace User;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
- $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ // $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8001/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
 // $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
@@ -30,25 +30,25 @@ $response = $client->request(
 //signUp  --end
 
 //signUp  --start
-/* $data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"12345678911",
-                                                "password"=>"1234678911",
-                                                "openId"=>"12345678911",
-                                                "tokenId"=>"",
-                                                "source"=>2,
-                                                "avatar"=>"avatar",
-                                                "nickName"=>"nickname"
-                                               )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'users',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );*/
+//  $data = array("data"=>array("type"=>"users",
+//                             "attributes"=>array("cellPhone"=>"12345678911",
+//                                                 "password"=>"1234678911",
+//                                                 "openId"=>"12345678911",
+//                                                 "tokenId"=>"",
+//                                                 "source"=>2,
+//                                                 "avatar"=>"avatar",
+//                                                 "nickName"=>"nickname"
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'users',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //signUp  --end
 
 //restPassword --start
@@ -123,24 +123,25 @@ $response = $client->request(
 
 //edit --start
 $data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("identifyCardNumber"=>"3editxxxxxxxxxx133",
-                                                "realName"=>"311realname",
-                                                "nickName"=>"311nickname",
-                                                "avatar"=>"311xxxx133456",
-                                                "qq"=>"31113456",
-                                                "email"=>"313333311@qq.com",
-                                                "gender"=>1,
-                                                "address"=>"3addressaddress",
-                                                "birthday"=>"2011-01-10",
-                                                "province"=>23,
-                                                "city"=>135,
-                                                "region"=>1200
+                            "attributes"=>array(
+                                                // "identifyCardNumber"=>"3editxxxxxxxxxx133",
+                                                // "realName"=>"311realname",
+                                                // "nickName"=>"311nickname",
+                                                "avatar"=>"dadadada",
+                                                // "qq"=>"31113456",
+                                                // "email"=>"313333311@qq.com",
+                                                // "gender"=>1,
+                                                // "address"=>"3addressaddress",
+                                                // "birthday"=>"2011-01-10",
+                                                // "province"=>23,
+                                                // "city"=>135,
+                                                // "region"=>1200
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'users/108',
+                'users/1',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -165,7 +166,7 @@ $body = $response->getBody();
 $contents = $body->getContents();
 
 echo "<pre>";
-var_dump($contents);
+print_r($contents);
 
 
 /*
