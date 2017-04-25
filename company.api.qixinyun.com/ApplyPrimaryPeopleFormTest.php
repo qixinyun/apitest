@@ -12,7 +12,7 @@ use GuzzleHttp;
  //filter[company]
  //filter[uid]
  //filter[userIdentification]
-// $response = $client->request('GET', 'applyPrimaryPeopleForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyPrimaryPeopleForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyPrimaryPeopleForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyPrimaryPeopleForms?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -59,7 +59,7 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'applyPrimaryPeopleForms/1',
+                'applyPrimaryPeopleForms/16',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -81,30 +81,34 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyPrimaryPeopleForms",
-        "id": "1",
+        "id": "16",
         "attributes": {
-            "userIdentification": 1,
-            "punishmentReason": 1,
-            "punishmentContent": "punishmentContentpunishmentContent",
-            "punishmentDate": "2010-02-02",
-            "punishmentOrganization": "punishmentOrganization",
-            "classificationSupervisionLevel": 1,
-            "company": 1,
+            "userIdentification": 2,
+            "name": "editnamenamename",
+            "duties": 2,
+            "gender": 2,
+            "nationality": 4,
+            "birthday": "1995-05-05",
+            "education": 8,
+            "socialDuties": "socialDuties",
+            "experience": "experience",
+            "abroadInvestmen": -2,
+            "company": 2,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1488529268
+            "createTime": 1493087661
         },
         "relationships": {
             "user": {
                 "data": {
                     "type": "users",
-                    "id": "1"
+                    "id": "2"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyPrimaryPeopleForms\/1"
+            "self": "127.0.0.1\/applyPrimaryPeopleForms\/16"
         }
     }
 }*/
