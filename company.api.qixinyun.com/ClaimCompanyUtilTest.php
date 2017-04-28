@@ -9,33 +9,33 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get  filter[name]  filter[principalRealName] 
 //sort=-id  sort=-name  sort=-principalRealName
-//$response = $client->request('GET', 'claimCompanyForms?sort=-principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'claimCompanyForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+//$response = $client->request('GET', 'claimCompanyForms?filter[company]=1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'claimCompanyForms?filter[uid]=128',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'claimCompanyForms?filter[name]=h&filter[principalRealName]=法',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 
 //add --start
-/*$data = array("data"=>array("type"=>"claimCompanyForms",
-                                    "attributes"=>array( "name"=>"企业hello555",
-                                                         "registrationNumber"=>"xxxxxxxxxx",
-                                                         "unifiedSocialCreditCode"=>"xxxxxxxxxx",
-                                                         "certificate"=>array('certificate11','certificate22','certificate33'),
-                                                         "province"=>20,
-                                                         "city"=>30,
-                                                         "region"=>40,
+$data = array("data"=>array("type"=>"claimCompanyForms",
+                                    "attributes"=>array( "name"=>"ffffffff企业hello555",
+                                                         "registrationNumber"=>"ffffffffxxxxxxxxxx",
+                                                         "unifiedSocialCreditCode"=>"ffffffffxxxxxxxxxx",
+                                                         "certificate"=>array('ffffffffcertificate11','ffffffffcertificate22','ffffffffcertificate33'),
+                                                         "province"=>2,
+                                                         "city"=>52,
+                                                         "region"=>500,
                                                          "uid"=>1,
-                                                         "principalRealName"=>"hhhh",
-                                                         "principalIdentifyCardNumber"=>"123456798962",
-                                                         "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
-                                                         "principalIdentifyCardBackPhoto"=>"22xxxxxxxxxx",
-                                                         "principalIdentifyCardHandHeldPhoto"=>"33xxxxxxxxxx",
-                                                         "principalIdentifyCardValidity"=>"2019-11-11",
-                                                         "principalBirthday"=>"2010-10-10",
+                                                         "principalRealName"=>"ffffffff",
+                                                         "principalIdentifyCardNumber"=>"fffffff123456798962",
+                                                         "principalIdentifyCardFrontPhoto"=>"fffffff11xxxxxxxxxx",
+                                                         "principalIdentifyCardBackPhoto"=>"2fffffff2xxxxxxxxxx",
+                                                         "principalIdentifyCardHandHeldPhoto"=>"fffffff33xxxxxxxxxx",
+                                                         "principalIdentifyCardValidity"=>"2029-11-11",
+                                                         "principalBirthday"=>"2020-10-10",
                                                          "principalBirthdayCategory"=>2,
-                                                         "contactName"=>"nijinghello",
-                                                         "contactDuties"=>"程序员",
-                                                         "contactPhone"=>"18840287763",
-                                                         "companyId"=>201
+                                                         "contactName"=>"fffffffijinghello",
+                                                         "contactDuties"=>"fffffff程序员",
+                                                         "contactPhone"=>"17840287763",
+                                                         "companyId"=>1
                                                          )
                                        )
                           );
@@ -46,11 +46,11 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -end
 
 //edit --start
-$data = array("data"=>array("type"=>"claimCompanyForms",
+/*$data = array("data"=>array("type"=>"claimCompanyForms",
                                     "attributes"=>array( "name"=>"helloworld",
                                                          "registrationNumber"=>"xxxxxxxxxx",
                                                          "unifiedSocialCreditCode"=>"xxxxxxxxxx",
@@ -74,51 +74,20 @@ $data = array("data"=>array("type"=>"claimCompanyForms",
                           );
 $response = $client->request(
                 'PUT',
-                'claimCompanyForms/2',
+                'claimCompanyForms/43',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //edit --end
-
-//confirm --start
 /*$response = $client->request(
                 'PUT',
-                'claimCompanyForms/2/confirm',
+                'claimCompanyForms/57/approve',
                 [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
             );*/
-//confirm --end
-
-//decline --start
-/*$data = array("data"=>array("type"=>"replyClaimCompanyForms",
-                                "attributes"=>array( "reasonCategory"=>1,
-                                                     "comment"=>'nononononn'
-                                                     )
-                                       )
-                          );
-
-$response = $client->request(
-                'PUT',
-                'claimCompanyForms/4/decline',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );*/
-//decline --end
-
-//get replyClaimCompanyForm --start
-/*$response = $client->request(
-                'GET',
-                'replyClaimCompanyForms?filter[claimCompanyFormId]=4',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                ]
-            );*/
-//get replyClaimCompanyForm --end
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
