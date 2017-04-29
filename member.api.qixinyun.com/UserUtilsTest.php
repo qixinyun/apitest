@@ -9,24 +9,24 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
 // $response = $client->request('GET', 'users',['haders'=>['Content-' => 'application/vnd.api+json']]);
- $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'getUsers?filter[openId]=12345678911',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp  --start
-/* $data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"18840287766",
-                                                "password"=>"18840287766"
-                                               )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'users',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );*/
+//  $data = array("data"=>array("type"=>"users",
+//                             "attributes"=>array("cellPhone"=>"18241237766",
+//                                                 "password"=>"18241237766"
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'users',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //signUp  --end
 
 //signUp  --start
@@ -52,9 +52,9 @@ $response = $client->request(
 //signUp  --end
 
 //restPassword --start
-/*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"18840287763",
-                                                "password"=>"18840287763"
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("passprot"=>"222nijing@139.com",
+                                                "password"=>"123456"
                                                )
                            )
               );
@@ -65,24 +65,24 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //restPassword --end
 
 //signIn --start
-$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"18729358536",
-                                                "password"=>"123123"
-                                               )
-                           )
-              );
-$response = $client->request(
-                'POST',
-                'users/signIn',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );
+// $data = array("data"=>array("type"=>"users",
+//                             "attributes"=>array("cellPhone"=>"18729358536",
+//                                                 "password"=>"123123"
+//                                                )
+//                            )
+//               );
+// $response = $client->request(
+//                 'POST',
+//                 'users/signIn',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //signIn --end
 
 //openSignIn --start
@@ -148,18 +148,18 @@ $response = $client->request(
 //edit --end
 
 //bindEmail --start 
-/*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("email"=>"222nijing@139.com")
-                           )
-              );
-$response = $client->request(
-                'PUT',
-                'users/2/bind/email',
-                [
-                'haders'=>['Content-Type' => 'application/vnd.api+json'],
-                'json' => $data
-                ]
-            );*/
+// $data = array("data"=>array("type"=>"users",
+//                             "attributes"=>array("email"=>"222nijing@139.com")
+//                            )
+//               );
+// $response = $client->request(
+//                 'PUT',
+//                 'users/1/bind/email',
+//                 [
+//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                 'json' => $data
+//                 ]
+//             );
 //bindEmail --end
 
 //bindQQ --start 
