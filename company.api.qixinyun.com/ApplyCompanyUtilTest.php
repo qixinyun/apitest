@@ -23,7 +23,14 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
     // 2 审核通过
     // 0  待审核
     // -2   审核不通过
- $response = $client->request('GET', 'applyCompanyForms/61,60',['haders'=>['Content-' => 'application/vnd.api+json']]);
+
+//获取申请表基本信息接口
+$response = $client->request('GET', 'applyForms/61',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'applyForms/61,60',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request('GET', 'applyForms?filter[uid]=1&filter[userIdentification]=2&filter[category]=45',['haders'=>['Content-' => 'application/vnd.api+json']]);
+
+//添加获取申领企业信息接口
+// $response = $client->request('GET', 'applyCompanyForms/61,60',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyForms?filter[name]=555&filter[principalRealName]=ni',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
