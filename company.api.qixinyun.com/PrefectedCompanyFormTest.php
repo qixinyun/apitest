@@ -15,7 +15,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 
 //add --start
-/*$data = array("data"=>array("type"=>"prefectedCompanyForms",
+$data = array("data"=>array("type"=>"prefectedCompanyForms",
                                     "attributes"=>array( "name"=>"dwwwwqiyemingcheng11288",
                                                          "certificate"=>array('wwweeeeress11','address22','address33'),
                                                          "province"=>2,
@@ -56,7 +56,8 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
                                                          "detailedAddress"=>"详细地址",
                                                          "businessPlace"=>"营业场所",
                                                          "residence"=>"住所",
-                                                         "companyId"=>1
+                                                         "companyId"=>1,
+                                                         "userIdentification"=>1
                                                          )
                                        )
                           );
@@ -67,7 +68,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -end
 
 //edit --start
