@@ -12,19 +12,22 @@ use GuzzleHttp;
  //filter[company]
  //filter[uid]
  //filter[userIdentification]
-// $response = $client->request('GET', 'applyEmployeeEvaluateForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyEmployeeEvaluateForms/76,77,78,79,75',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyEmployeeEvaluateForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyEmployeeEvaluateForms?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyEmployeeEvaluateForms",
-                            "attributes"=>array("appraiser"=>"评价人",
-                                                "date"=>"2020-02-02",
-                                                "content"=>'评价内容',
-                                                "duties"=>'评价人岗位',
+                            "attributes"=>array("category"=>1,
+                                                "title"=>"评价标题",
+                                                "nature"=>1,
+                                                "evaluateDetails"=>array(
+                                                    'voucher'=>array('voucher11','voucher22','voucher33'),
+                                                    'content'=>'内容内容内容',
+                                                    'overallEvaluation'=>'总体评价总体评价总体评价'
+                                                ),
                                                 "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                                                "uid"=>1
                                                ) 
                            )
               );
@@ -39,22 +42,26 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyEmployeeEvaluateForms",
-                            "attributes"=>array("appraiser"=>"11评价人",
-                                                "date"=>"2010-02-02",
-                                                "content"=>'111评价内容',
-                                                "duties"=>'111评价人岗位',
+/*$data = array("data"=>array("type"=>"applyEmployeeEvaluateForms",
+                            "attributes"=>array("category"=>2,
+                                                "title"=>"评价标题22",
+                                                "nature"=>2,
+                                                "evaluateDetails"=>array(
+                                                    'voucher'=>array('2222voucher11','222voucher22','2222voucher33'),
+                                                    'content'=>'222内容内容内容',
+                                                    'overallEvaluation'=>'222总体评价总体评价总体评价'
+                                                )
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyEmployeeEvaluateForms/1',
+                'applyEmployeeEvaluateForms/76',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 
 
