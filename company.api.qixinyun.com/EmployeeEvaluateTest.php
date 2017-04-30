@@ -10,16 +10,22 @@ use GuzzleHttp;
 //get 
  //filter[status]
  //filter[company]
-// $response = $client->request('GET', 'employeeEvaluates',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ //filter[uid]
+// $response = $client->request('GET', 'employeeEvaluates/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'employeeEvaluates/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'employeeEvaluates?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'employeeEvaluates?filter[uid]=1sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"employeeEvaluates",
-                            "attributes"=>array("appraiser"=>"评价人",
-                                                "date"=>"2020-02-02",
-                                                "content"=>'评价内容',
-                                                "duties"=>'评价人岗位',
+                            "attributes"=>array("category"=>1,
+                                                "title"=>"评价标题",
+                                                "nature"=>1,
+                                                "evaluateDetails"=>array(
+                                                    'voucher'=>array('voucher11','voucher22','voucher33'),
+                                                    'content'=>'内容内容内容',
+                                                    'overallEvaluation'=>'总体评价总体评价总体评价'
+                                                ),
+                                                "uid"=>1,
                                                 "companyId"=>1
                                                )
                            )
@@ -35,11 +41,15 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"employeeEvaluates",
-                            "attributes"=>array("appraiser"=>"评价人111",
-                                                "date"=>"2027-02-02",
-                                                "content"=>'评价内容111',
-                                                "duties"=>'评价人岗位11',
+/*$data = array("data"=>array("type"=>"employeeEvaluates",
+                            "attributes"=>array("category"=>2,
+                                                "title"=>"222评价标题",
+                                                "nature"=>2,
+                                                "evaluateDetails"=>array(
+                                                    'voucher'=>array('22voucher11','22voucher22','22voucher33'),
+                                                    'content'=>'22内容内容内容',
+                                                    'overallEvaluation'=>'22总体评价总体评价总体评价'
+                                                )
                                                )
                            )
               );
@@ -50,7 +60,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
