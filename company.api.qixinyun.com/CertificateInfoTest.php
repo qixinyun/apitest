@@ -5,7 +5,7 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
  //filter[status]
