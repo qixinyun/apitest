@@ -10,7 +10,7 @@ use GuzzleHttp;
 //get 
  //filter[status]
  //filter[company]
-$response = $client->request('GET', 'equityPledgeRegistrations',['haders'=>['Content-' => 'application/vnd.api+json']]);
+//$response = $client->request('GET', 'equityPledgeRegistrations',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'equityPledgeRegistrations/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'equityPledgeRegistrations?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
