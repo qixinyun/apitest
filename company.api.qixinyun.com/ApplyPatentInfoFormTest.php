@@ -8,10 +8,6 @@ use GuzzleHttp;
  $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
- //filter[status]
- //filter[name]
- //filter[category]
- //filter[patentInfoStatus]
  //filter[company]
  //filter[uid]
  //filter[userIdentification]
