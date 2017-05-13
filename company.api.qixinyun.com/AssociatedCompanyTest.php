@@ -14,7 +14,7 @@ use GuzzleHttp;
  //filter[company]
 // $response = $client->request('GET', 'associatedCompanies',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'associatedCompanies/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
- $response = $client->request('GET', 'associatedCompanies?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'associatedCompanies?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"associatedCompanies",
