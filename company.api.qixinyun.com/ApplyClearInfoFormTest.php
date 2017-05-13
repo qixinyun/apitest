@@ -11,7 +11,7 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- //$response = $client->request('GET', 'applyClearInfoForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyClearInfoForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyClearInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyClearInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
