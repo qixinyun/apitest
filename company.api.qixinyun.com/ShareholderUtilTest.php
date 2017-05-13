@@ -6,13 +6,13 @@ use GuzzleHttp;
 
 $client = new GuzzleHttp\Client();
 //get 
-$response = $client->request(
+/*$response = $client->request(
                 'GET',
                 'http://127.0.0.1/shareholders?filter[company]=2',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 ]
-            );
+            );*/
 
 
 /*$data = array("data"=>array("type"=>"shareholders",
