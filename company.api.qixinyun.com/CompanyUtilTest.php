@@ -4,11 +4,11 @@ namespace Company;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-$client = new GuzzleHttp\Client();
+//$client = new GuzzleHttp\Client();
 
 $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
 
-$response = $client->request('GET', 'companies/1',
+/*$response = $client->request('GET', 'companies/1',
     [
     'headers'        => [
                         'Accept-Encoding' => 'gzip',
@@ -17,7 +17,7 @@ $response = $client->request('GET', 'companies/1',
                         ],
     'decode_content' => 'gzip'
     ]
-);
+);*/
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get  filter[name]  filter[principalRealName] filter[industry]  filter[unifiedSocialCreditCode] filter[registrationNumber]  filter[registrationCapital]
