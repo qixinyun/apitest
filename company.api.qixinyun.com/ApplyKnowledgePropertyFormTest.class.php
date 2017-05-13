@@ -11,7 +11,7 @@ use GuzzleHttp;
  //filter[status]
  //filter[userIdentification]
  //filter[uid]
- //$response = $client->request('GET', 'applyKnowledgePropertyForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyKnowledgePropertyForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyKnowledgePropertyForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyKnowledgePropertyForms?filter[reason]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
