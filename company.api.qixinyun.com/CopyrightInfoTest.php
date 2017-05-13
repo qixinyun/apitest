@@ -12,7 +12,7 @@ use GuzzleHttp;
  //filter[company]
  //filter[name]
  //filter[registrationCategory]
- $response = $client->request('GET', 'copyrightInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'copyrightInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'copyrightInfos/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'copyrightInfos?filter[registrationCategory]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
