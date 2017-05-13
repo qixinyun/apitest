@@ -11,7 +11,7 @@ use GuzzleHttp;
  //filter[status]
  //filter[result]
  //filter[company]
- $response = $client->request('GET', 'inViolationRecords',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'inViolationRecords',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'inViolationRecords/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'inViolationRecords?filter[reason]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
