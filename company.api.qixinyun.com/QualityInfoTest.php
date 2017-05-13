@@ -12,7 +12,7 @@ use GuzzleHttp;
  //filter[company]
 // $response = $client->request('GET', 'qualityInfos',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'qualityInfos/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
- $response = $client->request('GET', 'qualityInfos?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'qualityInfos?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"qualityInfos",
