@@ -11,7 +11,7 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyRevocationInfoForms/31,32',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyRevocationInfoForms/31,32',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyRevocationInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyRevocationInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
