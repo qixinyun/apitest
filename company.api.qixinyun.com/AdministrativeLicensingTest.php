@@ -10,7 +10,7 @@ use GuzzleHttp;
 //get 
  //filter[status]
  //filter[company]
-// $response = $client->request('GET', 'administrativeLicensings',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'administrativeLicensings/2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'administrativeLicensings/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'administrativeLicensings?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -41,7 +41,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"administrativeLicensings",
+/*$data = array("data"=>array("type"=>"administrativeLicensings",
                             "attributes"=>array("number"=>'331112222233333',
                                                 "title"=>'33titletitletitle1',
                                                 "validityFrom"=>'2019-05-05',
@@ -62,7 +62,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
