@@ -9,9 +9,6 @@ use GuzzleHttp;
 
 //get 
  //filter[status]
- //filter[name]
- //filter[category]
- //filter[brandInfoStatus]
  //filter[company]
  //filter[uid]
  //filter[userIdentification]
