@@ -13,7 +13,7 @@ use GuzzleHttp;
  //filter[company]
 // $response = $client->request('GET', 'investmentAbroads',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'investmentAbroads/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
- $response = $client->request('GET', 'investmentAbroads?filter[companyName]=company&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'investmentAbroads?filter[companyName]=company&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"investmentAbroads",
