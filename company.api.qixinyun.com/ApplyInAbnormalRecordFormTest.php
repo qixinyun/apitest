@@ -11,7 +11,7 @@ use GuzzleHttp;
  //filter[status]
  //filter[userIdentification]
 // filter[uid]
-// $response = $client->request('GET', 'applyInAbnormalRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyInAbnormalRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInAbnormalRecordForms/14,15',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInAbnormalRecordForms?filter[company]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
