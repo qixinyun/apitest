@@ -12,7 +12,7 @@ use GuzzleHttp;
  //filter[company]
  //filter[uid]
  //filter[userIdentification]
-// $response = $client->request('GET', 'applyFinancialOverviewForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyFinancialOverviewForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyFinancialOverviewForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyFinancialOverviewForms?filter[registrationCategory]=3&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
