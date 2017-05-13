@@ -10,7 +10,7 @@ use GuzzleHttp;
 //get 
  //filter[status]
  //filter[company]
- $response = $client->request('GET', 'administrativePunishments',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'administrativePunishments/3',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'administrativePunishments/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'administrativePunishments?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
