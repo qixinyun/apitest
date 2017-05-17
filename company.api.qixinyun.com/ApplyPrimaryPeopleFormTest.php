@@ -5,16 +5,25 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
- $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
- //filter[status]
- //filter[company]
- //filter[uid]
- //filter[userIdentification]
+/**   
+ *   3.1 filter[status]  表单审核状态
+ *      审核通过状态 2
+ *      待审核状态 0
+ *      审核拒绝状态 -2
+ *   3.2 filter[company]
+ *      所属企业id
+ *   3.3 filter[userIdentification]  用户标识
+ *      OA用户    1 
+ *      非OA用户  2
+ *   3.4 filter[uid]
+ *      用户id
+ */
 // $response = $client->request('GET', 'applyPrimaryPeopleForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyPrimaryPeopleForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'applyPrimaryPeopleForms?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyPrimaryPeopleForms?sort=-id&page[number]=1&page[size]=10',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyPrimaryPeopleForms",
