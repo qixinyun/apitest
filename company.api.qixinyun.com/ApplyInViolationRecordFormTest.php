@@ -8,11 +8,19 @@ use GuzzleHttp;
  $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
- //filter[status]
- //filter[date]
- //filter[company]
- //filter[userIdentification]
-// filter[uid]
+/**   
+ *   3.1 filter[status]  表单审核状态
+ *      审核通过状态 2
+ *      待审核状态 0
+ *      审核拒绝状态 -2
+ *   3.2 filter[company]
+ *      所属企业id
+ *   3.3 filter[userIdentification]  用户标识
+ *      OA用户    1 
+ *      非OA用户  2
+ *   3.4 filter[uid]
+ *      用户id
+ */
 // $response = $client->request('GET', 'applyInViolationRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInViolationRecordForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInViolationRecordForms?filter[reason]=1&sort=date',['haders'=>['Content-' => 'application/vnd.api+json']]);
