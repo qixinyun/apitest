@@ -11,12 +11,12 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyInvestmentAbroadForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyInvestmentAbroadForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInvestmentAbroadForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInvestmentAbroadForms?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyInvestmentAbroadForms",
+$data = array("data"=>array("type"=>"applyInvestmentAbroadForms",
                             "attributes"=>array("companyName"=>"companyName",
                                                 "principal"=>'principal',
                                                 "establishedTime"=>'2029-05-05',
@@ -36,11 +36,11 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyInvestmentAbroadForms",
+/*$data = array("data"=>array("type"=>"applyInvestmentAbroadForms",
                             "attributes"=>array("companyName"=>"111companyName",
                                                 "principal"=>'111principal',
                                                 "establishedTime"=>'2019-05-05',
@@ -57,7 +57,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 
 
