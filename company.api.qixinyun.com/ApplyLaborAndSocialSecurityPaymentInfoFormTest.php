@@ -8,11 +8,20 @@ use GuzzleHttp;
  $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
- //filter[status]
- //filter[company]
- //filter[uid]
- //filter[userIdentification]
- $response = $client->request('GET', 'applyLaborAndSocialSecurityPaymentInfoForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+/**   
+ *   3.1 filter[status]  表单审核状态
+ *      审核通过状态 2
+ *      待审核状态 0
+ *      审核拒绝状态 -2
+ *   3.2 filter[company]
+ *      所属企业id
+ *   3.3 filter[userIdentification]  用户标识
+ *      OA用户    1 
+ *      非OA用户  2
+ *   3.4 filter[uid]
+ *      用户id
+ */
+// $response = $client->request('GET', 'applyLaborAndSocialSecurityPaymentInfoForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyLaborAndSocialSecurityPaymentInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyLaborAndSocialSecurityPaymentInfoForms?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -49,7 +58,7 @@ $data = array("data"=>array("type"=>"applyLaborAndSocialSecurityPaymentInfoForms
               );
 $response = $client->request(
                 'PUT',
-                'applyLaborAndSocialSecurityPaymentInfoForms/1',
+                'applyLaborAndSocialSecurityPaymentInfoForms/16',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
