@@ -16,10 +16,11 @@ use GuzzleHttp;
 // $response = $client->request('GET', 'applyModifiedInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-$data = array("data"=>array("type"=>"applyModifiedInfoForms",
+/*$data = array("data"=>array("type"=>"applyModifiedInfoForms",
                             "attributes"=>array("category"=>1,
                                                 "beforeModifiedInfo"=>"beforeModifiedInfo",
                                                 "afterModifiedInfo"=>"afterModifiedInfo",
+                                                "modifiedTime"=>"2017-02-04",
                                                 "companyId"=>1,
                                                 "uid"=>1,
                                                 "userIdentification"=>1
@@ -33,25 +34,26 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyModifiedInfoForms",
+$data = array("data"=>array("type"=>"applyModifiedInfoForms",
                             "attributes"=>array("category"=>12,
                                                 "beforeModifiedInfo"=>"12beforeModifiedInfo",
                                                 "afterModifiedInfo"=>"12afterModifiedInfo",
+                                                "modifiedTime"=>"2017-02-06",
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyModifiedInfoForms/29',
+                'applyModifiedInfoForms/36',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 
 
 
@@ -74,6 +76,7 @@ print_r($contents);
             "category": 12,
             "beforeModifiedInfo": "12beforeModifiedInfo",
             "afterModifiedInfo": "12afterModifiedInfo",
+            "modifiedTime": "2017-02-02",
             "company": 1,
             "status": 0,
             "statusTime": 0,
