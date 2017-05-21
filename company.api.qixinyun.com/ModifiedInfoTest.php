@@ -5,7 +5,7 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
  //filter[status]
@@ -19,6 +19,7 @@ use GuzzleHttp;
                             "attributes"=>array("category"=>1,
                                                 "beforeModifiedInfo"=>"beforeModifiedInfo",
                                                 "afterModifiedInfo"=>"afterModifiedInfo",
+                                                "modifiedTime"=>"2017-02-06",
                                                 "companyId"=>1
                                                )
                            )
@@ -38,6 +39,7 @@ $data = array("data"=>array("type"=>"modifiedInfos",
                             "attributes"=>array("category"=>2,
                                                 "beforeModifiedInfo"=>"222beforeModifiedInfo",
                                                 "afterModifiedInfo"=>"2222afterModifiedInfo",
+                                                "modifiedTime"=>"2017-02-02",
                                                )
                            )
               );
@@ -68,6 +70,7 @@ print_r($contents);
             "category": 1,
             "beforeModifiedInfo": "beforeModifiedInfo",
             "afterModifiedInfo": "afterModifiedInfo",
+            "modifiedTime": "2017-02-02",
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
