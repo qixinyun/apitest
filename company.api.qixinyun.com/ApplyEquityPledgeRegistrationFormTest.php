@@ -17,21 +17,22 @@ use GuzzleHttp;
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyEquityPledgeRegistrationForms",
-                            "attributes"=>array("registrationNumber"=>'registrationNumber',
-                                                "pledgorName"=>'pledgorName',
+                            "attributes"=>array("registrationNumber"=>'2222istrationNumber',
+                                                "pledgorName"=>'2222pledgorName',
                                                 "pledgorCertificateType"=>1,
-                                                "pledgorCertificateNumber"=>'pledgorCertificateNumber',
+                                                "pledgorCertificateNumber"=>'2222pledgorCertificateNumber',
                                                 "pledgedEquityAmount"=>12,
                                                 "pledgeeName"=>'pledgeeName',
                                                 "pledgeeCertificateType"=>1,
-                                                "pledgeeCertificateNumber"=>'pledgeeCertificateNumber',
+                                                "pledgeeCertificateNumber"=>'22pledgeeCertificateNumber',
                                                 "pledgedEquityRegistrationDate"=>'2000-01-02',
                                                 "variation"=>'variationvariationvariation',
                                                 "attachments"=>array('attachments155','attachments255','attachments355'),
                                                 "equityPledgeRegistrationStatus"=>1,
                                                 "companyId"=>1,
                                                 "uid"=>1,
-                                                "userIdentification"=>1
+                                                "userIdentification"=>1,
+                                                //"equityPledgeRegistrationId"=>1
                                                ) 
                            )
               );
@@ -46,15 +47,15 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyEquityPledgeRegistrationForms",
-                            "attributes"=>array("registrationNumber"=>'11registrationNumber',
-                                                "pledgorName"=>'11pledgorName',
+$data = array("data"=>array("type"=>"applyEquityPledgeRegistrationForms",
+                            "attributes"=>array("registrationNumber"=>'1222221registrationNumber',
+                                                "pledgorName"=>'33311pledgorName',
                                                 "pledgorCertificateType"=>11,
-                                                "pledgorCertificateNumber"=>'11pledgorCertificateNumber',
+                                                "pledgorCertificateNumber"=>'333311pledgorCertificateNumber',
                                                 "pledgedEquityAmount"=>112,
                                                 "pledgeeName"=>'11pledgeeName',
                                                 "pledgeeCertificateType"=>12,
-                                                "pledgeeCertificateNumber"=>'11pledgeeCertificateNumber',
+                                                "pledgeeCertificateNumber"=>'1331pledgeeCertificateNumber',
                                                 "pledgedEquityRegistrationDate"=>'2001-01-02',
                                                 "variation"=>'11variationvariationvariation',
                                                 "attachments"=>array('EquityPledgeRegistrationattachments155','EquityPledgeRegistrationattachments255','EquityPledgeRegistrationattachments355'),
@@ -64,12 +65,12 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'applyEquityPledgeRegistrationForms/11',
+                'applyEquityPledgeRegistrationForms/91',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //edit -- 结束
 
 
@@ -86,41 +87,42 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyEquityPledgeRegistrationForms",
-        "id": "11",
+        "id": "91",
         "attributes": {
             "userIdentification": 1,
-            "registrationNumber": "registrationNumber",
-            "pledgorName": "pledgorName",
-            "pledgorCertificateType": 1,
-            "pledgorCertificateNumber": "pledgorCertificateNumber",
-            "pledgedEquityAmount": 12,
-            "pledgeeName": "pledgeeName",
-            "pledgeeCertificateType": 1,
-            "pledgeeCertificateNumber": "pledgeeCertificateNumber",
-            "pledgedEquityRegistrationDate": "2000-01-02",
-            "variation": "variationvariationvariation",
+            "registrationNumber": "1222221registrationNumber",
+            "pledgorName": "33311pledgorName",
+            "pledgorCertificateType": 11,
+            "pledgorCertificateNumber": "333311pledgorCertificateNumber",
+            "pledgedEquityAmount": 112,
+            "pledgeeName": "11pledgeeName",
+            "pledgeeCertificateType": 12,
+            "pledgeeCertificateNumber": "1331pledgeeCertificateNumber",
+            "pledgedEquityRegistrationDate": "2001-01-02",
+            "variation": "11variationvariationvariation",
             "equityPledgeRegistrationStatus": 1,
             "attachments": [
-                "attachments155",
-                "attachments255",
-                "attachments355"
+                "EquityPledgeRegistrationattachments155",
+                "EquityPledgeRegistrationattachments255",
+                "EquityPledgeRegistrationattachments355"
             ],
             "company": 1,
+            "equityPledgeRegistrationId": 1,
             "status": 0,
-            "statusTime": 0,
-            "updateTime": 0,
-            "createTime": 1492766492
+            "statusTime": 1495595908,
+            "updateTime": 1495595908,
+            "createTime": 1495595730
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
+                    "type": "OAusers",
                     "id": "1"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyEquityPledgeRegistrationForms\/11"
+            "self": "127.0.0.1\/applyEquityPledgeRegistrationForms\/91"
         }
     }
 }*/
