@@ -11,19 +11,20 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyInsepectionForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyInsepectionForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInsepectionForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyInsepectionForms?filter[uid]=1&filter[userIdentification]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyInsepectionForms",
                             "attributes"=>array("council"=>"insepectionCouncil9836369",
-                                                "category"=>2,
+                                                "category"=>57,
                                                 "date"=>'2059-05-05',
                                                 "result"=>1,
                                                 "companyId"=>1,
                                                 "uid"=>1,
-                                                "userIdentification"=>1
+                                                "userIdentification"=>1,
+                                               // "insepectionId"=>1
                                                ) 
                            )
               );
@@ -38,22 +39,22 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyInsepectionForms",
+$data = array("data"=>array("type"=>"applyInsepectionForms",
                             "attributes"=>array("council"=>"1insepectionCouncil123456",
-                                                "category"=>11,
-                                                "date"=>'2109-05-05',
+                                                "category"=>52,
+                                                "date"=>'2059-05-05',
                                                 "result"=>5
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyInsepectionForms/20',
+                'applyInsepectionForms/105',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //edit -- 结束
 
 
@@ -70,29 +71,30 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyInsepectionForms",
-        "id": "1",
+        "id": "105",
         "attributes": {
-            "userIdentification": 2,
-            "council": "insepectionCouncil123456",
-            "category": 1,
-            "date": "2009-05-05",
+            "userIdentification": 1,
+            "council": "1insepectionCouncil123456",
+            "category": 52,
+            "date": "2059-05-05",
             "result": 0,
             "company": 1,
-            "status": 2,
-            "statusTime": 1487640754,
-            "updateTime": 1487602203,
-            "createTime": 1487599507
+            "insepectionId": 1,
+            "status": 0,
+            "statusTime": 1495633593,
+            "updateTime": 1495633593,
+            "createTime": 1495633408
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
+                    "type": "OAusers",
                     "id": "1"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyInsepectionForms\/1"
+            "self": "127.0.0.1\/applyInsepectionForms\/105"
         }
     }
 }*/
