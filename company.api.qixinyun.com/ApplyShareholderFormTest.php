@@ -11,25 +11,26 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyShareholderForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ //$response = $client->request('GET', 'applyShareholderForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyShareholderForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyShareholderForms?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyShareholderForms",
-                            "attributes"=>array("name"=>"111股东名称",
+$data = array("data"=>array("type"=>"applyShareholderForms",
+                            "attributes"=>array("name"=>"东名称",
                                                 "category"=>1,
                                                 "certificateType"=>1,
-                                                "certificateNumber"=>"111234567896321465",
+                                                "certificateNumber"=>"11111111234567896321465",
                                                 "subscribedContributionMethod"=>1,
                                                 "subscribedContribution"=>1000,
                                                 "subscribedContributionTime"=>"2016-01-01",
                                                 "actualContributionMethod"=>1,
                                                 "actualContribution"=>1000,
                                                 "actualContributionTime"=>"2018-05-05",
-                                                "companyId"=>2,
-                                                "uid"=>2,
-                                                "userIdentification"=>2
+                                                "companyId"=>3,
+                                                "uid"=>1,
+                                                "userIdentification"=>1,
+                                               // 'shareholderId'=>8
                                                ) 
                            )
               );
@@ -40,7 +41,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
@@ -60,7 +61,7 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'applyShareholderForms/19',
+                'applyShareholderForms/73',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -81,35 +82,36 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyShareholderForms",
-        "id": "19",
+        "id": "76",
         "attributes": {
-            "userIdentification": 2,
-            "name": "111\u80a1\u4e1c\u540d\u79f0",
+            "userIdentification": 1,
+            "name": "\u4e1c\u540d\u79f0",
             "category": 1,
             "certificateType": 1,
-            "certificateNumber": "111234567896321465",
+            "certificateNumber": "11111111234567896321465",
             "subscribedContributionMethod": 1,
             "subscribedContribution": 1000,
             "subscribedContributionTime": "2016-01-01",
             "actualContributionMethod": 1,
             "actualContribution": 1000,
             "actualContributionTime": "2018-05-05",
-            "company": 2,
+            "company": 3,
+            "shareholderId": 8,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1493099206
+            "createTime": 1495591043
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "2"
+                    "type": "OAusers",
+                    "id": "1"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyShareholderForms\/19"
+            "self": "127.0.0.1\/applyShareholderForms\/76"
         }
     }
 }*/
