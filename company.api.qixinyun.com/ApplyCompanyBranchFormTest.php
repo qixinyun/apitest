@@ -11,13 +11,13 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyCompanyBranchForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyCompanyBranchForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyBranchForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyBranchForms?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyCompanyBranchForms",
-                            "attributes"=>array("name"=>"企业名称namename111",
+                            "attributes"=>array("name"=>"111222企业名称namename111",
                                                 "category"=>1,
                                                 "registrationNumber"=>"",
                                                 "unifiedSocialCreditCode"=>"x11xxx123",
@@ -31,7 +31,8 @@ use GuzzleHttp;
                                                 "detailedAddress"=>"11detailedAddress详细地址",
                                                 "companyId"=>2,
                                                 "uid"=>2,
-                                                "userIdentification"=>2
+                                                "userIdentification"=>1,
+                                                //"companyBranchId"=>1
                                                ) 
                            )
               );
@@ -47,7 +48,7 @@ $response = $client->request(
 
 //edit -- 开始
 $data = array("data"=>array("type"=>"applyCompanyBranchForms",
-                            "attributes"=>array("name"=>"22企业名称namename111",
+                            "attributes"=>array("name"=>"111222企业名称namename111111",
                                                 "category"=>1,
                                                 "registrationNumber"=>"",
                                                 "unifiedSocialCreditCode"=>"222x11xxx123",
@@ -64,7 +65,7 @@ $data = array("data"=>array("type"=>"applyCompanyBranchForms",
               );
 $response = $client->request(
                 'PUT',
-                'applyCompanyBranchForms/17',
+                'applyCompanyBranchForms/110',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
