@@ -17,15 +17,16 @@ use GuzzleHttp;
 
 //add -- 开始
 $data = array("data"=>array("type"=>"applyInvestmentAbroadForms",
-                            "attributes"=>array("companyName"=>"companyName",
-                                                "principal"=>'principal',
+                            "attributes"=>array("companyName"=>"111111companyName",
+                                                "principal"=>'11principal',
                                                 "establishedTime"=>'2029-05-05',
                                                 "registrationCapital"=>23,
                                                 "address"=>'addressaddress',
                                                 "website"=>'htp://www.baidu.com',
                                                 "companyId"=>1,
                                                 "uid"=>1,
-                                                "userIdentification"=>1
+                                                "userIdentification"=>1,
+                                                //"investmentAbroadId"=>1
                                                ) 
                            )
               );
@@ -41,18 +42,18 @@ $response = $client->request(
 
 //edit -- 开始
 /*$data = array("data"=>array("type"=>"applyInvestmentAbroadForms",
-                            "attributes"=>array("companyName"=>"111companyName",
-                                                "principal"=>'111principal',
+                            "attributes"=>array("companyName"=>"11companyName",
+                                                "principal"=>'111111principal',
                                                 "establishedTime"=>'2019-05-05',
-                                                "registrationCapital"=>13,
-                                                "address"=>'11addressaddress',
+                                                "registrationCapital"=>11113,
+                                                "address"=>'11111addressaddress',
                                                 "website"=>'http://www.baidu.com',
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyInvestmentAbroadForms/1',
+                'applyInvestmentAbroadForms/99',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -74,31 +75,32 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyInvestmentAbroadForms",
-        "id": "1",
+        "id": "99",
         "attributes": {
             "userIdentification": 1,
-            "companyName": "companyName",
-            "principal": "principal",
-            "establishedTime": "2029-05-05",
-            "registrationCapital": 23,
-            "address": "addressaddress",
-            "website": "htp:\/\/www.baidu.com",
+            "companyName": "11companyName",
+            "principal": "111111principal",
+            "establishedTime": "2019-05-05",
+            "registrationCapital": 11113,
+            "address": "11111addressaddress",
+            "website": "http:\/\/www.baidu.com",
             "company": 1,
+            "investmentAbroadId": 1,
             "status": 0,
-            "statusTime": 0,
-            "updateTime": 0,
-            "createTime": 1488879087
+            "statusTime": 1495620206,
+            "updateTime": 1495620206,
+            "createTime": 1495620037
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
+                    "type": "OAusers",
                     "id": "1"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyInvestmentAbroadForms\/1"
+            "self": "127.0.0.1\/applyInvestmentAbroadForms\/99"
         }
     }
 }*/
