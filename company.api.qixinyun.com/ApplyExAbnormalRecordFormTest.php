@@ -11,19 +11,20 @@ use GuzzleHttp;
  //filter[status]
  //filter[userIdentification]
 // filter[uid]
- $response = $client->request('GET', 'applyExAbnormalRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyExAbnormalRecordForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyExAbnormalRecordForms/18,19',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyExAbnormalRecordForms?filter[inAbnormalRecord]=1&sort=id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyExAbnormalRecordForms",
                             "attributes"=>array("reason"=>'reasonreasonreason121',
-                                                "date"=>'2059-05-05',
+                                                "date"=>'2005-04-12',
                                                 "decisionAuthority"=>'decisionAuthoritydecisionAuthoritydecisionAuthority',
                                                 "inAbnormalRecordId"=>1,
                                                 "companyId"=>1,
                                                 "uid"=>1,
-                                                "userIdentification"=>1
+                                                "userIdentification"=>1,
+                                                //"exAbnormalRecordId"=>1
                                                )
                            )
               );
@@ -38,21 +39,21 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyExAbnormalRecordForms",
-                            "attributes"=>array("reason"=>'1reasonreasonreason33333',
-                                                "date"=>'2180-04-12',
-                                                "decisionAuthority"=>'2211111decisionAuthoritydecisionAuthoritydecisionAuthority'
+$data = array("data"=>array("type"=>"applyExAbnormalRecordForms",
+                            "attributes"=>array("reason"=>'1213322222',
+                                                "date"=>'2010-05-12',
+                                                "decisionAuthority"=>'1233333333333333333333333323'
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyExAbnormalRecordForms/19',
+                'applyExAbnormalRecordForms/126',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //edit -- 结束
 
 $status = $response->getStatusCode();
@@ -68,29 +69,30 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyExAbnormalRecordForms",
-        "id": "1",
+        "id": "126",
         "attributes": {
             "userIdentification": 1,
-            "reason": 1,
-            "date": "2059-05-05",
+            "reason": "reasonreasonreason121",
+            "date": "2005-04-12",
             "decisionAuthority": "decisionAuthoritydecisionAuthoritydecisionAuthority",
             "inAbnormalRecord": 1,
             "company": 1,
+            "exAbnormalRecordId": 1,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1487747683
+            "createTime": 1495690452
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
+                    "type": "OAusers",
                     "id": "1"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyExAbnormalRecordForms\/1"
+            "self": "127.0.0.1\/applyExAbnormalRecordForms\/126"
         }
     }
 }*/
