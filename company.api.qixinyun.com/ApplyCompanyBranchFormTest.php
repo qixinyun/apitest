@@ -87,10 +87,10 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyCompanyBranchForms",
-        "id": "17",
+        "id": "110",
         "attributes": {
-            "userIdentification": 2,
-            "name": "22\u4f01\u4e1a\u540d\u79f0namename111",
+            "userIdentification": 1,
+            "name": "111222\u4f01\u4e1a\u540d\u79f0namename111111",
             "category": 1,
             "registrationNumber": "",
             "unifiedSocialCreditCode": "222x11xxx123",
@@ -103,21 +103,22 @@ print_r($contents);
             "region": 1258,
             "detailedAddress": "22211detailedAddress\u8be6\u7ec6\u5730\u5740",
             "company": 2,
+            "companyBranchId": 1,
             "status": 0,
-            "statusTime": 1493094869,
-            "updateTime": 1493094869,
-            "createTime": 1493094791
+            "statusTime": 1495636832,
+            "updateTime": 1495636832,
+            "createTime": 1495636353
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
+                    "type": "OAusers",
                     "id": "2"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyCompanyBranchForms\/17"
+            "self": "127.0.0.1\/applyCompanyBranchForms\/110"
         }
     }
 }*/
