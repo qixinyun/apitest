@@ -19,14 +19,15 @@ use GuzzleHttp;
 /*$data = array("data"=>array("type"=>"applyChattelMortgageRegistrationForms",
                             "attributes"=>array("registrationNumber"=>'555555555555',
                                                 "registrationDate"=>'2009-05-05',
-                                                "registrationAuthority"=>'registrationAuthority',
+                                                "registrationAuthority"=>'555555555555registrationAuthority',
                                                 "securedBond"=>123,
-                                                "content"=>'contentcontentcontent',
+                                                "content"=>'555555555555contentcontentcontent',
                                                 "attachments"=>array('1attachments155','1attachments255','1attachments355'),
                                                 "chattelMortgageRegistrationStatus"=>1,
                                                 "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                               // "chattelMortgageRegistrationId"=>1
                                                ) 
                            )
               );
@@ -41,8 +42,8 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyChattelMortgageRegistrationForms",
-                            "attributes"=>array("registrationNumber"=>'111111111',
+$data = array("data"=>array("type"=>"applyChattelMortgageRegistrationForms",
+                            "attributes"=>array("registrationNumber"=>'55555555555',
                                                 "registrationDate"=>'2019-01-05',
                                                 "registrationAuthority"=>'11111registrationAuthority',
                                                 "securedBond"=>1123,
@@ -54,12 +55,12 @@ $response = $client->request(
               );
 $response = $client->request(
                 'PUT',
-                'applyChattelMortgageRegistrationForms/13',
+                'applyChattelMortgageRegistrationForms/136',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //edit -- 结束
 
 
@@ -76,36 +77,37 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyChattelMortgageRegistrationForms",
-        "id": "13",
+        "id": "136",
         "attributes": {
             "userIdentification": 1,
-            "registrationNumber": "555555555555",
-            "registrationDate": "2009-05-05",
-            "registrationAuthority": "registrationAuthority",
-            "securedBond": 123,
-            "content": "contentcontentcontent",
-            "chattelMortgageRegistrationStatus": 1,
+            "registrationNumber": "55555555555",
+            "registrationDate": "2019-01-05",
+            "registrationAuthority": "11111registrationAuthority",
+            "securedBond": 1123,
+            "content": "11111contentcontentcontent",
+            "chattelMortgageRegistrationStatus": 2,
             "attachments": [
-                "1attachments155",
-                "1attachments255",
-                "1attachments355"
+                "11111attachments155",
+                "111111attachments255",
+                "11111attachments355"
             ],
             "company": 1,
+            "chattelMortgageRegistrationId": 1,
             "status": 0,
-            "statusTime": 0,
-            "updateTime": 0,
-            "createTime": 1492999858
+            "statusTime": 1495787127,
+            "updateTime": 1495787127,
+            "createTime": 1495787038
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "1"
+                    "type": "OAusers",
+                    "id": "152"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyChattelMortgageRegistrationForms\/13"
+            "self": "127.0.0.1\/applyChattelMortgageRegistrationForms\/136"
         }
     }
-}[*/
+}*/
