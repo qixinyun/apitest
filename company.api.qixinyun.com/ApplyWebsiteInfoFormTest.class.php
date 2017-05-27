@@ -18,14 +18,15 @@ use GuzzleHttp;
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyWebsiteInfoForms",
-                            "attributes"=>array("name"=>"namee222",
+                            "attributes"=>array("name"=>"11111namee222",
                                                 "domain"=>'domain222',
-                                                "url"=>'urlurlurl222',
-                                                "filingLicense"=>'filingLicense222',
+                                                "url"=>'1111urlurlurl222',
+                                                "filingLicense"=>'111filingLicense222',
                                                 "verifyTime"=>'2027-05-05',
                                                 "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                                                "uid"=>392,
+                                                "userIdentification"=>2,
+                                               // "websiteInfoId"=>1,
                                                ) 
                            )
               );
@@ -40,23 +41,23 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyWebsiteInfoForms",
-                            "attributes"=>array("name"=>"123456namename",
-                                                "domain"=>'domain11',
-                                                "url"=>'urlurlurl11',
-                                                "filingLicense"=>'11filingLicense',
-                                                "verifyTime"=>'2019-05-05',
+$data = array("data"=>array("type"=>"applyWebsiteInfoForms",
+                            "attributes"=>array("name"=>"wwwwwwwwwww123456namename",
+                                                "domain"=>'domain222',
+                                                "url"=>'wwwwwwwwwwwwwurlurlurl11',
+                                                "filingLicense"=>'1wwwwwwwwwwwwwwww1filingLicense',
+                                                "verifyTime"=>'2009-05-05',
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyWebsiteInfoForms/1',
+                'applyWebsiteInfoForms/147',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 
 
 
@@ -73,30 +74,31 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyWebsiteInfoForms",
-        "id": "1",
+        "id": "147",
         "attributes": {
-            "userIdentification": 1,
-            "name": "namenamenamenamenamenamenamenamenamenamenamename",
-            "domain": "domain",
-            "url": "urlurlurl",
-            "filingLicense": "filingLicense",
-            "verifyTime": "2029-05-05",
+            "userIdentification": 2,
+            "name": "11111namee222",
+            "domain": "domain222",
+            "url": "1111urlurlurl222",
+            "filingLicense": "111filingLicense222",
+            "verifyTime": "2027-05-05",
             "company": 1,
+            "websiteInfoId": 1,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1488339393
+            "createTime": 1495851946
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "1"
+                    "type": "skynetcreditUsers",
+                    "id": "392"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyWebsiteInfoForms\/1"
+            "self": "127.0.0.1\/applyWebsiteInfoForms\/147"
         }
     }
 }*/
