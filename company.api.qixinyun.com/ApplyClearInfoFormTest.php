@@ -11,18 +11,19 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyClearInfoForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyClearInfoForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyClearInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyClearInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyClearInfoForms",
-                            "attributes"=>array("name"=>"11122namenamename",
-                                                "members"=>"11122membersmembers",
-                                                "maxClearCount"=>122,
+                            "attributes"=>array("name"=>"11editname",
+                                                "members"=>"11editmembers",
+                                                "maxClearCount"=>120,
                                                 "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                                //"clearInfoId"=>4
                                                ) 
                            )
               );
@@ -37,21 +38,21 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyClearInfoForms",
-                            "attributes"=>array("name"=>"27namenamename",
-                                                "members"=>"27membersmembers",
-                                                "maxClearCount"=>127
+$data = array("data"=>array("type"=>"applyClearInfoForms",
+                            "attributes"=>array("name"=>"22211editname",
+                                                "members"=>"22211editmembers",
+                                                "maxClearCount"=>110
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyClearInfoForms/27',
+                'applyClearInfoForms/163',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //edit -- 结束
 
 $status = $response->getStatusCode();
@@ -67,28 +68,29 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyClearInfoForms",
-        "id": "27",
+        "id": "163",
         "attributes": {
             "userIdentification": 1,
-            "name": "27namenamename",
-            "members": "27membersmembers",
-            "maxClearCount": 127,
+            "name": "11editname",
+            "members": "11editmembers",
+            "maxClearCount": 120,
             "company": 1,
+            "clearInfoId": 4,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1492599816
+            "createTime": 1496204107
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "1"
+                    "type": "OAusers",
+                    "id": "152"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyClearInfoForms\/27"
+            "self": "127.0.0.1\/applyClearInfoForms\/163"
         }
     }
 }*/
