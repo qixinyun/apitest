@@ -12,18 +12,19 @@ use GuzzleHttp;
  //filter[company]
  //filter[userIdentification]
 // filter[uid]
- $response = $client->request('GET', 'applyCertificateInfoForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyCertificateInfoForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCertificateInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCertificateInfoForms?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyCertificateInfoForms",
-                            "attributes"=>array("name"=>'hellohello1111',
-                                                "issueDate"=>'2009-05-05',
-                                                "expirationDate"=>'2021-09-06',
+                            "attributes"=>array("name"=>'444444hhhhh',
+                                                "issueDate"=>'2001-05-05',
+                                                "expirationDate"=>'2020-09-06',
                                                 "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                                //"certificateInfoId"=>4
                                                )
                            )
               );
@@ -38,28 +39,29 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-// $data = array("data"=>array("type"=>"applyCertificateInfoForms",
-//                             "attributes"=>array("name"=>'hellohello',
-//                                                 "issueDate"=>'2019-05-05',
-//                                                 "expirationDate"=>'2031-09-06',
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'PUT',
-//                 'applyCertificateInfoForms/1',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+$data = array("data"=>array("type"=>"applyCertificateInfoForms",
+                            "attributes"=>array("name"=>'444444hhhhh',
+                                                "issueDate"=>'2001-05-05',
+                                                "expirationDate"=>'2020-09-06',
+                                               )
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'applyCertificateInfoForms/159',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );
 
+//edit -- 结束
 
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
-//edit -- 结束
+
 
 echo "<pre>";
 print_r($status);
@@ -69,28 +71,29 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyCertificateInfoForms",
-        "id": "1",
+        "id": "159",
         "attributes": {
             "userIdentification": 1,
-            "name": "hellohello222",
-            "issueDate": "2009-05-05",
-            "expirationDate": "2021-09-06",
+            "name": "444444hhhhh",
+            "issueDate": "2001-05-05",
+            "expirationDate": "2020-09-06",
             "company": 1,
+            "certificateInfoId": 4,
             "status": 0,
-            "statusTime": 0,
-            "updateTime": 0,
-            "createTime": 1488171166
+            "statusTime": 1496203004,
+            "updateTime": 1496203004,
+            "createTime": 1496202903
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "1"
+                    "type": "OAusers",
+                    "id": "152"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyCertificateInfoForms\/1"
+            "self": "127.0.0.1\/applyCertificateInfoForms\/159"
         }
     }
 }*/
