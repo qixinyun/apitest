@@ -17,14 +17,15 @@ use GuzzleHttp;
 
 //add -- 开始
 $data = array("data"=>array("type"=>"applyBrandInfoForms",
-                            "attributes"=>array("name"=>"111namemmmmmmmm",
-                                                "category"=>2,
-                                                "fillingTime"=>'2059-05-05',
-                                                "logo"=>'logologologo',
+                            "attributes"=>array("name"=>"148name",
+                                                "category"=>1,
+                                                "fillingTime"=>'2019-05-05',
+                                                "logo"=>'148logologologo',
                                                 "brandInfoStatus"=>-2,
                                                 "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                                //"brandInfoId"=>1
                                                ) 
                            )
               );
@@ -40,28 +41,28 @@ $response = $client->request(
 
 //edit -- 开始
 /*$data = array("data"=>array("type"=>"applyBrandInfoForms",
-                            "attributes"=>array("name"=>"111222namemmmmmmmm",
-                                                "category"=>1,
-                                                "fillingTime"=>'2209-10-12',
-                                                "logo"=>'123456logologo',
+                            "attributes"=>array("name"=>"149namename",
+                                                "category"=>12,
+                                                "fillingTime"=>'2009-10-12',
+                                                "logo"=>'149logologo',
                                                 "brandInfoStatus"=>2,
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyBrandInfoForms/1',
+                'applyBrandInfoForms/149',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );*/
-
+//edit -- 结束
 
 $status = $response->getStatusCode();
 $body = $response->getBody();
 $contents = $body->getContents();
-//edit -- 结束
+
 
 echo "<pre>";
 print_r($status);
@@ -71,30 +72,31 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyBrandInfoForms",
-        "id": "1",
+        "id": "151",
         "attributes": {
             "userIdentification": 1,
-            "name": "namenamenamenamenamenamenamenamenamenamenamename",
-            "category": 2,
-            "fillingTime": "2059-05-05",
-            "logo": "logologologo",
+            "name": "148name",
+            "category": 1,
+            "fillingTime": "2019-05-05",
+            "logo": "148logologologo",
             "brandInfoStatus": -2,
             "company": 1,
+            "brandInfoId": 1,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1487837051
+            "createTime": 1496200755
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "1"
+                    "type": "OAusers",
+                    "id": "152"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyBrandInfoForms\/1"
+            "self": "127.0.0.1\/applyBrandInfoForms\/151"
         }
     }
 }*/
