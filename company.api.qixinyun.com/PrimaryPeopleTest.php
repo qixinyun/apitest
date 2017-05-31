@@ -4,21 +4,27 @@ namespace Company;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
- $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1:10084/']);
 
 //get 
  //filter[status]
  //filter[company]
- $response = $client->request('GET', 'primaryPeoples',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'primaryPeoples',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'primaryPeoples/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'primaryPeoples?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"primaryPeoples",
-                            "attributes"=>array("name"=>"namenamename",
-                                                "members"=>"membersmembers",
-                                                "maxClearCount"=>12,
+$data = array("data"=>array("type"=>"primaryPeoples",
+                            "attributes"=>array("name"=>"edit111namenamename",
+                                                "duties"=>2,
+                                                "gender"=>2,
+                                                "nationality"=>4,
+                                                "birthday"=>"1995-05-05",
+                                                "education"=>8,
+                                                "socialDuties"=>"socialDuties",
+                                                "experience"=>"experience",
+                                                "abroadInvestmen"=>-2,
                                                 "companyId"=>1
                                                )
                            )
@@ -30,7 +36,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
