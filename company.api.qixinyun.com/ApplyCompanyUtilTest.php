@@ -4,8 +4,8 @@ namespace Company;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
-$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get 
 // 所有的申请表单都一样,过滤用户申请表单时，必须加上 userIdentification 过滤条件，表明用户属于OA用户还是非OA用户 
@@ -25,7 +25,13 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
     // -2   审核不通过
 
 //获取申请表基本信息接口
-$response = $client->request('GET', 'applyForms/61',['haders'=>['Content-' => 'application/vnd.api+json']]);
+$response = $client->request(
+    'GET', 
+    'applyForms/171,140?include=companies&fields[companies]=name,principalRealName,category,certificate',
+    [
+        'haders'=>['Content-' => 'application/vnd.api+json']
+    ]
+);
 //$response = $client->request('GET', 'applyForms/61,60',['haders'=>['Content-' => 'application/vnd.api+json']]);
 //$response = $client->request('GET', 'applyForms?filter[uid]=1&filter[userIdentification]=2&filter[category]=45',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
