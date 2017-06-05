@@ -17,12 +17,13 @@ use GuzzleHttp;
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyRevocationInfoForms",
-                            "attributes"=>array("category"=>1,
-                                                "beforeRevocationInfo"=>"beforeRevocationInfo",
-                                                "afterRevocationInfo"=>"afterRevocationInfo",
-                                                "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                            "attributes"=>array("category"=>12,
+                                                "beforeRevocationInfo"=>"11111beforeRevocationInfo",
+                                                "afterRevocationInfo"=>"11111afterRevocationInfo",
+                                                "companyId"=>12,
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                               // "revocationInfoId"=>4
                                                ) 
                            )
               );
@@ -37,21 +38,21 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyRevocationInfoForms",
-                            "attributes"=>array("category"=>12,
-                                                "beforeRevocationInfo"=>"12beforeRevocationInfo",
-                                                "afterRevocationInfo"=>"12afterRevocationInfo",
+$data = array("data"=>array("type"=>"applyRevocationInfoForms",
+                            "attributes"=>array("category"=>22,
+                                                "beforeRevocationInfo"=>"222212beforeRevocationInfo",
+                                                "afterRevocationInfo"=>"22212afterRevocationInfo",
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyRevocationInfoForms/32',
+                'applyRevocationInfoForms/184',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 
 //edit -- 结束
 
@@ -69,28 +70,35 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyRevocationInfoForms",
-        "id": "32",
+        "id": "184",
         "attributes": {
             "userIdentification": 1,
-            "category": 1,
-            "beforeRevocationInfo": "beforeRevocationInfo",
-            "afterRevocationInfo": "afterRevocationInfo",
-            "company": 1,
+            "category": 22,
+            "beforeRevocationInfo": "222212beforeRevocationInfo",
+            "afterRevocationInfo": "22212afterRevocationInfo",
+            "company": 12,
+            "revocationInfoId": 4,
             "status": 0,
-            "statusTime": 0,
-            "updateTime": 0,
-            "createTime": 1492661986
+            "statusTime": 1496630853,
+            "updateTime": 1496630853,
+            "createTime": 1496630765
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "1"
+                    "type": "OAusers",
+                    "id": "152"
+                }
+            },
+            "companies": {
+                "data": {
+                    "type": "companies",
+                    "id": "12"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyRevocationInfoForms\/32"
+            "self": "127.0.0.1\/applyRevocationInfoForms\/184"
         }
     }
 }*/
