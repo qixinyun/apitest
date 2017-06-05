@@ -17,18 +17,19 @@ use GuzzleHttp;
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyEquityChangeForms",
-                            "attributes"=>array("beforeChangeEquityRatio"=>"beforeChangeEquityRatio",
-                                                "afterhangeEquityRatio"=>"afterhangeEquityRatio",
-                                                "date"=>"2010-01-01",
-                                                "executor"=>"executor",
-                                                "equityAmount"=>"equityAmount",
-                                                "assignee"=>"assignee",
-                                                "court"=>"court",
-                                                "content"=>"contentcontent",
+                            "attributes"=>array("beforeChangeEquityRatio"=>"55555beforeChangeEquityRatio",
+                                                "afterhangeEquityRatio"=>"55555afterhangeEquityRatio",
+                                                "date"=>"2000-01-01",
+                                                "executor"=>"5555executor",
+                                                "equityAmount"=>"5555equityAmount",
+                                                "assignee"=>"5555assignee",
+                                                "court"=>"5555court",
+                                                "content"=>"5555contentcontent",
                                                 "shareholderId"=>1,
                                                 "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                               // "equityChangeId"=>5
                                                ) 
                            )
               );
@@ -44,20 +45,20 @@ $response = $client->request(
 
 //edit -- 开始
 $data = array("data"=>array("type"=>"applyEquityChangeForms",
-                            "attributes"=>array("beforeChangeEquityRatio"=>"33beforeChangeEquityRatio",
-                                                "afterhangeEquityRatio"=>"33afterhangeEquityRatio",
+                            "attributes"=>array("beforeChangeEquityRatio"=>"777beforeChangeEquityRatio",
+                                                "afterhangeEquityRatio"=>"777afterhangeEquityRatio",
                                                 "date"=>"2013-01-01",
-                                                "executor"=>"33executor",
-                                                "equityAmount"=>"e33quityAmount",
-                                                "assignee"=>"33assignee",
-                                                "court"=>"33court",
-                                                "content"=>"33contentcontent"
+                                                "executor"=>"777executor",
+                                                "equityAmount"=>"e777quityAmount",
+                                                "assignee"=>"777assignee",
+                                                "court"=>"777court",
+                                                "content"=>"777contentcontent"
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyEquityChangeForms/33',
+                'applyEquityChangeForms/180',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -79,34 +80,41 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyEquityChangeForms",
-        "id": "33",
+        "id": "180",
         "attributes": {
             "userIdentification": 1,
-            "beforeChangeequityRatio": "beforeChangeEquityRatio",
-            "afterhangeequityRatio": "afterhangeEquityRatio",
-            "date": "2010-01-01",
-            "executor": "executor",
-            "equityAmount": "equityAmount",
-            "assignee": "assignee",
-            "court": "court",
-            "content": "contentcontent",
+            "beforeChangeequityRatio": "777beforeChangeEquityRatio",
+            "afterhangeequityRatio": "777afterhangeEquityRatio",
+            "date": "2013-01-01",
+            "executor": "777executor",
+            "equityAmount": "e777quityAmount",
+            "assignee": "777assignee",
+            "court": "777court",
+            "content": "777contentcontent",
             "shareholder": 1,
             "company": 1,
+            "equityChangeId": 5,
             "status": 0,
-            "statusTime": 0,
-            "updateTime": 0,
-            "createTime": 1492669025
+            "statusTime": 1496629334,
+            "updateTime": 1496629334,
+            "createTime": 1496629115
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
+                    "type": "OAusers",
+                    "id": "152"
+                }
+            },
+            "companies": {
+                "data": {
+                    "type": "companies",
                     "id": "1"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyEquityChangeForms\/33"
+            "self": "127.0.0.1\/applyEquityChangeForms\/180"
         }
     }
 }*/
