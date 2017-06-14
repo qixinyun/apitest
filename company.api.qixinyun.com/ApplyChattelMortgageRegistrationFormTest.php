@@ -11,7 +11,7 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
-// $response = $client->request('GET', 'applyChattelMortgageRegistrationForms/13',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyChattelMortgageRegistrationForms/130,135,133?include=companies&fields[companies]=name,principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyChattelMortgageRegistrationForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyChattelMortgageRegistrationForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -42,7 +42,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyChattelMortgageRegistrationForms",
+/*$data = array("data"=>array("type"=>"applyChattelMortgageRegistrationForms",
                             "attributes"=>array("registrationNumber"=>'55555555555',
                                                 "registrationDate"=>'2019-01-05',
                                                 "registrationAuthority"=>'11111registrationAuthority',
@@ -60,7 +60,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //edit -- 结束
 
 
