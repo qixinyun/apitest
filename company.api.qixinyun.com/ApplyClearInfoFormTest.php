@@ -11,7 +11,7 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
-// $response = $client->request('GET', 'applyClearInfoForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyClearInfoForms/163?include=companies&fields[companies]=name,principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyClearInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyClearInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -38,7 +38,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyClearInfoForms",
+/*$data = array("data"=>array("type"=>"applyClearInfoForms",
                             "attributes"=>array("name"=>"22211editname",
                                                 "members"=>"22211editmembers",
                                                 "maxClearCount"=>110
@@ -52,7 +52,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //edit -- 结束
 
 $status = $response->getStatusCode();
