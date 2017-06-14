@@ -3,9 +3,10 @@ namespace User;
 
 require '../vendor/autoload.php';
 use GuzzleHttp;
+use GuzzleHttp\Exception\ClientException;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
- $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 
 //get 
@@ -44,20 +45,27 @@ $response = $client->request(
 //signUp -- 结束
 
 //signIn
-// $data = array("data"=>array("type"=>"users",
-//                             "attributes"=>array("passport"=>"18974111315",
-//                                                 "password"=>"18974111315"
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'POST',
-//                 'users/signIn',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("passport"=>"11117741187722",
+                                                "password"=>"123456ww"
+                                               )
+                           )
+              );
+try {
+    $response = $client->request(
+                    'POST',
+                    'users/signIn',
+                    [
+                    'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                    'json' => $data
+                    ]
+                );
+} catch (ClientException $e) {
+    if ($e->hasResponse()) {
+        var_dump($e->getResponse()->getBody()->getContents());
+        exit();
+    }
+}
 
 
 //updatePassword
