@@ -11,12 +11,12 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- //$response = $client->request('GET', 'applyBrandInfoForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyBrandInfoForms/148,151,171?include=companies&fields[companies]=name,principalRealName,category,certificate,registration_number',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyBrandInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyBrandInfoForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-$data = array("data"=>array("type"=>"applyBrandInfoForms",
+/*$data = array("data"=>array("type"=>"applyBrandInfoForms",
                             "attributes"=>array("name"=>"148name",
                                                 "category"=>1,
                                                 "fillingTime"=>'2019-05-05',
@@ -36,7 +36,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //add -- 结束
 
 //edit -- 开始
