@@ -11,7 +11,7 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
-// $response = $client->request('GET', 'applyAdministrativePunishmentForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyAdministrativePunishmentForms?include=companies&fields[companies]=name,principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyAdministrativePunishmentForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyAdministrativePunishmentForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -42,7 +42,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyAdministrativePunishmentForms",
+/*$data = array("data"=>array("type"=>"applyAdministrativePunishmentForms",
                             "attributes"=>array("number"=>'22222155555555',
                                                 "category"=>1,
                                                 "title"=>'12222211titletitle',
@@ -60,7 +60,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //edit -- 结束
 
 
