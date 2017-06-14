@@ -13,19 +13,20 @@ use GuzzleHttp;
  //filter[company]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyProductInfoForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyProductInfoForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyProductInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyProductInfoForms?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyProductInfoForms",
-                            "attributes"=>array("name"=>"namennamenamenamename",
-                                                "description"=>'description',
+                            "attributes"=>array("name"=>"555enamename",
+                                                "description"=>'555description',
                                                 "url"=>'http://www.baidu.com',
-                                                "logo"=>'logologologo',
+                                                "logo"=>'5551logologologo',
                                                 "companyId"=>1,
-                                                "uid"=>1,
-                                                "userIdentification"=>1
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                                "productInfoId"=>5
                                                ) 
                            )
               );
@@ -41,16 +42,16 @@ $response = $client->request(
 
 //edit -- 开始
 $data = array("data"=>array("type"=>"applyProductInfoForms",
-                            "attributes"=>array("name"=>"111namennamenamenamename",
-                                                "description"=>'111description',
+                            "attributes"=>array("name"=>"23editnamennamenamenamename",
+                                                "description"=>'23editdescription',
                                                 "url"=>'https://www.baidu.com',
-                                                "logo"=>'111logologologo',
+                                                "logo"=>'23editlogologologo',
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyProductInfoForms/1',
+                'applyProductInfoForms/200',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -72,29 +73,36 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyProductInfoForms",
-        "id": "1",
+        "id": "200",
         "attributes": {
             "userIdentification": 1,
-            "name": "namennamenamenamename",
-            "description": "description",
-            "url": "http:\/\/www.baidu.com",
-            "logo": "logologologo",
+            "name": "23editnamennamenamenamename",
+            "description": "23editdescription",
+            "url": "https:\/\/www.baidu.com",
+            "logo": "23editlogologologo",
             "company": 1,
+            "productInfoId": 5,
             "status": 0,
-            "statusTime": 0,
-            "updateTime": 0,
-            "createTime": 1488791658
+            "statusTime": 1497239807,
+            "updateTime": 1497239807,
+            "createTime": 1497239717
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
+                    "type": "OAusers",
+                    "id": "152"
+                }
+            },
+            "companies": {
+                "data": {
+                    "type": "companies",
                     "id": "1"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyProductInfoForms\/1"
+            "self": "127.0.0.1\/applyProductInfoForms\/200"
         }
     }
 }*/
