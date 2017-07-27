@@ -6,6 +6,7 @@ use GuzzleHttp;
 
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1:10085/']);
 
 //get 
  //filter[status]
@@ -17,16 +18,17 @@ use GuzzleHttp;
 // $response = $client->request('GET', 'knowledgeProperties?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"knowledgeProperties",
+$data = array("data"=>array("type"=>"knowledgeProperties",
                             "attributes"=>array("number"=>"124578963122",
                                                 "name"=>'namename',
-                                                "category"=>1,
+                                                "category"=>"testcategory",
                                                 "pledgorName"=>'出质人名称',
                                                 "pledgeeName"=>'质权人名称',
                                                 "pledgeRegistrationDeadline"=>'2020-09-06',
                                                 "variation"=>'变化情况2029-05-05',
-                                                "status"=>0,
-                                                "companyId"=>1
+                                                "status"=>"teststatusKnow",
+                                                "companyId"=>4,
+                                                //"infoIdentification"=>1
                                                )
                            )
               );
@@ -37,11 +39,11 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"knowledgeProperties",
+/*$data = array("data"=>array("type"=>"knowledgeProperties",
                             "attributes"=>array("number"=>"1245789631225555555",
                                                 "name"=>'namename5555555',
                                                 "category"=>2,
@@ -60,7 +62,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 $status = $response->getStatusCode();
 $body = $response->getBody();

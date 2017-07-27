@@ -25,19 +25,19 @@ use GuzzleHttp;
     // -2   审核不通过
 
 //获取申请表基本信息接口
-$response = $client->request(
+/*$response = $client->request(
     'GET', 
-    'applyForms/171,140?include=companies&fields[companies]=name,principalRealName,category,certificate',
+    'applyForms/108?include=companies&fields[companies]=name,principalRealName,category,certificate',
     [
         'haders'=>['Content-' => 'application/vnd.api+json']
     ]
-);
+);*/
 //$response = $client->request('GET', 'applyForms/61,60',['haders'=>['Content-' => 'application/vnd.api+json']]);
 //$response = $client->request('GET', 'applyForms?filter[uid]=1&filter[userIdentification]=2&filter[category]=45',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //添加获取申领企业信息接口
-// $response = $client->request('GET', 'applyCompanyForms/61,60',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'applyCompanyForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyCompanyForms/108,107?include=companies&fields[companies]=name,principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyCompanyForms/30',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCompanyForms?filter[name]=555&filter[principalRealName]=ni',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 
@@ -45,13 +45,13 @@ $response = $client->request(
 
 /*$data = array("data"=>array("type"=>"applyCompanyForms",
                                     "attributes"=>array( "name"=>"xian555".rand(0,100),
-                                                         "registrationNumber"=>"xxxxxxxxxx".rand(0,100),
+                                                         "registrationNumber"=>"2123121234574121x".rand(0,100),
                                                          "unifiedSocialCreditCode"=>"",
                                                          "certificate"=>array('certificate11','certificate22','certificate33'),
                                                          "province"=>2,
                                                          "city"=>52,
                                                          "region"=>500,
-                                                         "uid"=>1,
+                                                         "uid"=>403,
                                                          "principalRealName"=>"nijing",
                                                          "principalIdentifyCardNumber"=>"123456798962",
                                                          "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
@@ -76,22 +76,22 @@ $response = $client->request(
             );*/
 //add --end
 
+
 //edit --start
-/*$data = array("data"=>array("type"=>"applyCompanyForms",
+$data = array("data"=>array("type"=>"applyCompanyForms",
                                     "attributes"=>array( "name"=>"hello555".rand(0,100),
-                                                         "registrationNumber"=>"xxxxxxxxxx",
-                                                         "unifiedSocialCreditCode"=>"xxxxxxxxxx",
+                                                         "registrationNumber"=>"",
+                                                         "unifiedSocialCreditCode"=>"xxxxxxxxx2131243x",
                                                          "certificate"=>array('certificate1','certificate2','certificate3'),
                                                          "province"=>20,
                                                          "city"=>30,
                                                          "region"=>40,
-                                                         "uid"=>1,
-                                                         "principalRealName"=>"nijing",
+                                                         "principalRealName"=>"法人名字",
                                                          "principalIdentifyCardNumber"=>"123456798962",
-                                                         "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
-                                                         "principalIdentifyCardBackPhoto"=>"22xxxxxxxxxx",
-                                                         "principalIdentifyCardHandHeldPhoto"=>"33xxxxxxxxxx",
-                                                         "principalIdentifyCardValidity"=>"2019-11-11",
+                                                         "principalIdentifyCardFrontPhoto"=>"1xxxxxxxxxx",
+                                                         "principalIdentifyCardBackPhoto"=>"2xxxxxxxxxx",
+                                                         "principalIdentifyCardHandHeldPhoto"=>"3xxxxxxxxxx",
+                                                         "principalIdentifyCardValidity"=>"2020-11-11",
                                                          "principalBirthday"=>"2010-10-10",
                                                          "principalBirthdayCategory"=>2,
                                                          "contactName"=>"nijinghello",
@@ -101,48 +101,13 @@ $response = $client->request(
                                        )
                           );
 $response = $client->request(
-                'POST',
-                'applyCompanyForms',
+                'PUT',
+                'applyCompanyForms/213',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
             );
-//add --end
-
-//edit --start
-// $data = array("data"=>array("type"=>"applyCompanyForms",
-//                                     "attributes"=>array( "name"=>"hello555".rand(0,100),
-//                                                          "registrationNumber"=>"xxxxxxxxxx",
-//                                                          "unifiedSocialCreditCode"=>"xxxxxxxxxx",
-//                                                          "certificate"=>array('certificate1','certificate2','certificate3'),
-//                                                          "province"=>20,
-//                                                          "city"=>30,
-//                                                          "region"=>40,
-//                                                          "principalRealName"=>"法人名字",
-//                                                          "principalIdentifyCardNumber"=>"123456798962",
-//                                                          "principalIdentifyCardFrontPhoto"=>"1xxxxxxxxxx",
-//                                                          "principalIdentifyCardBackPhoto"=>"2xxxxxxxxxx",
-//                                                          "principalIdentifyCardHandHeldPhoto"=>"3xxxxxxxxxx",
-//                                                          "principalIdentifyCardValidity"=>"2020-11-11",
-//                                                          "principalBirthday"=>"2010-10-10",
-//                                                          "principalBirthdayCategory"=>2,
-//                                                          "contactName"=>"nijinghello",
-//                                                          "contactDuties"=>"程序员",
-//                                                          "contactPhone"=>"18840287763"
-//                                                          )
-//                                        )
-//                           );
-// $response = $client->request(
-//                 'PUT',
-//                 'applyCompanyForms/10',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
-=======
-            );*/
 //edit --end
 
 /*$response = $client->request(

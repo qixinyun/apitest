@@ -4,8 +4,8 @@ require '../vendor/autoload.php';
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1:8001/']);
 
 //get 
- $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8006/']);
-$response = $client->request('GET', 'workflows/11',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.104:8006/']);
+$response = $client->request('GET', 'workflows',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'workflows?filter[userGroupId]=3&filter[category]=2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'workflows?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 

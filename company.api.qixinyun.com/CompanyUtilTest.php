@@ -23,7 +23,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
 //get  filter[name]  filter[principalRealName] filter[industry]  filter[unifiedSocialCreditCode] filter[registrationNumber]  filter[registrationCapital]
 //sort=-id  sort=-name  sort=-principalRealName
 // $response = $client->request('GET', 'companies?filter[unifiedSocialCreditCode]=91350100095309691A',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'companies/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'companies/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'companies?filter[registrationCapital]=20000',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'companies?sort=-status,id,principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -34,23 +34,23 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
  */
 //add --start
 /*$data = array("data"=>array("type"=>"companies",
-                                    "attributes"=>array( "name"=>"qiyemingcheng11288",
+                                    "attributes"=>array( "name"=>"qqqqqteqqqstcompanyName",
                                                          "certificate"=>array('address11','address22','address33'),
                                                          "province"=>2,
                                                          "city"=>52,                                                        
                                                          "region"=>500,
                                                          "uid"=>1,
-                                                         "principalRealName"=>"法人名字",
-                                                         "principalIdentifyCardNumber"=>"xxxxxxxxxx",
+                                                         "principalRealName"=>"qqq法人名字",
+                                                         "principalIdentifyCardNumber"=>"xqqqqxxxxxxxxx",
                                                          "principalIdentifyCardFrontPhoto"=>"11xxxxxxxxxx",
                                                          "principalIdentifyCardBackPhoto"=>"22xxxxxxxxxx",
                                                          "principalIdentifyCardHandHeldPhoto"=>"33xxxxxxxxxx",
                                                          "principalIdentifyCardValidity"=>"2019-11-11",
                                                          "contactPhone"=>"1234568911",
                                                          "category"=>1,
-                                                         "registrationNumber"=>"xxxxxxxxxx",
-                                                         "unifiedSocialCreditCode"=>"xxxxxxxxxx",
-                                                         "organizationCode"=>"xxxxxxxxxx",
+                                                         "registrationNumber"=>"xqqqxxxxxxxxx",
+                                                         "unifiedSocialCreditCode"=>"qqqqqqwwwqqqzzzxxxxx",
+                                                         "organizationCode"=>"xxxxqqqqxxxxxx",
                                                          "registrationAuthority"=>"登记机关",
                                                          "approveDate"=>"2016-12-31",
                                                          "englishName"=>"xxxxxxxxxx",
@@ -75,7 +75,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8003/']);
                                                          )
                                        )
                           );
-/*$response = $client->request(
+$response = $client->request(
                 'POST',
                 'companies',
                 [

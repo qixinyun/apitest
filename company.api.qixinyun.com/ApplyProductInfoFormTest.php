@@ -13,7 +13,7 @@ use GuzzleHttp;
  //filter[company]
  //filter[uid]
  //filter[userIdentification]
-// $response = $client->request('GET', 'applyProductInfoForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyProductInfoForms/200?include=companies&fields[companies]=name,principalRealName,category,certificate',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyProductInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyProductInfoForms?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -41,7 +41,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyProductInfoForms",
+/*$data = array("data"=>array("type"=>"applyProductInfoForms",
                             "attributes"=>array("name"=>"23editnamennamenamenamename",
                                                 "description"=>'23editdescription',
                                                 "url"=>'https://www.baidu.com',
@@ -56,7 +56,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 
 

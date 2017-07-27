@@ -17,7 +17,7 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
             );*/
 
 //add -- 开始
-$data = array("data"=>array("type"=>"departments",
+/*$data = array("data"=>array("type"=>"departments",
                             "attributes"=>array("name"=>"department1",
                                                 'departmentType'=>1,
                                                 'platformId'=>1
@@ -31,7 +31,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //add -- 结束
 
 //edit --开始
@@ -53,13 +53,13 @@ $response = $client->request(
 //edit -- 结束
 
 //enabled --开始
-/*$response = $client->request(
+$response = $client->request(
                 'PUT',
                 'departments/1/enabled',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
-            );*/
+            );
 //enabled --结束
 
 //disabled --开始
