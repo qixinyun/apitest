@@ -5,22 +5,23 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 use GuzzleHttp\Exception\ClientException;
 
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:9001/']);
  $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 
 //get 
- $response = $client->request('GET', 'users?filter[cellPhone]=18840247763',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ //$response = $client->request('GET', 'users/8',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users?filter[cellPhone]=15592660858&sort=-id&page[number]=1&page[size]=20',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp -- 开始
-/*$data = array("data"=>array("type"=>"users",
-                            "attributes"=>array("cellPhone"=>"1884027765",
+$data = array("data"=>array("type"=>"users",
+                            "attributes"=>array("cellPhone"=>"18808060165",
                                                 "password"=>"123456",
-                                                'userName'=>"hellow2244",
-                                                'realName'=>'张三',
+                                                'userName'=>"admin",
+                                                'realName'=>'杨勋',
                                                 'organizationId'=>1,
-                                                'email' => '111@ssssqq.com'
+                                                'email' => '1361600985@qq.com',
+                                                'avatar' => ''
                                                )
                            )
               );
@@ -32,28 +33,28 @@ $response = $client->request(
             'haders'=>['Content-Type' => 'application/vnd.api+json'],
             'json' => $data
             ]
-        );*/
+        );
 
 //signUp -- 结束
 
 
 //signIn -- 开始
-/*//用户名密码登录示例
-$data = array("data"=>array("type"=>"users",
+//用户名密码登录示例
+/*$data = array("data"=>array("type"=>"users",
                             "attributes"=>array("passport"=>"helloword",
                                                 "password"=>"123456"
                                                )
                            )
-              );
+              );*/
 
 //手机号登录示例//
-$data = array("data"=>array("type"=>"users",
+/*$data = array("data"=>array("type"=>"users",
                             "attributes"=>array("passport"=>"1884027764"
                                                )
                            )
-              );
+              );*/
 
-try {
+/*try {
     $response = $client->request(
                     'POST',
                     'users/signIn',
@@ -100,13 +101,14 @@ try {
 /*$data = array("data"=>array("type"=>"users",
                             "attributes"=>array("realName"=>"张三11122",
                                                 "organizationId"=>2,
-                                                'email' => '111333wwww@qq.com'
+                                                'email' => '111333wwww@qq.com',
+                                                'avatar' => '111333wwww.jpg'
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'users/11',
+                'users/50',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -128,7 +130,7 @@ $response = $client->request(
 /*try {
     $response = $client->request(
                     'DELETE',
-                    'users/12',
+                    'users/53',
                     [
                     'haders'=>['Content-Type' => 'application/vnd.api+json']
                     ]
@@ -139,7 +141,24 @@ $response = $client->request(
         exit();
     }
 }*/
-//delete --结束    
+//delete --结束  
+
+//enable --开始
+/*try {
+    $response = $client->request(
+                    'PUT',
+                    'users/53/enable',
+                    [
+                    'haders'=>['Content-Type' => 'application/vnd.api+json']
+                    ]
+                );
+} catch (ClientException $e) {
+    if ($e->hasResponse()) {
+        var_dump($e->getResponse()->getBody()->getContents());
+        exit();
+    }
+}*/
+//enable --结束    
 
 
 $status = $response->getStatusCode();
