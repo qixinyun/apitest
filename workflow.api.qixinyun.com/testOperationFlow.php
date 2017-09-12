@@ -1,13 +1,14 @@
 <?php
 require '../vendor/autoload.php';
 
- $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8006/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.104:8006/']);
+
 // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1:8001/']);
 
 //get 
-// $response = $client->request('GET', 'operationFlows?filter[roleId]=4',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'operationFlows?filter[roleId]=4',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
-$data = array("data"=>array("type"=>"operationFlows",
+/*$data = array("data"=>array("type"=>"operationFlows",
                             "attributes"=>array(
                                                 'content'=>['审批通过']
                                                )
@@ -21,7 +22,7 @@ $response = $client->request(
                 'json' => $data
                 ]
             );
-
+*/
 //approve
 //confirm
 //decline
