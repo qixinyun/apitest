@@ -18,8 +18,8 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
     'decode_content' => ''
     ]
 );*/
-// $response = $client->request('GET', 'products/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
-// $response = $client->request('GET', 'products?filter[number]=123454&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'products',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'products?filter[frequency]=10101&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"products",
@@ -31,7 +31,8 @@ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
                                                 "content"=>array(
                                                             '产品内容'
                                                         ),
-                                                "number"=>'123454446',
+                                                "number"=>'1234544sadxx46',
+                                                "frequency"=>100
                                                )
                            )
               );
@@ -53,12 +54,13 @@ $response = $client->request(
                                                 "content"=>array(
                                                             '产品内容'
                                                         ),
+                                                "frequency"=>10101
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'products/1',
+                'products/3',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
@@ -67,13 +69,13 @@ $response = $client->request(
 //edit -- 结束
 
 //enable --开始
-$response = $client->request(
+/*$response = $client->request(
                 'PUT',
                 'products/1/enable',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
-            );
+            );*/
 //enable --结束
 
 //disable --开始
@@ -102,17 +104,18 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "products",
-        "id": "1",
+        "id": "3",
         "attributes": {
             "category": 2,
             "name": "productName",
             "price": 10.2,
-            "number": "123456",
+            "number": "1234544sadxx46",
+            "frequency": 100,
             "content": [
                 "\u4ea7\u54c1\u5185\u5bb9"
             ],
             "updateTime": 0,
-            "createTime": 1505291752,
+            "createTime": 1505360522,
             "statusTime": 0,
             "status": 0
         },
@@ -131,7 +134,7 @@ print_r($contents);
             }
         },
         "links": {
-            "self": "127.0.0.1\/products\/1"
+            "self": "127.0.0.1\/products\/3"
         }
     }
 }
