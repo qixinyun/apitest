@@ -5,12 +5,13 @@ require '../vendor/autoload.php';
 use GuzzleHttp;
 use GuzzleHttp\Exception\ClientException;
 
- $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+ //$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 
 //get 
 // $response = $client->request('GET', 'users/9?fields[users]=cellPhone,employmentDate',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users?filter[cellPhone]=15592660858&sort=-id&page[number]=1&page[size]=20',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp -- 开始
@@ -45,7 +46,7 @@ $response = $client->request(
 //signUp -- 结束
 
 //signIn
-$data = array("data"=>array("type"=>"users",
+/*$data = array("data"=>array("type"=>"users",
                             "attributes"=>array("passport"=>"11117741187722",
                                                 "password"=>"123456ww"
                                                )
@@ -65,7 +66,7 @@ try {
         var_dump($e->getResponse()->getBody()->getContents());
         exit();
     }
-}
+}*/
 
 
 //updatePassword
