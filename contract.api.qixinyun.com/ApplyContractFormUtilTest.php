@@ -4,8 +4,8 @@ namespace Product;
 require '../vendor/autoload.php';
 use GuzzleHttp;
 
- $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.141:8006/']);
-// $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+// $client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.14:8006/']);
+ $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 //get applyContractForms
   /**
@@ -34,48 +34,50 @@ use GuzzleHttp;
 // $response = $client->request('GET', 'contracts?filter[businessId]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-// $data = array("data"=>array("type"=>"applyContractForms",
-//                             "attributes"=>array("name"=>"contractName",
-//                                                 "validityStart"=>'2017-01-18',
-//                                                 "validityEnd"=>'2027-01-18',
-//                                                 "category"=>1,
-//                                                 "price"=>10.2,
-//                                                 "companyId"=>1,
-//                                                 "productId"=>1,
-//                                                 "businessId"=>1,
-//                                                 "uid"=>86
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'POST',
-//                 'applyContractForms',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+/*$data = array("data"=>array("type"=>"applyContractForms",
+                            "attributes"=>array("name"=>"contractName",
+                                                "category"=>1,
+                                                "price"=>10.2,
+                                                "companyId"=>1,
+                                                "productId"=>1,
+                                                "businessId"=>1,
+                                                "uid"=>110,
+                                                "validity"=>1,
+                                                "frequency"=>1,
+                                                "discount"=>0.2
+                                               )
+                           )
+              );
+$response = $client->request(
+                'POST',
+                'applyContractForms',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
 //add -- 结束
 
 //edit -- 开始
-// $data = array("data"=>array("type"=>"applyContractForms",
-//                             "attributes"=>array("name"=>"contractNameqqq",
-//                                                 "validityStart"=>'2017-01-28',
-//                                                 "validityEnd"=>'2027-01-28',
-//                                                 "category"=>2,
-//                                                 "price"=>10.25,
-//                                                 "productId"=>1
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'PUT',
-//                 'applyContractForms/10',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+/*$data = array("data"=>array("type"=>"applyContractForms",
+                            "attributes"=>array("name"=>"namename",
+                                                "category"=>2,
+                                                "price"=>100.11,
+                                                "productId"=>1,
+                                                "validity"=>12,
+                                                "frequency"=>12,
+                                                "discount"=>0.25
+                                               )
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'applyContractForms/1',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
 
 /*$response = $client->request(
                 'PUT',
@@ -102,21 +104,22 @@ print_r($contents);
         "type": "applyContractForms",
         "id": "1",
         "attributes": {
-            "name": "contractNameqqq",
-            "validityStart": "2017-01-28",
-            "validityEnd": "2027-01-28",
+            "name": "namename",
             "category": 2,
-            "price": 10,
-            "status": -2,
-            "updateTime": 1484662497,
-            "createTime": 1484660426,
-            "statusTime": 1484741139
+            "price": 100.11,
+            "validity": 12,
+            "frequency": 12,
+            "discount": 0.25,
+            "status": 0,
+            "updateTime": 1505742466,
+            "createTime": 1505742182,
+            "statusTime": 1505742466
         },
         "relationships": {
             "user": {
                 "data": {
                     "type": "users",
-                    "id": "86"
+                    "id": "110"
                 }
             },
             "userGroup": {
@@ -128,7 +131,7 @@ print_r($contents);
             "department": {
                 "data": {
                     "type": "departments",
-                    "id": "9"
+                    "id": "10"
                 }
             },
             "company": {
@@ -174,10 +177,11 @@ print_r($contents);
             "id": "1",
             "attributes": {
                 "name": "contractName",
-                "validityStart": "2017-01-18",
-                "validityEnd": "2027-01-18",
                 "category": 1,
                 "price": 10,
+                "validity": 12,
+                "frequency": 12,
+                "discount": 0.25,
                 "updateTime": 0,
                 "createTime": 1484740956,
                 "statusTime": 0,

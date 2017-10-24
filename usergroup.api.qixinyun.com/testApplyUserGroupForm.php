@@ -36,23 +36,23 @@ $response = $client->request(
 //add -- 结束
 
 //edit  --开始
-// $data = array("data"=>array("type"=>"applyUserGroupForms",
-//                             "attributes"=>array('name'=>"avvss1111",
-//                                                 'parentId'=>2,
-//                                                 'userGroupType'=>1,
-//                                                 'jirisdictionAreaIds'=>array(23, 66, 775),
-//                                                 'businessAreaIds'=>array(122, 552, 2000)
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'PUT',
-//                 'applyUserGroupForms/30',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+/*$data = array("data"=>array("type"=>"applyUserGroupForms",
+                            "attributes"=>array('name'=>"avvss1111",
+                                                'parentId'=>2,
+                                                'userGroupType'=>1,
+                                                'jirisdictionAreaIds'=>array(23, 66, 775),
+                                                'businessAreaIds'=>array(122, 552, 2000)
+                                               )
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'applyUserGroupForms/12',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/
 //edit  --结束
 
 

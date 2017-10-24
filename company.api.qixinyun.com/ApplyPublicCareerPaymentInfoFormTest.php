@@ -12,19 +12,20 @@ use GuzzleHttp;
  //filter[company]
  //filter[uid]
  //filter[userIdentification]
- $response = $client->request('GET', 'applyPublicCareerPaymentInfoForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyPublicCareerPaymentInfoForms',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyPublicCareerPaymentInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyPublicCareerPaymentInfoForms?filter[category]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyPublicCareerPaymentInfoForms",
-                            "attributes"=>array("arrearsMoney"=>12,
-                                                "arrearsCategory"=>2,
-                                                "statisticsDate"=>'2020-02-02',
-                                                "classificationSupervisionLevel"=>2,
-                                                "companyId"=>2,
-                                                "uid"=>2,
-                                                "userIdentification"=>2
+$data = array("data"=>array("type"=>"applyPublicCareerPaymentInfoForms",
+                            "attributes"=>array("arrearsMoney"=>111,
+                                                "arrearsCategory"=>111,
+                                                "statisticsDate"=>'2010-02-02',
+                                                "classificationSupervisionLevel"=>111,
+                                                "companyId"=>4,
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                                "publicCareerPaymentInfoId"=>1
                                                ) 
                            )
               );
@@ -35,11 +36,11 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyPublicCareerPaymentInfoForms",
+/*$data = array("data"=>array("type"=>"applyPublicCareerPaymentInfoForms",
                             "attributes"=>array("arrearsMoney"=>13,
                                                 "arrearsCategory"=>1,
                                                 "statisticsDate"=>'2034-03-03',
@@ -54,7 +55,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 
 
@@ -71,30 +72,36 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyPublicCareerPaymentInfoForms",
-        "id": "1",
+        "id": "206",
         "attributes": {
             "userIdentification": 1,
-            "punishmentReason": 1,
-            "punishmentContent": "punishmentContentpunishmentContent",
-            "punishmentDate": "2010-02-02",
-            "punishmentOrganization": "punishmentOrganization",
-            "classificationSupervisionLevel": 1,
-            "company": 1,
+            "arrearsMoney": 122,
+            "arrearsCategory": 22,
+            "statisticsDate": "2020-02-02",
+            "classificationSupervisionLevel": 22,
+            "company": 3,
+            "publicCareerPaymentInfoId": 1,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1488529268
+            "createTime": 1497336629
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "1"
+                    "type": "OAusers",
+                    "id": "152"
+                }
+            },
+            "companies": {
+                "data": {
+                    "type": "companies",
+                    "id": "3"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyPublicCareerPaymentInfoForms\/1"
+            "self": "127.0.0.1\/applyPublicCareerPaymentInfoForms\/206"
         }
     }
 }*/

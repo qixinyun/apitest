@@ -11,12 +11,12 @@ use GuzzleHttp;
  //filter[status]
  //filter[uid]
  //filter[userIdentification]
- //$response = $client->request('GET', 'applyAdministrativeLicensingForms/8,9',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'applyAdministrativeLicensingForms?include=companies&fields[companies]=name,principalRealName,category,certificate,registration_number',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyAdministrativeLicensingForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyAdministrativeLicensingForms?filter[userIdentification]=2&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"applyAdministrativeLicensingForms",
+$data = array("data"=>array("type"=>"applyAdministrativeLicensingForms",
                             "attributes"=>array("number"=>'331112222233333',
                                                 "title"=>'33titletitletitle1',
                                                 "validityFrom"=>'2019-05-05',
@@ -41,11 +41,11 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyAdministrativeLicensingForms",
+/*$data = array("data"=>array("type"=>"applyAdministrativeLicensingForms",
                             "attributes"=>array("number"=>'1232434322412',
                                                 "title"=>'313titletitletitle1',
                                                 "validityFrom"=>'2029-05-05',
@@ -66,7 +66,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 //edit -- 结束
 
 

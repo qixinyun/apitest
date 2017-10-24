@@ -15,17 +15,18 @@ use GuzzleHttp;
 // $response = $client->request('GET', 'equityChanges?sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //add -- 开始
-/*$data = array("data"=>array("type"=>"equityChanges",
+$data = array("data"=>array("type"=>"equityChanges",
                             "attributes"=>array("beforeChangeEquityRatio"=>"beforeChangeEquityRatio",
                                                 "afterhangeEquityRatio"=>"afterhangeEquityRatio",
-                                                "date"=>"2010-01-01",
+                                                "date"=>"2000-01-01",
                                                 "executor"=>"executor",
                                                 "equityAmount"=>"equityAmount",
                                                 "assignee"=>"assignee",
                                                 "court"=>"court",
                                                 "content"=>"contentcontent",
                                                 "shareholderId"=>1,
-                                                "companyId"=>1
+                                                "companyId"=>1,
+                                                "infoIdentification"=>1
                                                )
                            )
               );
@@ -36,11 +37,11 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"equityChanges",
+/*$data = array("data"=>array("type"=>"equityChanges",
                             "attributes"=>array("beforeChangeEquityRatio"=>"1beforeChangeEquityRatio",
                                                 "afterhangeEquityRatio"=>"1afterhangeEquityRatio",
                                                 "date"=>"2011-01-01",
@@ -59,7 +60,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
+            );*/
 
 $status = $response->getStatusCode();
 $body = $response->getBody();

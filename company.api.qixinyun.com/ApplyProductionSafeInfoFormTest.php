@@ -18,14 +18,15 @@ use GuzzleHttp;
 
 //add -- 开始
 /*$data = array("data"=>array("type"=>"applyProductionSafeInfoForms",
-                            "attributes"=>array("punishmentReason"=>2,
-                                                "punishmentContent"=>'punishmentContentpunishmentContent',
+                            "attributes"=>array("punishmentReason"=>33,
+                                                "punishmentContent"=>'33entContentpunishmentContent',
                                                 "punishmentDate"=>'2020-02-02',
-                                                "punishmentOrganization"=>'punishmentOrganization',
-                                                "classificationSupervisionLevel"=>2,
+                                                "punishmentOrganization"=>'33mentOrganization',
+                                                "classificationSupervisionLevel"=>33,
                                                 "companyId"=>2,
-                                                "uid"=>2,
-                                                "userIdentification"=>2
+                                                "uid"=>152,
+                                                "userIdentification"=>1,
+                                                "productionSafeInfoId"=>3
                                                ) 
                            )
               );
@@ -40,23 +41,23 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-/*$data = array("data"=>array("type"=>"applyProductionSafeInfoForms",
-                            "attributes"=>array("punishmentReason"=>1,
-                                                "punishmentContent"=>'111punishmentContentpunishmentContent',
+$data = array("data"=>array("type"=>"applyProductionSafeInfoForms",
+                            "attributes"=>array("punishmentReason"=>333,
+                                                "punishmentContent"=>'333editContentpunishmentContent',
                                                 "punishmentDate"=>'2014-01-01',
-                                                "punishmentOrganization"=>'11122punishmentOrganization',
-                                                "classificationSupervisionLevel"=>1,
+                                                "punishmentOrganization"=>'33editentOrganization',
+                                                "classificationSupervisionLevel"=>333,
                                                )
                            )
               );
 $response = $client->request(
                 'PUT',
-                'applyProductionSafeInfoForms/1',
+                'applyProductionSafeInfoForms/204',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );*/
+            );
 
 
 
@@ -73,30 +74,37 @@ print_r($contents);
     "meta": [],
     "data": {
         "type": "applyProductionSafeInfoForms",
-        "id": "1",
+        "id": "203",
         "attributes": {
             "userIdentification": 1,
-            "punishmentReason": 1,
-            "punishmentContent": "punishmentContentpunishmentContent",
-            "punishmentDate": "2010-02-02",
-            "punishmentOrganization": "punishmentOrganization",
-            "classificationSupervisionLevel": 1,
-            "company": 1,
+            "punishmentReason": 33,
+            "punishmentContent": "33entContentpunishmentContent",
+            "punishmentDate": "2020-02-02",
+            "punishmentOrganization": "33mentOrganization",
+            "classificationSupervisionLevel": 33,
+            "company": 2,
+            "productionSafeInfoId": 3,
             "status": 0,
             "statusTime": 0,
             "updateTime": 0,
-            "createTime": 1488529268
+            "createTime": 1497251128
         },
         "relationships": {
             "user": {
                 "data": {
-                    "type": "users",
-                    "id": "1"
+                    "type": "OAusers",
+                    "id": "152"
+                }
+            },
+            "companies": {
+                "data": {
+                    "type": "companies",
+                    "id": "2"
                 }
             }
         },
         "links": {
-            "self": "127.0.0.1\/applyProductionSafeInfoForms\/1"
+            "self": "127.0.0.1\/applyProductionSafeInfoForms\/203"
         }
     }
 }*/

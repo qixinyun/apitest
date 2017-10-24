@@ -3,62 +3,72 @@ namespace User;
 
 require '../vendor/autoload.php';
 use GuzzleHttp;
+use GuzzleHttp\Exception\ClientException;
 
-$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
- // $client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
+//$client = new GuzzleHttp\Client(['base_uri' => 'http://139.224.65.136:8002/']);
+$client = new GuzzleHttp\Client(['base_uri' => 'http://127.0.0.1/']);
 
 
 //get 
-$response = $client->request('GET', 'users?sort=-id&page[number]=1&page[size]=10',['haders'=>['Content-' => 'application/vnd.api+json']]);
+//$response = $client->request('GET', 'users?filter[platformId]=1&sort=-updateTime&page[number]=1&page[size]=10',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'users/9?fields[users]=cellPhone,employmentDate',['haders'=>['Content-' => 'application/vnd.api+json']]);
+// $response = $client->request('GET', 'users/1,5',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'users?filter[cellPhone]=15592660858&sort=-id&page[number]=1&page[size]=20',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
 //signUp -- 开始
-// $data = array("data"=>array("type"=>"users",
-//                             "attributes"=>array("cellPhone"=>"18841187722",
-//                                                 "password"=>"123456",
-//                                                 'userName'=>"emilyngrgdddd",
-//                                                 'realName'=>'张三',
-//                                                 'employmentDate'=>'2016-11-01',
-//                                                 'gender'=>1,
-//                                                 'birthday'=>'1983-10-30',
-//                                                 'identifyCardNumber'=>'610105598310301321',
-//                                                 "identifyCardFrontPhoto"=>"身份证正面",
-//                                                 "identifyCardBackPhoto"=>"身份证反面",
-//                                                 "identifyCardHandHeldPhoto"=>"手持身份证",
-//                                                 'roleIds'=>array(3,4),
-//                                                 'number'=>'123456xx',
-//                                                 'avatar' => 'xxxxxxx21125',
-//                                                 'qq' => '123456789',
-//                                                 'email' => '111@qq.com'
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'POST',
-//                 'users',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+//$data = array("data"=>array("type"=>"users",
+//                            "attributes"=>array("cellPhone"=>"17741187".rand(100,999),
+//                                                'number'=>'12345'.rand(100,999),
+//                                                "password"=>"123456",
+//                                                'userName'=>"nijing114".rand(100,999),
+//                                                'realName'=>'张三',
+//                                                'employmentDate'=>'2016-11-01',
+//                                                'gender'=>1,
+//                                                'birthday'=>'1983-10-30',
+//                                                'identifyCardNumber'=>'610105598310301555',
+//                                                "identifyCardFrontPhoto"=>"身份证正面",
+//                                                "identifyCardBackPhoto"=>"身份证反面",
+//                                                "identifyCardHandHeldPhoto"=>"手持身份证",
+//                                                'roleIds'=>array(1),
+//                                                'avatar' => 'xxxxxxx21125',
+//                                                'qq' => '123456789',
+//                                                'email' => '111@qq.com',
+//                                                'positions' => array(array('userGroupId'=>10,'departmentId'=>8))
+//                                               )
+//                           )
+//              );
+//$response = $client->request(
+//                'POST',
+//                'users',
+//                [
+//                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                'json' => $data
+//                ]
+//            );
 //signUp -- 结束
 
 //signIn
-// $data = array("data"=>array("type"=>"users",
-//                             "attributes"=>array("passport"=>"18974111315",
-//                                                 "password"=>"18974111315"
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'POST',
-//                 'users/signIn',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
-
+//$data = array("data"=>array("type"=>"users",
+//                            "attributes"=>array("passport"=>"18700000000",
+//                            "password"=>"18801060865@yx"
+//                                               )
+//                           )
+//              );
+//try {
+//    $response = $client->request(
+//                    'POST',
+//                    'users/signIn',
+//                    [
+//                    'haders'=>['Content-Type' => 'application/vnd.api+json'],
+//                    'json' => $data
+//                    ]
+//                );
+//} catch (ClientException $e) {
+//    if ($e->hasResponse()) {
+//        var_dump($e->getResponse()->getBody()->getContents());
+//        exit();
+//    }
+//}
 
 //updatePassword
 // $data = array("data"=>array("type"=>"users",
@@ -77,35 +87,51 @@ $response = $client->request('GET', 'users?sort=-id&page[number]=1&page[size]=10
 //             );
 
 //编辑用户信息
-// $data = array("data"=>array("type"=>"users",
-//                             "attributes"=>array("cellPhone"=>"18841187728",
-//                                                 "password"=>"123456",
-//                                                 'realName'=>'张三111',
-//                                                 'employmentDate'=>'2016-11-01',
-//                                                 'gender'=>1,
-//                                                 'birthday'=>'1983-10-30',
-//                                                 'identifyCardNumber'=>'610105598310301328',
-//                                                 "identifyCardFrontPhoto"=>"身份证正面1",
-//                                                 "identifyCardBackPhoto"=>"身份证反面2",
-//                                                 "identifyCardHandHeldPhoto"=>"手持身份证3",
-//                                                 'roleIds'=>array(3,4),
-//                                                 'number'=>'123456xx',
-//                                                 'avatar' => 'xxxxxxx21125',
-//                                                 'qq' => '12345678229',
-//                                                 'email' => '111333wwww@qq.com'
-//                                                )
-//                            )
-//               );
-// $response = $client->request(
-//                 'PUT',
-//                 'users/1',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );
+ $data = array("data"=>array("type"=>"users",
+                            "attributes"=>array(
+                                                 'realName'=>'张三111',
+                                                 'employmentDate'=>'2016-11-01',
+                                                 'gender'=>1,
+                                                 'birthday'=>'1983-10-30',
+                                                 'identifyCardNumber'=>'610105598310301328',
+                                                 "identifyCardFrontPhoto"=>"身份证正面1",
+                                                 "identifyCardBackPhoto"=>"身份证反面2",
+                                                 "identifyCardHandHeldPhoto"=>"手持身份证3",
+                                                 'roleIds'=>array(3),
+                                                 'number'=>'123456xx'.rand(100,999),
+                                                 'avatar' => 'xxxxxxx21125',
+                                                 'qq' => '12345678229',
+                                                 'email' => '111333wwww@qq.com',
+                                                 'positions' => array(array('userGroupId'=>3,'departmentId'=>6))
+                                                )
+                            )
+               );
+ $response = $client->request(
+                 'PUT',
+                 'users/1',
+                 [
+                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                 'json' => $data
+                 ]
+             );
 
-
+//$data = array("data"=>array(
+//    "type"=>"users",
+//    "attributes"=>array(
+//        'positions'=>[array('userGroupId'=>3, 'departmentId'=>6)],
+//        'roleIds'=>array(3)
+//    )
+//    )
+//);
+//
+//$response = $client->request(
+//    'POST',
+//    'users/1/bindPlatform',
+//    [
+//    'headers'=>['Content-Type' => 'application/vnd.api+json'],
+//    'json' => $data
+//    ]
+//);
 //restPassword
 /*$data = array("data"=>array("type"=>"users",
                             "attributes"=>array("password"=>"111111")
@@ -123,7 +149,7 @@ $response = $client->request(
 //enable --开始
 /*$response = $client->request(
                 'PUT',
-                'users/1/enable',
+                'users/9/enable',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
@@ -133,7 +159,7 @@ $response = $client->request(
 //disable --开始
 /*$response = $client->request(
                 'PUT',
-                'users/1/disable',
+                'users/9/disable',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
@@ -153,7 +179,7 @@ $response = $client->request(
 //unBindAdmin --开始
 /*$response = $client->request(
                 'PUT',
-                'users/1/unBindAdmin',
+                'users/9/unBindAdmin',
                 [
                 'haders'=>['Content-Type' => 'application/vnd.api+json']
                 ]
@@ -171,47 +197,47 @@ $response = $client->request(
 //verifyEmail --结束
 
 //绑定职位
-// $data = array("data"=>array("type"=>"positions",
-//                             "attributes"=>array(
-//                                 "userGroupId"=>2,
-//                                 "departmentId"=>10
-//                             )
-//                            )
-//               );
-// $response = $client->request(
-//                 'POST',
-//                 'users/69/positions',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );    
+/*$data = array("data"=>array("type"=>"positions",
+                            "attributes"=>array(
+                                "userGroupId"=>3,
+                                "departmentId"=>9
+                            )
+                           )
+              );
+$response = $client->request(
+                'POST',
+                'users/9/positions',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            ); */   
 
 //解绑职位
-// $response = $client->request(
-//                 'DELETE',
-//                 'users/1/positions/1',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json']
-//                 ]
-//             );    
+/*$response = $client->request(
+                'DELETE',
+                'users/1/positions/1',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json']
+                ]
+            ); */   
 
 //修改职位
-// $data = array("data"=>array("type"=>"positions",
-//                             "attributes"=>array(
-//                                 "userGroupId"=>11,
-//                                 "departmentId"=>2
-//                             )
-//                            )
-//               );
-// $response = $client->request(
-//                 'PUT',
-//                 'users/1/positions/1',
-//                 [
-//                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
-//                 'json' => $data
-//                 ]
-//             );    
+/*$data = array("data"=>array("type"=>"positions",
+                            "attributes"=>array(
+                                "userGroupId"=>4,
+                                "departmentId"=>9
+                            )
+                           )
+              );
+$response = $client->request(
+                'PUT',
+                'users/9/positions/1',
+                [
+                'haders'=>['Content-Type' => 'application/vnd.api+json'],
+                'json' => $data
+                ]
+            );*/    
 
 
 $status = $response->getStatusCode();
@@ -220,7 +246,6 @@ $contents = $body->getContents();
 
 echo "<pre>";
 print_r($contents);
-
 
 /*
 {

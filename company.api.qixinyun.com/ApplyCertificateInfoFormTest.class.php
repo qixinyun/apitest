@@ -12,7 +12,7 @@ use GuzzleHttp;
  //filter[company]
  //filter[userIdentification]
 // filter[uid]
-// $response = $client->request('GET', 'applyCertificateInfoForms/1',['haders'=>['Content-' => 'application/vnd.api+json']]);
+ $response = $client->request('GET', 'applyCertificateInfoForms/155,158,159?include=companies&fields[companies]=name,principalRealName',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCertificateInfoForms/1,2',['haders'=>['Content-' => 'application/vnd.api+json']]);
 // $response = $client->request('GET', 'applyCertificateInfoForms?filter[company]=1&sort=-id',['haders'=>['Content-' => 'application/vnd.api+json']]);
 
@@ -39,7 +39,7 @@ $response = $client->request(
 //add -- 结束
 
 //edit -- 开始
-$data = array("data"=>array("type"=>"applyCertificateInfoForms",
+/*$data = array("data"=>array("type"=>"applyCertificateInfoForms",
                             "attributes"=>array("name"=>'444444hhhhh',
                                                 "issueDate"=>'2001-05-05',
                                                 "expirationDate"=>'2020-09-06',
@@ -53,8 +53,7 @@ $response = $client->request(
                 'haders'=>['Content-Type' => 'application/vnd.api+json'],
                 'json' => $data
                 ]
-            );
-
+            );*/
 //edit -- 结束
 
 
